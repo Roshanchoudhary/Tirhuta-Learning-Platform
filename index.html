@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="mai">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -12,9 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
     <style>
-        /* ================================================================
-           CSS VARIABLES
-           ================================================================ */
+        /* ===== CSS VARIABLES ===== */
         :root {
             --primary: #7A1A1A;
             --primary-dark: #4A0A0A;
@@ -37,9 +35,6 @@
             --transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
-        /* ================================================================
-           RESET
-           ================================================================ */
         * {
             margin: 0;
             padding: 0;
@@ -62,9 +57,7 @@
             user-select: none;
         }
 
-        /* ================================================================
-           HEADER
-           ================================================================ */
+        /* ===== HEADER ===== */
         .header {
             width: 100%;
             max-width: 500px;
@@ -127,10 +120,6 @@
             justify-content: center;
         }
 
-        .theme-btn:hover {
-            background: rgba(255, 255, 255, 0.25);
-        }
-
         .user-badge {
             background: rgba(255, 255, 255, 0.12);
             padding: 4px 12px;
@@ -149,9 +138,7 @@
             font-size: 0.7rem;
         }
 
-        /* ================================================================
-           NAV TABS
-           ================================================================ */
+        /* ===== NAV TABS ===== */
         .nav-tabs {
             width: 100%;
             max-width: 500px;
@@ -217,9 +204,7 @@
             font-weight: 700;
         }
 
-        /* ================================================================
-           USER INFO
-           ================================================================ */
+        /* ===== USER INFO ===== */
         .user-info {
             width: 100%;
             max-width: 500px;
@@ -279,9 +264,7 @@
             transform: scale(0.95);
         }
 
-        /* ================================================================
-           CONTAINER
-           ================================================================ */
+        /* ===== CONTAINER ===== */
         .container {
             width: 100%;
             max-width: 500px;
@@ -291,9 +274,7 @@
             align-items: center;
         }
 
-        /* ================================================================
-           SECTIONS
-           ================================================================ */
+        /* ===== SECTIONS ===== */
         .section {
             display: none;
             width: 100%;
@@ -315,9 +296,7 @@
             }
         }
 
-        /* ================================================================
-           LEARNING CARD - CENTRE
-           ================================================================ */
+        /* ===== LEARNING CARD ===== */
         .learning-card {
             background: var(--white);
             border-radius: var(--radius);
@@ -331,35 +310,30 @@
 
         .learning-header {
             background: linear-gradient(135deg, var(--primary), #6B1515);
-            padding: 16px 14px;
+            padding: 20px 14px 16px;
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
             position: relative;
             overflow: hidden;
-        }
-
-        .learning-header::after {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -20%;
-            width: 180px;
-            height: 180px;
-            background: radial-gradient(circle, rgba(212, 160, 23, 0.08) 0%, transparent 70%);
-            border-radius: 50%;
+            min-height: 130px;
+            justify-content: center;
         }
 
         .learning-header .char-display {
             font-family: var(--font-tirhuta);
-            font-size: 3.5rem;
+            font-size: 3.8rem;
             font-weight: 700;
             color: var(--white);
             text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-            line-height: 1;
+            line-height: 1.2;
             position: relative;
             z-index: 1;
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+            padding: 2px 0;
         }
 
         .learning-header .char-name {
@@ -370,6 +344,7 @@
             position: relative;
             z-index: 1;
             margin-top: 2px;
+            text-align: center;
         }
 
         .learning-header .char-counter {
@@ -377,7 +352,7 @@
             color: var(--white);
             opacity: 0.6;
             background: rgba(255, 255, 255, 0.1);
-            padding: 2px 12px;
+            padding: 2px 14px;
             border-radius: var(--radius-full);
             display: inline-block;
             margin-top: 4px;
@@ -389,9 +364,7 @@
             padding: 14px;
         }
 
-        /* ================================================================
-           CHAR INFO - CENTRE
-           ================================================================ */
+        /* ===== CHAR INFO ===== */
         .char-info-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -423,20 +396,13 @@
             word-break: break-word;
         }
 
-        .char-info-item .value i {
-            color: var(--gold);
-            margin-right: 4px;
-        }
-
         @media (max-width: 380px) {
             .char-info-grid {
                 grid-template-columns: 1fr;
             }
         }
 
-        /* ================================================================
-           STROKE GUIDE - CENTRE
-           ================================================================ */
+        /* ===== STROKE GUIDE ===== */
         .stroke-guide {
             display: flex;
             gap: 4px;
@@ -466,13 +432,7 @@
             box-shadow: 0 4px 16px rgba(212, 160, 23, 0.2);
         }
 
-        .stroke-step i {
-            font-size: 0.55rem;
-        }
-
-        /* ================================================================
-           CANVAS - CENTRE (जहाँ उंगली/माउस से लिखना है)
-           ================================================================ */
+        /* ===== CANVAS ===== */
         .canvas-wrapper {
             display: flex;
             justify-content: center;
@@ -493,11 +453,6 @@
             margin: 0 auto;
         }
 
-        .canvas-container:focus-within {
-            border-color: var(--gold);
-            box-shadow: 0 0 0 4px rgba(212, 160, 23, 0.1), inset 0 0 30px rgba(0, 0, 0, 0.03);
-        }
-
         .canvas-container canvas {
             width: 100%;
             height: 100%;
@@ -508,7 +463,6 @@
             background: #fff;
         }
 
-        /* Canvas पर हिंट टेक्स्ट - "उंगली या माउस से लिखें" */
         .canvas-hint {
             position: absolute;
             bottom: 12px;
@@ -526,15 +480,7 @@
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
-        [data-theme="dark"] .canvas-hint {
-            background: rgba(255, 255, 255, 0.08);
-            color: #aaa;
-            border-color: rgba(255, 255, 255, 0.05);
-        }
-
-        /* ================================================================
-           TOOLBAR - CENTRE
-           ================================================================ */
+        /* ===== TOOLBAR ===== */
         .toolbar {
             display: flex;
             flex-wrap: wrap;
@@ -567,39 +513,22 @@
             background: var(--bg);
             color: var(--text-secondary);
         }
-        .btn-prev:active {
-            background: #e8e0d8;
-        }
-
         .btn-clear {
             background: var(--bg);
             color: var(--text-secondary);
         }
-        .btn-clear:active {
-            background: #e8e0d8;
-        }
-
         .btn-save {
             background: linear-gradient(135deg, var(--primary), var(--primary-dark));
             color: #fff;
             box-shadow: 0 4px 16px rgba(122, 26, 26, 0.2);
         }
-        .btn-save:active {
-            transform: scale(0.95);
-        }
-
         .btn-next {
             background: linear-gradient(135deg, var(--secondary), var(--gold));
             color: #fff;
             box-shadow: 0 4px 16px rgba(212, 160, 23, 0.2);
         }
-        .btn-next:active {
-            transform: scale(0.95);
-        }
 
-        /* ================================================================
-           STATUS - CENTRE
-           ================================================================ */
+        /* ===== STATUS ===== */
         .practice-status {
             text-align: center;
             margin-top: 8px;
@@ -621,9 +550,7 @@
             color: #2e7d32;
         }
 
-        /* ================================================================
-           TIP CARD - CENTRE
-           ================================================================ */
+        /* ===== TIP CARD ===== */
         .tip-card {
             background: var(--white);
             border-radius: var(--radius);
@@ -665,9 +592,7 @@
             font-weight: 500;
         }
 
-        /* ================================================================
-           PROGRESS
-           ================================================================ */
+        /* ===== PROGRESS ===== */
         .progress-card {
             background: var(--white);
             border-radius: var(--radius);
@@ -760,10 +685,6 @@
             position: relative;
         }
 
-        .char-grid-item:active {
-            transform: scale(0.92);
-        }
-
         .char-grid-item.done {
             background: #e8f5e9;
             border-color: #a5d6a7;
@@ -792,9 +713,7 @@
             box-shadow: 0 0 0 2px rgba(212, 160, 23, 0.2);
         }
 
-        /* ================================================================
-           EXAM - CENTRE & FULL TEXT
-           ================================================================ */
+        /* ===== EXAM ===== */
         .exam-card {
             background: var(--white);
             border-radius: var(--radius);
@@ -867,10 +786,6 @@
             overflow-wrap: break-word;
         }
 
-        .exam-options button:active:not(:disabled) {
-            transform: scale(0.95);
-        }
-
         .exam-options button.correct {
             border-color: #2e7d32;
             background: #e8f5e9;
@@ -918,10 +833,6 @@
             text-align: center;
         }
 
-        .exam-controls .btn:active {
-            transform: scale(0.95);
-        }
-
         .btn-exam-next {
             background: linear-gradient(135deg, var(--primary), var(--primary-dark));
             color: #fff;
@@ -964,24 +875,7 @@
             border: 2px solid #c62828;
         }
 
-        @media (max-width: 380px) {
-            .exam-options {
-                grid-template-columns: 1fr;
-            }
-            .exam-options button {
-                font-size: 1.2rem;
-                min-height: 42px;
-                max-width: 100%;
-            }
-            .exam-question {
-                font-size: 0.8rem;
-                padding: 10px 12px;
-            }
-        }
-
-        /* ================================================================
-           CERTIFICATE
-           ================================================================ */
+        /* ===== CERTIFICATE ===== */
         .cert-card {
             background: var(--white);
             border-radius: var(--radius);
@@ -1084,10 +978,6 @@
             touch-action: manipulation;
         }
 
-        .cert-actions .btn:active {
-            transform: scale(0.95);
-        }
-
         .cert-actions .btn:disabled {
             opacity: 0.4;
             cursor: not-allowed;
@@ -1115,9 +1005,7 @@
             font-size: 0.7rem;
         }
 
-        /* ================================================================
-           SHORTCUTS HINT
-           ================================================================ */
+        /* ===== SHORTCUTS ===== */
         .shortcuts-hint {
             display: none;
             position: fixed;
@@ -1155,9 +1043,7 @@
             }
         }
 
-        /* ================================================================
-           FOOTER
-           ================================================================ */
+        /* ===== FOOTER ===== */
         .footer {
             width: 100%;
             max-width: 500px;
@@ -1173,9 +1059,7 @@
             color: var(--gold);
         }
 
-        /* ================================================================
-           TOAST
-           ================================================================ */
+        /* ===== TOAST ===== */
         .toast-container {
             position: fixed;
             bottom: 60px;
@@ -1237,26 +1121,7 @@
             }
         }
 
-        /* ================================================================
-           ACCESSIBILITY
-           ================================================================ */
-        :focus-visible {
-            outline: 2px solid var(--gold);
-            outline-offset: 2px;
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            *,
-            *::before,
-            *::after {
-                animation-duration: 0.01ms !important;
-                transition-duration: 0.01ms !important;
-            }
-        }
-
-        /* ================================================================
-           DARK THEME
-           ================================================================ */
+        /* ===== DARK THEME ===== */
         [data-theme="dark"] {
             --white: #1A1A1A;
             --bg: #121212;
@@ -1268,133 +1133,11 @@
             --shadow-lg: 0 16px 56px rgba(0, 0, 0, 0.6);
         }
 
-        [data-theme="dark"] .learning-card,
-        [data-theme="dark"] .progress-card,
-        [data-theme="dark"] .exam-card,
-        [data-theme="dark"] .cert-card,
-        [data-theme="dark"] .tip-card {
-            border-color: #333;
-        }
-
-        [data-theme="dark"] .char-info-item {
-            background: #1E1E1E;
-        }
-
-        [data-theme="dark"] .exam-question {
-            background: #1E1E1E;
-        }
-
-        [data-theme="dark"] .certificate-preview {
-            background: linear-gradient(135deg, #1A1A1A, #1E1E1E);
-            border-color: var(--gold);
-        }
-
-        [data-theme="dark"] .exam-options button {
-            background: #1A1A1A;
-            border-color: #333;
-        }
-
-        [data-theme="dark"] .exam-options button.correct {
-            background: #1A3A1A;
-            border-color: #2e7d32;
-        }
-
-        [data-theme="dark"] .exam-options button.wrong {
-            background: #3A1A1A;
-            border-color: #c62828;
-        }
-
-        [data-theme="dark"] .char-grid-item {
-            background: #1E1E1E;
-            border-color: #333;
-        }
-
-        [data-theme="dark"] .char-grid-item.done {
-            background: #1A3A1A;
-            border-color: #2e7d32;
-        }
-
-        [data-theme="dark"] .char-grid-item.current {
-            background: #2A2418;
-            border-color: var(--gold);
-        }
-
-        [data-theme="dark"] .canvas-container {
-            background: #1A1A1A;
-            border-color: #333;
-        }
-
         [data-theme="dark"] .canvas-container canvas {
             background: #1A1A1A;
         }
 
-        [data-theme="dark"] .toolbar .btn-prev,
-        [data-theme="dark"] .toolbar .btn-clear {
-            background: #1E1E1E;
-            color: #B5A898;
-        }
-
-        [data-theme="dark"] .status {
-            background: #1E1E1E;
-            color: #B5A898;
-        }
-
-        [data-theme="dark"] .status.success {
-            background: #1A3A1A;
-            color: #4CAF50;
-        }
-
-        [data-theme="dark"] .user-info {
-            background: #1A1A1A;
-            border-color: #333;
-        }
-
-        [data-theme="dark"] .user-info .field {
-            background: #1E1E1E;
-            border-color: #333;
-        }
-
-        [data-theme="dark"] .user-info .field input {
-            color: #F0EDE8;
-        }
-
-        [data-theme="dark"] .nav-tabs {
-            background: #1A1A1A;
-            border-color: #333;
-        }
-
-        [data-theme="dark"] .shortcuts-hint {
-            background: #1A1A1A;
-            border-color: #333;
-            color: #B5A898;
-        }
-
-        [data-theme="dark"] .shortcuts-hint kbd {
-            background: #1E1E1E;
-            border-color: #333;
-        }
-
-        [data-theme="dark"] .toast {
-            background: #1A1A1A;
-            border-color: #333;
-            color: #F0EDE8;
-        }
-
-        [data-theme="dark"] .stroke-step {
-            background: #1E1E1E;
-            border-color: #333;
-            color: #B5A898;
-        }
-
-        [data-theme="dark"] .stroke-step.active {
-            background: var(--gold);
-            color: #fff;
-            border-color: var(--gold);
-        }
-
-        /* ================================================================
-           RESPONSIVE
-           ================================================================ */
+        /* ===== RESPONSIVE ===== */
         @media (max-width: 420px) {
             .learning-header .char-display {
                 font-size: 2.8rem;
@@ -1407,31 +1150,8 @@
                 grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
                 gap: 3px;
             }
-            .char-grid-item {
-                font-size: 0.8rem;
-            }
-            .user-info .field {
-                min-width: 70px;
-            }
-            .toolbar .btn {
-                padding: 5px 10px;
-                font-size: 0.6rem;
-                min-height: 28px;
-            }
             .canvas-container {
                 max-width: 320px;
-            }
-            .learning-header .char-display {
-                font-size: 2.8rem;
-            }
-            .exam-options button {
-                font-size: 1.1rem;
-                min-height: 38px;
-                padding: 8px 6px;
-            }
-            .exam-question {
-                font-size: 0.75rem;
-                padding: 8px 10px;
             }
         }
 
@@ -1439,62 +1159,22 @@
             .learning-header .char-display {
                 font-size: 2.2rem;
             }
-            .nav-tab {
-                font-size: 0.55rem;
-                min-width: 40px;
-                padding: 4px 2px;
-            }
-            .nav-tab i {
-                font-size: 0.8rem;
-            }
-            .container {
-                padding: 6px 6px 50px;
-            }
             .canvas-container {
                 max-width: 260px;
-            }
-            .char-grid {
-                grid-template-columns: repeat(auto-fill, minmax(26px, 1fr));
-                gap: 2px;
-            }
-            .char-grid-item {
-                font-size: 0.7rem;
-            }
-            .exam-options button {
-                font-size: 1rem;
-                min-height: 34px;
-            }
-            .certificate-preview {
-                padding: 12px 8px;
-            }
-            .certificate-preview .cert-heading {
-                font-size: 1rem;
-            }
-            .certificate-preview .cert-name {
-                font-size: 1rem;
-            }
-            .user-info .field {
-                min-width: 60px;
-                max-width: 120px;
-            }
-            .user-info .field input {
-                font-size: 0.6rem;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- ================================================================
-    HEADER
-    ================================================================ -->
+    <!-- ===== HEADER ===== -->
     <header class="header">
         <div class="logo">
             <span class="logo-icon">𑒀</span>
             <span>तिरहुता <span>लिपि</span></span>
         </div>
         <div class="header-right">
-            <button class="theme-btn" id="themeBtn" aria-label="थीम बदलें">
+            <button class="theme-btn" id="themeBtn">
                 <i class="fas fa-moon" id="themeIcon"></i>
             </button>
             <div class="user-badge" id="profileBtn">
@@ -1504,13 +1184,11 @@
         </div>
     </header>
 
-    <!-- ================================================================
-    NAV TABS
-    ================================================================ -->
+    <!-- ===== NAV TABS ===== -->
     <nav class="nav-tabs" id="navTabs">
         <button class="nav-tab active" data-section="learn">
             <i class="fas fa-pen-fancy"></i>
-            <span>सीखें</span>
+            <span>सीखी</span>
             <span class="badge" id="learnBadge">0%</span>
         </button>
         <button class="nav-tab" data-section="progress">
@@ -1527,9 +1205,7 @@
         </button>
     </nav>
 
-    <!-- ================================================================
-    USER INFO
-    ================================================================ -->
+    <!-- ===== USER INFO ===== -->
     <div class="user-info">
         <div class="field">
             <i class="fas fa-user"></i>
@@ -1542,14 +1218,10 @@
         <button class="btn-update" id="updateUserBtn">✅</button>
     </div>
 
-    <!-- ================================================================
-    CONTAINER
-    ================================================================ -->
+    <!-- ===== CONTAINER ===== -->
     <div class="container">
 
-        <!-- ============================================================
-        SECTION: LEARN (जहाँ उंगली/माउस से लिखना है)
-        ============================================================ -->
+        <!-- ===== SECTION: LEARN ===== -->
         <section id="learnSection" class="section active">
 
             <div class="learning-card">
@@ -1560,27 +1232,25 @@
                 </div>
 
                 <div class="learning-body">
-                    <!-- Character Info -->
                     <div class="char-info-grid">
                         <div class="char-info-item">
-                            <div class="label"><i class="fas fa-microphone"></i> उच्चारण</div>
+                            <div class="label">उच्चारण</div>
                             <div class="value" id="charPronounce">𑒀 (Ajji)</div>
                         </div>
                         <div class="char-info-item">
-                            <div class="label"><i class="fas fa-layer-group"></i> वर्ग</div>
+                            <div class="label">वर्ग</div>
                             <div class="value" id="charCategory">पवित्र</div>
                         </div>
                         <div class="char-info-item">
-                            <div class="label"><i class="fas fa-pen-fancy"></i> स्ट्रोक</div>
+                            <div class="label">स्ट्रोक</div>
                             <div class="value" id="charStrokes">4 स्ट्रोक</div>
                         </div>
                         <div class="char-info-item">
-                            <div class="label"><i class="fas fa-lightbulb"></i> उदाहरण</div>
+                            <div class="label">उदाहरण</div>
                             <div class="value" id="charExample">प्रारम्भ में अज्जी</div>
                         </div>
                     </div>
 
-                    <!-- Stroke Guide -->
                     <div class="stroke-guide" id="strokeGuide">
                         <span class="stroke-step active"><i class="fas fa-arrow-down"></i> नीचे</span>
                         <span class="stroke-step"><i class="fas fa-arrow-right"></i> दाएँ</span>
@@ -1588,34 +1258,29 @@
                         <span class="stroke-step"><i class="fas fa-arrow-left"></i> बाएँ</span>
                     </div>
 
-                    <!-- CANVAS - यहाँ उंगली/माउस से लिखना है -->
                     <div class="canvas-wrapper">
                         <div class="canvas-container">
                             <canvas id="practiceCanvas"></canvas>
-                            <!-- हिंट टेक्स्ट -->
-                            <div class="canvas-hint"><i class="fas fa-hand-pointer"></i> उंगली या माउस से लिखें</div>
+                            <div class="canvas-hint"><i class="fas fa-hand-pointer"></i> उंगली या माउस से लिखी</div>
                         </div>
                     </div>
 
-                    <!-- Toolbar -->
                     <div class="toolbar">
                         <button class="btn btn-prev" id="prevChar"><i class="fas fa-chevron-left"></i> पिछला</button>
                         <button class="btn btn-clear" id="clearCanvas"><i class="fas fa-eraser"></i> साफ़</button>
-                        <button class="btn btn-save" id="savePractice"><i class="fas fa-save"></i> सहेजें</button>
+                        <button class="btn btn-save" id="savePractice"><i class="fas fa-save"></i> सहेजी</button>
                         <button class="btn btn-next" id="nextChar">अगला <i class="fas fa-chevron-right"></i></button>
                     </div>
 
-                    <!-- Status -->
                     <div class="practice-status">
-                        <span class="status" id="practiceStatus">✍️ उंगली या माउस से लिखें</span>
+                        <span class="status" id="practiceStatus">✍️ उंगली या माउस से लिखी</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Tip Card -->
             <div class="tip-card">
                 <i class="fas fa-lightbulb"></i>
-                <p><strong>टिप:</strong> स्ट्रोक दिशा का पालन करें और अभ्यास करें।</p>
+                <p><strong>टिप:</strong> स्ट्रोक दिशा के अनुसार लिखी।</p>
                 <span class="badge-device">
                     <i class="fas fa-mobile-alt"></i> फिंगर
                     <span style="opacity:0.3;margin:0 4px;">|</span>
@@ -1625,14 +1290,12 @@
 
         </section>
 
-        <!-- ============================================================
-        SECTION: PROGRESS
-        ============================================================ -->
+        <!-- ===== SECTION: PROGRESS ===== -->
         <section id="progressSection" class="section">
 
             <div class="progress-card">
                 <div class="progress-title">
-                    <i class="fas fa-chart-simple"></i> आपकी प्रगति
+                    <i class="fas fa-chart-simple"></i> हमर प्रगति
                 </div>
 
                 <div class="progress-stats">
@@ -1659,9 +1322,7 @@
 
         </section>
 
-        <!-- ============================================================
-        SECTION: EXAM
-        ============================================================ -->
+        <!-- ===== SECTION: EXAM ===== -->
         <section id="examSection" class="section">
 
             <div class="exam-card">
@@ -1674,7 +1335,7 @@
 
                 <div id="examContent">
                     <div class="exam-question">
-                        <strong>प्रश्न:</strong> <span id="examQuestionText">कौन सा अक्षर है?</span>
+                        <strong>प्रश्न:</strong> <span id="examQuestionText">कौन अक्षर अछि?</span>
                     </div>
 
                     <div class="exam-options" id="examOptions"></div>
@@ -1692,9 +1353,7 @@
 
         </section>
 
-        <!-- ============================================================
-        SECTION: CERTIFICATE
-        ============================================================ -->
+        <!-- ===== SECTION: CERTIFICATE ===== -->
         <section id="certificateSection" class="section">
 
             <div class="cert-card">
@@ -1703,7 +1362,7 @@
                 </div>
 
                 <div class="cert-status" id="certStatus">
-                    <i class="fas fa-info-circle"></i> परीक्षा पास करें
+                    <i class="fas fa-info-circle"></i> परीक्षा पास करी
                 </div>
 
                 <div class="certificate-preview" id="certificatePreview">
@@ -1731,46 +1390,33 @@
 
     </div>
 
-    <!-- ================================================================
-    SHORTCUTS HINT
-    ================================================================ -->
+    <!-- ===== SHORTCUTS ===== -->
     <div class="shortcuts-hint">
         <span><kbd>←</kbd> <kbd>→</kbd></span>
-        <span><kbd>S</kbd> सहेजें</span>
+        <span><kbd>S</kbd> सहेजी</span>
         <span><kbd>R</kbd> साफ़</span>
     </div>
 
-    <!-- ================================================================
-    TOAST CONTAINER
-    ================================================================ -->
+    <!-- ===== TOAST ===== -->
     <div class="toast-container" id="toastContainer"></div>
 
-    <!-- ================================================================
-    FOOTER
-    ================================================================ -->
+    <!-- ===== FOOTER ===== -->
     <footer class="footer">
         <i class="fas fa-om"></i> 𑒞𑒱𑒩𑒯𑒳𑒞𑒰 𑒪𑒱𑒣𑒱 · मिथिलाक्षर
     </footer>
 
-    <!-- ================================================================
-    SCRIPTS
-    ================================================================ -->
+    <!-- ===== SCRIPTS ===== -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js">
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js">
     </script>
 
     <script>
-        // ================================================================
-        // DATA - Complete Tirhuta Dataset
-        // ================================================================
+        // ===== DATA =====
         const TIRHUTA_DATA = [
-            // Ajji
             { char: '𑒀', name: 'अज्जी', pronounce: 'Ajji', category: 'पवित्र', strokes: 4,
             example: 'प्रारम्भ में अज्जी' },
-            // OM
             { char: '𑓇', name: 'ॐ', pronounce: 'ॐ (Om)', category: 'पवित्र', strokes: 4, example: 'ॐ नमः शिवाय' },
-            // Vowels
             { char: '𑒁', name: 'अ', pronounce: 'a', category: 'स्वर', strokes: 2, example: '𑒁𑒧𑓃𑒞 (अमृत)' },
             { char: '𑒂', name: 'आ', pronounce: 'ā', category: 'स्वर', strokes: 3, example: '𑒂𑒧 (आम)' },
             { char: '𑒃', name: 'इ', pronounce: 'i', category: 'स्वर', strokes: 2, example: '𑒃𑒧𑒪𑒲 (इमली)' },
@@ -1782,47 +1428,39 @@
             { char: '𑒉', name: 'ऐ', pronounce: 'ai', category: 'स्वर', strokes: 3, example: '𑒉𑒢𑒏 (ऐनक)' },
             { char: '𑒊', name: 'ओ', pronounce: 'o', category: 'स्वर', strokes: 2, example: '𑒊𑒒𑒾𑒪𑒲 (ओखली)' },
             { char: '𑒋', name: 'औ', pronounce: 'au', category: 'स्वर', strokes: 3, example: '𑒋𑒩𑒞 (औरत)' },
-            // Ka Varga
             { char: '𑒏', name: 'क', pronounce: 'ka', category: 'व्यंजन', strokes: 3, example: '𑒏𑒧𑒪 (कमल)' },
             { char: '𑒐', name: 'ख', pronounce: 'kha', category: 'व्यंजन', strokes: 3, example: '𑒐𑒕𑒯𑓂𑒩𑒴𑒁𑒻 (खजूर)' },
             { char: '𑒑', name: 'ग', pronounce: 'ga', category: 'व्यंजन', strokes: 3, example: '𑒑𑒰𑒨 (गाय)' },
             { char: '𑒒', name: 'घ', pronounce: 'gha', category: 'व्यंजन', strokes: 4, example: '𑒒𑒩 (घर)' },
             { char: '𑒓', name: 'ङ', pronounce: 'ṅa', category: 'व्यंजन', strokes: 2, example: '𑒩𑒓𑓂𑒑 (रङ्ग)' },
-            // Cha Varga
             { char: '𑒔', name: 'च', pronounce: 'ca', category: 'व्यंजन', strokes: 3, example: '𑒔𑒰𑒢𑓂𑒠 (चाँद)' },
             { char: '𑒕', name: 'छ', pronounce: 'cha', category: 'व्यंजन', strokes: 3, example: '𑒕𑒞 (छत)' },
             { char: '𑒖', name: 'ज', pronounce: 'ja', category: 'व्यंजन', strokes: 3, example: '𑒖𑒪 (जल)' },
             { char: '𑒗', name: 'झ', pronounce: 'jha', category: 'व्यंजन', strokes: 4, example: '𑒗𑓂𑒛𑒜𑒰 (झंडा)' },
             { char: '𑒘', name: 'ञ', pronounce: 'ña', category: 'व्यंजन', strokes: 3, example: '𑒘𑒰𑒢 (ज्ञान)' },
-            // Ta Varga (Murdhanya)
             { char: '𑒙', name: 'ट', pronounce: 'ṭa', category: 'व्यंजन', strokes: 3, example: '𑒙𑒰𑒕𑒲 (टाटी)' },
             { char: '𑒚', name: 'ठ', pronounce: 'ṭha', category: 'व्यंजन', strokes: 3, example: '𑒚𑒲𑒕 (ठीक)' },
             { char: '𑒛', name: 'ड', pronounce: 'ḍa', category: 'व्यंजन', strokes: 3, example: '𑒛𑒩 (डर)' },
             { char: '𑒜', name: 'ढ', pronounce: 'ḍha', category: 'व्यंजन', strokes: 4, example: '𑒜𑒱𑒪𑒾𑒞𑒹𑒯 (ढिलाई)' },
             { char: '𑒝', name: 'ण', pronounce: 'ṇa', category: 'व्यंजन', strokes: 3, example: '𑒝𑒱𑒢 (णिन)' },
-            // Ta Varga (Dantya)
             { char: '𑒞', name: 'त', pronounce: 'ta', category: 'व्यंजन', strokes: 3, example: '𑒞𑒪 (तल)' },
             { char: '𑒟', name: 'थ', pronounce: 'tha', category: 'व्यंजन', strokes: 3, example: '𑒟𑒰𑒢𑒻 (थानी)' },
             { char: '𑒠', name: 'द', pronounce: 'da', category: 'व्यंजन', strokes: 3, example: '𑒠𑒰𑒢 (दान)' },
             { char: '𑒡', name: 'ध', pronounce: 'dha', category: 'व्यंजन', strokes: 4, example: '𑒡𑒩𑓂𑒧 (धर्म)' },
             { char: '𑒢', name: 'न', pronounce: 'na', category: 'व्यंजन', strokes: 3, example: '𑒢𑒩 (नर)' },
-            // Pa Varga
             { char: '𑒣', name: 'प', pronounce: 'pa', category: 'व्यंजन', strokes: 3, example: '𑒣𑒰𑒢𑒲 (पानी)' },
             { char: '𑒤', name: 'फ', pronounce: 'pha', category: 'व्यंजन', strokes: 3, example: '𑒤𑒪 (फल)' },
             { char: '𑒥', name: 'ब', pronounce: 'ba', category: 'व्यंजन', strokes: 3, example: '𑒥𑒰𑒕 (बाट)' },
             { char: '𑒦', name: 'भ', pronounce: 'bha', category: 'व्यंजन', strokes: 4, example: '𑒦𑒰𑒞 (भात)' },
             { char: '𑒧', name: 'म', pronounce: 'ma', category: 'व्यंजन', strokes: 3, example: '𑒧𑒰𑒞 (मात)' },
-            // Antastha
             { char: '𑒨', name: 'य', pronounce: 'ya', category: 'व्यंजन', strokes: 3, example: '𑒨𑒞𑒹𑒢 (यत्न)' },
             { char: '𑒩', name: 'र', pronounce: 'ra', category: 'व्यंजन', strokes: 3, example: '𑒩𑒰𑒨 (राय)' },
             { char: '𑒪', name: 'ल', pronounce: 'la', category: 'व्यंजन', strokes: 3, example: '𑒪𑒰𑒪 (लाल)' },
             { char: '𑒫', name: 'व', pronounce: 'va', category: 'व्यंजन', strokes: 3, example: '𑒫𑒰𑒕𑒰 (वाटा)' },
-            // Ushma
             { char: '𑒬', name: 'श', pronounce: 'śa', category: 'व्यंजन', strokes: 3, example: '𑒬𑒱𑒫 (शिव)' },
             { char: '𑒭', name: 'ष', pronounce: 'ṣa', category: 'व्यंजन', strokes: 3, example: '𑒭𑒵𑒯𑒴 (षड्)' },
             { char: '𑒮', name: 'स', pronounce: 'sa', category: 'व्यंजन', strokes: 3, example: '𑒮𑒳𑒩𑓂𑒨 (सूर्य)' },
             { char: '𑒯', name: 'ह', pronounce: 'ha', category: 'व्यंजन', strokes: 3, example: '𑒯𑒰𑒞𑒲 (हाथी)' },
-            // Matra (with क)
             { char: '𑒏𑒰', name: 'का', pronounce: 'kā', category: 'मात्रा', strokes: 3, example: '𑒏𑒰𑒧 (काम)' },
             { char: '𑒏𑒱', name: 'कि', pronounce: 'ki', category: 'मात्रा', strokes: 2, example: '𑒏𑒱𑒞𑒰𑒥 (किताब)' },
             { char: '𑒏𑒲', name: 'की', pronounce: 'kī', category: 'मात्रा', strokes: 3, example: '𑒏𑒲𑒩𑒞𑒲 (कीरती)' },
@@ -1834,7 +1472,6 @@
             { char: '𑒏𑒼', name: 'को', pronounce: 'ko', category: 'मात्रा', strokes: 2, example: '𑒏𑒼𑒞𑒱 (कोति)' },
             { char: '𑒏𑒽', name: 'कौ', pronounce: 'kau', category: 'मात्रा', strokes: 3, example: '𑒏𑒽𑒩𑒰 (कौरा)' },
             { char: '𑒏𑓂', name: 'क्', pronounce: 'k', category: 'हलन्त', strokes: 1, example: '𑒏𑓂𑒢 (क्न)' },
-            // Sanyukt (Compound)
             { char: '𑒏𑓂𑒏', name: 'क्क', pronounce: 'kka', category: 'संयुक्त', strokes: 4, example: '𑒏𑓂𑒏𑒩𑒰𑒕𑒰' },
             { char: '𑒏𑓂𑒐', name: 'क्ख', pronounce: 'kkha', category: 'संयुक्त', strokes: 4, example: '𑒏𑓂𑒐𑒩𑓂𑒧' },
             { char: '𑒏𑓂𑒑', name: 'क्ग', pronounce: 'kga', category: 'संयुक्त', strokes: 4, example: '𑒏𑓂𑒑𑒰𑒕𑒰' },
@@ -1865,7 +1502,6 @@
             { char: '𑒏𑓂𑒭', name: 'क्ष', pronounce: 'kṣa', category: 'संयुक्त', strokes: 4, example: '𑒏𑓂𑒭𑒱𑒞𑒱' },
             { char: '𑒏𑓂𑒮', name: 'क्स', pronounce: 'ksa', category: 'संयुक्त', strokes: 4, example: '𑒏𑓂𑒮𑒱𑒞' },
             { char: '𑒏𑓂𑒯', name: 'क्ह', pronounce: 'kha', category: 'संयुक्त', strokes: 4, example: '𑒏𑓂𑒯𑒱𑒞' },
-            // Numbers
             { char: '𑓐', name: '०', pronounce: 'शून्य', category: 'संख्या', strokes: 1, example: '०' },
             { char: '𑓑', name: '१', pronounce: 'एक', category: 'संख्या', strokes: 1, example: '१' },
             { char: '𑓒', name: '२', pronounce: 'द्वि', category: 'संख्या', strokes: 1, example: '२' },
@@ -1878,9 +1514,7 @@
             { char: '𑓙', name: '९', pronounce: 'नव', category: 'संख्या', strokes: 2, example: '९' },
         ];
 
-        // ================================================================
-        // STATE
-        // ================================================================
+        // ===== STATE =====
         const STATE = {
             currentIndex: 0,
             practiced: JSON.parse(localStorage.getItem('tirhuta_practiced') || '{}'),
@@ -1899,15 +1533,11 @@
             examTotal: 0,
         };
 
-        // ================================================================
-        // DOM REFS
-        // ================================================================
+        // ===== DOM REFS =====
         const $ = id => document.getElementById(id);
         const $$ = sel => document.querySelectorAll(sel);
 
-        // ================================================================
-        // TOAST
-        // ================================================================
+        // ===== TOAST =====
         function showToast(msg, type = 'info') {
             const container = $('toastContainer');
             const icons = { success: '✅', error: '❌', warning: '⚠️', info: 'ℹ️' };
@@ -1923,20 +1553,15 @@
             setTimeout(() => { if (toast.parentNode) toast.remove(); }, 3000);
         }
 
-        // ================================================================
-        // THEME
-        // ================================================================
+        // ===== THEME =====
         function toggleTheme() {
             STATE.theme = STATE.theme === 'light' ? 'dark' : 'light';
             document.documentElement.setAttribute('data-theme', STATE.theme);
             localStorage.setItem('tirhuta_theme', STATE.theme);
-            const icon = $('themeIcon');
-            icon.className = STATE.theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+            $('themeIcon').className = STATE.theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
         }
 
-        // ================================================================
-        // NAVIGATION
-        // ================================================================
+        // ===== NAVIGATION =====
         function navigateTo(section) {
             $$('.nav-tab').forEach(t => t.classList.toggle('active', t.dataset.section === section));
             $$('.section').forEach(s => s.classList.toggle('active', s.id === section + 'Section'));
@@ -1945,9 +1570,7 @@
             if (section === 'certificate') updateCertificateUI();
         }
 
-        // ================================================================
-        // CANVAS - यहाँ उंगली/माउस से लिखना है
-        // ================================================================
+        // ===== CANVAS =====
         function initCanvas() {
             const canvas = $('practiceCanvas');
             const container = canvas.parentElement;
@@ -1966,13 +1589,11 @@
             ctx.lineJoin = 'round';
             ctx.strokeStyle = '#2D1B0E';
 
-            // Mouse events
             canvas.addEventListener('mousedown', startDraw);
             canvas.addEventListener('mousemove', draw);
             canvas.addEventListener('mouseup', stopDraw);
             canvas.addEventListener('mouseleave', stopDraw);
 
-            // Touch events - Mobile finger writing
             canvas.addEventListener('touchstart', handleTouch, { passive: false });
             canvas.addEventListener('touchmove', handleTouchMove, { passive: false });
             canvas.addEventListener('touchend', stopDraw, { passive: false });
@@ -2028,7 +1649,6 @@
             ctx.fillStyle = '#fff';
             ctx.fillRect(0, 0, c.width, c.height);
 
-            // Grid
             ctx.strokeStyle = '#f0ebe4';
             ctx.lineWidth = 0.5;
             for (let i = 0; i < 10; i++) {
@@ -2043,25 +1663,22 @@
                 ctx.stroke();
             }
 
-            // Reference character
+            // ===== IMPORTANT: Reference Character (𑒀) in CENTRE =====
             const data = TIRHUTA_DATA[STATE.currentIndex];
-         if (data) {
-                ctx.fillStyle = '#f0ebe4';
-                const fontSize = data.char.length > 2 ? canvas.width * 0.3 : canvas.width * 0.45;
-                ctx.font = fontSize + 'px "Noto Sans Tirhuta"';
-                ctx.textAlign = 'right';
-                ctx.textBaseline = 'top';
-                ctx.textAlign = 'center';        // ← Centre में
-ctx.textBaseline = 'middle';     // ← Middle में
-ctx.fillText(data.char, canvas.width / 2, canvas.height / 2); 
+            if (data) {
+                ctx.fillStyle = '#e0d8d0';
+                const fs = Math.min(c.width * 0.45, 160);
+                ctx.font = fs + 'px "Noto Sans Tirhuta"';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText(data.char, c.width / 2, c.height / 2);
             }
+
             ctx.strokeStyle = '#2D1B0E';
             ctx.lineWidth = 8;
         }
 
-        // ================================================================
-        // PRACTICE
-        // ================================================================
+        // ===== PRACTICE =====
         function loadChar(index) {
             const data = TIRHUTA_DATA[index];
             if (!data) return;
@@ -2074,20 +1691,18 @@ ctx.fillText(data.char, canvas.width / 2, canvas.height / 2);
             $('charStrokes').textContent = data.strokes + ' स्ट्रोक';
             $('charExample').textContent = data.example || '—';
 
-            // Stroke guide
             const steps = $$('.stroke-step');
             steps.forEach((el, i) => {
                 el.classList.toggle('active', i < data.strokes);
             });
 
-            // Status
             const status = $('practiceStatus');
             if (STATE.practiced[index]) {
                 status.className = 'status success';
-                status.textContent = '✅ अभ्यास हो चुका है!';
+                status.textContent = '✅ अभ्यास होए गेल अछि!';
             } else {
                 status.className = 'status';
-                status.textContent = '✍️ उंगली या माउस से लिखें';
+                status.textContent = '✍️ उंगली या माउस से लिखी';
             }
 
             clearCanvas();
@@ -2109,9 +1724,9 @@ ctx.fillText(data.char, canvas.width / 2, canvas.height / 2);
 
             const status = $('practiceStatus');
             status.className = 'status success';
-            status.textContent = '✅ सहेजा गया!';
+            status.textContent = '✅ सहेजल गेल!';
 
-            showToast('अभ्यास सहेजा गया! 🎉', 'success');
+            showToast('अभ्यास सहेजल गेल! 🎉', 'success');
             updateProgressUI();
             updateBadge();
 
@@ -2120,14 +1735,12 @@ ctx.fillText(data.char, canvas.width / 2, canvas.height / 2);
                     STATE.currentIndex++;
                     loadChar(STATE.currentIndex);
                 } else {
-                    showToast('🎉 सभी अक्षर पूरे!', 'success');
+                    showToast('🎉 सभी अक्षर पूर्ण!', 'success');
                 }
             }, 500);
         }
 
-        // ================================================================
-        // PROGRESS UI
-        // ================================================================
+        // ===== PROGRESS =====
         function updateProgressUI() {
             const total = TIRHUTA_DATA.length;
             const done = Object.keys(STATE.practiced).filter(k => STATE.practiced[k]).length;
@@ -2162,9 +1775,7 @@ ctx.fillText(data.char, canvas.width / 2, canvas.height / 2);
             $('learnBadge').textContent = Math.round((done / total) * 100) + '%';
         }
 
-        // ================================================================
-        // EXAM
-        // ================================================================
+        // ===== EXAM =====
         function initExam() {
             const shuffled = [...TIRHUTA_DATA].sort(() => Math.random() - 0.5);
             STATE.examQuestions = shuffled.slice(0, 10).map(item => {
@@ -2195,7 +1806,7 @@ ctx.fillText(data.char, canvas.width / 2, canvas.height / 2);
                 return;
             }
             const q = STATE.examQuestions[STATE.examIndex];
-            $('examQuestionText').textContent = `"${q.char}" कौन सा अक्षर है? (${q.name})`;
+            $('examQuestionText').textContent = `"${q.char}" कौन अक्षर अछि? (${q.name})`;
             const options = $('examOptions');
             options.innerHTML = '';
             STATE.examAnswered = false;
@@ -2234,7 +1845,7 @@ ctx.fillText(data.char, canvas.width / 2, canvas.height / 2);
 
         $('examNextBtn').onclick = () => {
             if (!STATE.examAnswered && STATE.examIndex < STATE.examQuestions.length) {
-                showToast('पहले उत्तर दें', 'warning');
+                showToast('पहिले उत्तर दी', 'warning');
                 return;
             }
             STATE.examIndex++;
@@ -2249,7 +1860,7 @@ ctx.fillText(data.char, canvas.width / 2, canvas.height / 2);
             const result = $('examResult');
             result.className = 'exam-result show ' + (passed ? 'pass' : 'fail');
             result.innerHTML = `
-                <strong>${passed ? '🎉 बधाई हो!' : '😞 पुनः प्रयास'}</strong><br>
+                <strong>${passed ? '🎉 बधाई!' : '😞 पुनः प्रयास'}</strong><br>
                 स्कोर: ${STATE.examScore}/${STATE.examTotal} (${pct}%)
             `;
             $('examOptions').innerHTML = '';
@@ -2267,13 +1878,11 @@ ctx.fillText(data.char, canvas.width / 2, canvas.height / 2);
                 };
                 localStorage.setItem('tirhuta_certificate', JSON.stringify(cert));
                 updateCertificateUI();
-                showToast('🎉 परीक्षा पास! प्रमाणपत्र देखें।', 'success');
+                showToast('🎉 परीक्षा पास! प्रमाणपत्र देखी।', 'success');
             }
         }
 
-        // ================================================================
-        // CERTIFICATE
-        // ================================================================
+        // ===== CERTIFICATE =====
         function updateCertificateUI() {
             const cert = JSON.parse(localStorage.getItem('tirhuta_certificate'));
             if (cert && cert.pct >= 70) {
@@ -2285,13 +1894,13 @@ ctx.fillText(data.char, canvas.width / 2, canvas.height / 2);
                 $('certStatus').style.color = '#2e7d32';
                 $('downloadCert').disabled = false;
                 $('shareCert').disabled = false;
-                $('certMessage').textContent = '✨ प्रमाणपत्र जारी हो गया।';
+                $('certMessage').textContent = '✨ प्रमाणपत्र जारी भेल।';
             } else {
                 $('certName').textContent = STATE.userName || 'साधक';
                 $('certDistrict').textContent = STATE.userDistrict ? '𑒧𑒱𑒟𑒱𑒪𑒰 (' + STATE.userDistrict + ')' : '';
                 $('certScore').textContent = 'स्कोर: —';
                 $('certDate').textContent = '—';
-                $('certStatus').innerHTML = 'ℹ️ परीक्षा पास करें (70%+)';
+                $('certStatus').innerHTML = 'ℹ️ परीक्षा पास करी (70%+)';
                 $('certStatus').style.color = '#888';
                 $('downloadCert').disabled = true;
                 $('shareCert').disabled = true;
@@ -2299,7 +1908,7 @@ ctx.fillText(data.char, canvas.width / 2, canvas.height / 2);
             }
         }
 
-        // PDF Download
+        // ===== PDF =====
         $('downloadCert').onclick = function() {
             const el = document.querySelector('.certificate-preview');
             html2canvas(el, { scale: 2, backgroundColor: '#fffdf7', useCORS: true, logging: false })
@@ -2313,12 +1922,12 @@ ctx.fillText(data.char, canvas.width / 2, canvas.height / 2);
                     pdf.addImage(img, 'PNG', (pw - c.width * r) / 2, (ph - c.height * r) / 2, c.width * r, c.height *
                     r);
                     pdf.save('Tirhuta_Certificate.pdf');
-                    showToast('PDF डाउनलोड हो रहा है...', 'success');
+                    showToast('PDF डाउनलोड होए रहल अछि...', 'success');
                 })
-                .catch(() => showToast('PDF बनाने में त्रुटि', 'error'));
+                .catch(() => showToast('PDF बनावे में त्रुटि', 'error'));
         };
 
-        // Share
+        // ===== SHARE =====
         $('shareCert').onclick = function() {
             const el = document.querySelector('.certificate-preview');
             html2canvas(el, { scale: 2, backgroundColor: '#fffdf7', useCORS: true, logging: false })
@@ -2337,12 +1946,10 @@ ctx.fillText(data.char, canvas.width / 2, canvas.height / 2);
                         }
                     });
                 })
-                .catch(() => showToast('शेयर करने में त्रुटि', 'error'));
+                .catch(() => showToast('शेयर करए में त्रुटि', 'error'));
         };
 
-        // ================================================================
-        // USER INFO
-        // ================================================================
+        // ===== USER INFO =====
         function updateUserInfo() {
             STATE.userName = $('userName').value.trim() || 'साधक';
             STATE.userDistrict = $('userDistrict').value.trim() || 'मिथिला';
@@ -2350,12 +1957,10 @@ ctx.fillText(data.char, canvas.width / 2, canvas.height / 2);
             localStorage.setItem('tirhuta_user_district', STATE.userDistrict);
             $('userNameDisplay').textContent = STATE.userName;
             updateCertificateUI();
-            showToast('✅ अपडेट हो गया!', 'success');
+            showToast('✅ अपडेट भेल!', 'success');
         }
 
-        // ================================================================
-        // EVENT BINDINGS
-        // ================================================================
+        // ===== EVENT BINDINGS =====
         $('themeBtn').onclick = toggleTheme;
         $('updateUserBtn').onclick = updateUserInfo;
 
@@ -2383,7 +1988,7 @@ ctx.fillText(data.char, canvas.width / 2, canvas.height / 2);
                 loadChar(STATE.currentIndex); }
         };
 
-        // Keyboard Shortcuts
+        // ===== KEYBOARD SHORTCUTS =====
         document.addEventListener('keydown', (e) => {
             const tag = e.target.tagName;
             if (tag === 'INPUT' || tag === 'TEXTAREA') return;
@@ -2399,9 +2004,7 @@ ctx.fillText(data.char, canvas.width / 2, canvas.height / 2);
                 e.preventDefault(); }
         });
 
-        // ================================================================
-        // INIT
-        // ================================================================
+        // ===== INIT =====
         document.documentElement.setAttribute('data-theme', STATE.theme);
         if (STATE.theme === 'dark') $('themeIcon').className = 'fas fa-sun';
         $('userName').value = STATE.userName;
@@ -2417,7 +2020,6 @@ ctx.fillText(data.char, canvas.width / 2, canvas.height / 2);
             updateCertificateUI();
         }, 100);
 
-        // Resize
         let resizeTimer;
         window.addEventListener('resize', () => {
             clearTimeout(resizeTimer);
@@ -2436,9 +2038,7 @@ ctx.fillText(data.char, canvas.width / 2, canvas.height / 2);
 
         console.log('🙏 तिरहुता शिक्षण मंच तैयार!');
         console.log('📖 कुल अक्षर:', TIRHUTA_DATA.length);
-        console.log('⌨️  ← → नेविगेट, S सहेजें, R साफ़');
-        console.log('👤 नाम:', STATE.userName, '| जिला:', STATE.userDistrict);
-        console.log('🖐️  Canvas पर उंगली/माउस से लिखें!');
+        console.log('⌨️  ← → नेविगेट, S सहेजी, R साफ़');
     </script>
 
 </body>
