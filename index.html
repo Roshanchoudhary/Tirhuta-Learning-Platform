@@ -3,14 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>तिरहुता लिपि - मिथिलाक्षर शिक्षण मंच</title>
-
-    <!-- SEO Meta -->
-    <meta name="description" content="तिरहुता (मिथिलाक्षर) लिपि सीखने का आधुनिक, इंटरैक्टिव, और पूर्णतः निःशुल्क शिक्षण मंच।" />
-    <meta name="keywords" content="तिरहुता, मिथिलाक्षर, Mithilakshar, Tirhuta, Maithili, लिपि, वर्णमाला" />
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕉️</text></svg>" />
+    <title>तिरहुता लिपि - अभ्यास</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -76,7 +69,7 @@
             width: 100%;
             max-width: 500px;
             background: linear-gradient(135deg, var(--primary-dark), var(--primary));
-            padding: 14px 20px;
+            padding: 12px 16px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -88,23 +81,23 @@
 
         .logo {
             color: #fff;
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: 700;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
             font-family: var(--font-primary);
         }
 
         .logo-icon {
-            width: 34px;
-            height: 34px;
+            width: 32px;
+            height: 32px;
             background: var(--gold);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1rem;
+            font-size: 0.9rem;
             color: var(--primary-dark);
             font-family: var(--font-tirhuta);
         }
@@ -123,11 +116,11 @@
             background: rgba(255, 255, 255, 0.15);
             border: none;
             color: #fff;
-            width: 34px;
-            height: 34px;
+            width: 32px;
+            height: 32px;
             border-radius: 50%;
             cursor: pointer;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             transition: var(--transition);
             display: flex;
             align-items: center;
@@ -140,10 +133,10 @@
 
         .user-badge {
             background: rgba(255, 255, 255, 0.12);
-            padding: 4px 14px;
+            padding: 4px 12px;
             border-radius: var(--radius-full);
             color: #fff;
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             display: flex;
             align-items: center;
             gap: 6px;
@@ -153,11 +146,11 @@
 
         .user-badge i {
             color: var(--gold-light);
-            font-size: 0.8rem;
+            font-size: 0.7rem;
         }
 
         /* ================================================================
-           NAV TABS - MOBILE FRIENDLY
+           NAV TABS
            ================================================================ */
         .nav-tabs {
             width: 100%;
@@ -168,7 +161,7 @@
             gap: 4px;
             border-bottom: 1px solid var(--border);
             position: sticky;
-            top: 62px;
+            top: 56px;
             z-index: 99;
             box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
             flex-wrap: nowrap;
@@ -183,12 +176,12 @@
 
         .nav-tab {
             flex: 1;
-            min-width: 60px;
-            padding: 8px 6px;
+            min-width: 55px;
+            padding: 6px 4px;
             border: none;
             background: transparent;
             border-radius: var(--radius-sm);
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             font-weight: 600;
             cursor: pointer;
             transition: var(--transition);
@@ -202,7 +195,7 @@
         }
 
         .nav-tab i {
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
 
         .nav-tab.active {
@@ -218,69 +211,64 @@
         .nav-tab .badge {
             background: var(--gold);
             color: #fff;
-            font-size: 0.55rem;
+            font-size: 0.5rem;
             padding: 0 6px;
             border-radius: var(--radius-full);
             font-weight: 700;
         }
 
         /* ================================================================
-           USER INFO - MOBILE FRIENDLY
+           USER INFO
            ================================================================ */
         .user-info {
             width: 100%;
             max-width: 500px;
             background: var(--white);
-            padding: 10px 16px;
+            padding: 8px 12px;
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
+            gap: 6px;
             align-items: center;
             justify-content: center;
             border-bottom: 1px solid var(--border);
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
         }
 
         .user-info .field {
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 4px;
             background: var(--bg);
-            padding: 4px 12px 4px 8px;
+            padding: 3px 10px 3px 6px;
             border-radius: var(--radius-full);
             border: 1px solid var(--border);
             flex: 1;
-            min-width: 100px;
-            max-width: 200px;
+            min-width: 80px;
+            max-width: 160px;
         }
 
         .user-info .field i {
             color: var(--gold);
-            font-size: 0.8rem;
+            font-size: 0.7rem;
         }
 
         .user-info .field input {
             border: none;
             background: transparent;
-            padding: 4px 0;
-            font-size: 0.8rem;
+            padding: 3px 0;
+            font-size: 0.7rem;
             font-family: var(--font-primary);
             color: var(--text);
             width: 100%;
             outline: none;
         }
 
-        .user-info .field input::placeholder {
-            color: var(--text-muted);
-        }
-
         .user-info .btn-update {
             background: linear-gradient(135deg, var(--primary), var(--primary-dark));
             color: #fff;
             border: none;
-            padding: 4px 16px;
+            padding: 3px 14px;
             border-radius: var(--radius-full);
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             font-weight: 600;
             cursor: pointer;
             font-family: var(--font-primary);
@@ -292,12 +280,12 @@
         }
 
         /* ================================================================
-           MAIN CONTAINER
+           CONTAINER
            ================================================================ */
         .container {
             width: 100%;
             max-width: 500px;
-            padding: 12px 14px 80px;
+            padding: 10px 12px 70px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -337,15 +325,13 @@
             overflow: hidden;
             width: 100%;
             transition: var(--transition);
-        }
-
-        .learning-card:active {
-            transform: scale(0.99);
+            max-width: 460px;
+            margin: 0 auto;
         }
 
         .learning-header {
             background: linear-gradient(135deg, var(--primary), #6B1515);
-            padding: 18px 16px;
+            padding: 16px 14px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -359,15 +345,15 @@
             position: absolute;
             top: -50%;
             right: -20%;
-            width: 200px;
-            height: 200px;
+            width: 180px;
+            height: 180px;
             background: radial-gradient(circle, rgba(212, 160, 23, 0.08) 0%, transparent 70%);
             border-radius: 50%;
         }
 
         .learning-header .char-display {
             font-family: var(--font-tirhuta);
-            font-size: 4rem;
+            font-size: 3.5rem;
             font-weight: 700;
             color: var(--white);
             text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
@@ -377,7 +363,7 @@
         }
 
         .learning-header .char-name {
-            font-size: 1rem;
+            font-size: 0.9rem;
             font-weight: 600;
             color: var(--white);
             opacity: 0.9;
@@ -387,11 +373,11 @@
         }
 
         .learning-header .char-counter {
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             color: var(--white);
             opacity: 0.6;
             background: rgba(255, 255, 255, 0.1);
-            padding: 2px 14px;
+            padding: 2px 12px;
             border-radius: var(--radius-full);
             display: inline-block;
             margin-top: 4px;
@@ -400,7 +386,7 @@
         }
 
         .learning-body {
-            padding: 16px;
+            padding: 14px;
         }
 
         /* ================================================================
@@ -409,20 +395,20 @@
         .char-info-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 8px;
-            margin-bottom: 14px;
+            gap: 6px;
+            margin-bottom: 12px;
         }
 
         .char-info-item {
             background: var(--bg);
-            padding: 10px 12px;
+            padding: 8px 10px;
             border-radius: var(--radius-sm);
             border-left: 3px solid var(--gold);
             text-align: center;
         }
 
         .char-info-item .label {
-            font-size: 0.6rem;
+            font-size: 0.55rem;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             color: var(--text-muted);
@@ -430,7 +416,7 @@
         }
 
         .char-info-item .value {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-weight: 600;
             margin-top: 2px;
             color: var(--text);
@@ -453,17 +439,17 @@
            ================================================================ */
         .stroke-guide {
             display: flex;
-            gap: 6px;
+            gap: 4px;
             justify-content: center;
             flex-wrap: wrap;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         .stroke-step {
-            padding: 4px 12px;
+            padding: 3px 10px;
             background: var(--bg);
             border-radius: var(--radius-full);
-            font-size: 0.7rem;
+            font-size: 0.6rem;
             border: 1.5px solid var(--border);
             color: var(--text-secondary);
             font-family: var(--font-primary);
@@ -481,11 +467,11 @@
         }
 
         .stroke-step i {
-            font-size: 0.6rem;
+            font-size: 0.55rem;
         }
 
         /* ================================================================
-           CANVAS - CENTRE
+           CANVAS - CENTRE (जहाँ उंगली/माउस से लिखना है)
            ================================================================ */
         .canvas-wrapper {
             display: flex;
@@ -496,7 +482,7 @@
         .canvas-container {
             position: relative;
             width: 100%;
-            max-width: 400px;
+            max-width: 380px;
             aspect-ratio: 1 / 1;
             background: var(--white);
             border-radius: var(--radius-sm);
@@ -522,31 +508,55 @@
             background: #fff;
         }
 
+        /* Canvas पर हिंट टेक्स्ट - "उंगली या माउस से लिखें" */
+        .canvas-hint {
+            position: absolute;
+            bottom: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.06);
+            backdrop-filter: blur(4px);
+            padding: 4px 14px;
+            border-radius: var(--radius-full);
+            font-size: 0.6rem;
+            color: var(--text-muted);
+            pointer-events: none;
+            white-space: nowrap;
+            font-family: var(--font-primary);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        [data-theme="dark"] .canvas-hint {
+            background: rgba(255, 255, 255, 0.08);
+            color: #aaa;
+            border-color: rgba(255, 255, 255, 0.05);
+        }
+
         /* ================================================================
            TOOLBAR - CENTRE
            ================================================================ */
         .toolbar {
             display: flex;
             flex-wrap: wrap;
-            gap: 6px;
+            gap: 5px;
             justify-content: center;
-            margin-top: 12px;
+            margin-top: 10px;
         }
 
         .toolbar .btn {
-            padding: 8px 16px;
+            padding: 6px 14px;
             border: none;
             border-radius: var(--radius-full);
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             font-weight: 600;
             cursor: pointer;
             transition: var(--transition);
             font-family: var(--font-primary);
             display: flex;
             align-items: center;
-            gap: 5px;
+            gap: 4px;
             touch-action: manipulation;
-            min-height: 36px;
+            min-height: 32px;
         }
 
         .toolbar .btn:active {
@@ -592,14 +602,14 @@
            ================================================================ */
         .practice-status {
             text-align: center;
-            margin-top: 10px;
+            margin-top: 8px;
         }
 
         .practice-status .status {
             display: inline-block;
-            padding: 4px 18px;
+            padding: 3px 16px;
             border-radius: var(--radius-full);
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             font-weight: 500;
             background: var(--bg);
             color: var(--text-secondary);
@@ -617,13 +627,14 @@
         .tip-card {
             background: var(--white);
             border-radius: var(--radius);
-            padding: 12px 16px;
+            padding: 10px 14px;
             box-shadow: var(--shadow);
             width: 100%;
-            margin-top: 14px;
+            max-width: 460px;
+            margin: 12px auto 0;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
             flex-wrap: wrap;
             justify-content: center;
             border: 1px solid var(--border);
@@ -631,14 +642,14 @@
 
         .tip-card i {
             color: var(--gold);
-            font-size: 1rem;
+            font-size: 0.9rem;
         }
 
         .tip-card p {
             color: var(--text-secondary);
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             flex: 1;
-            min-width: 140px;
+            min-width: 120px;
             text-align: center;
         }
 
@@ -647,9 +658,9 @@
             align-items: center;
             gap: 4px;
             background: var(--bg);
-            padding: 2px 12px;
+            padding: 2px 10px;
             border-radius: var(--radius-full);
-            font-size: 0.6rem;
+            font-size: 0.55rem;
             color: var(--text-secondary);
             font-weight: 500;
         }
@@ -660,21 +671,23 @@
         .progress-card {
             background: var(--white);
             border-radius: var(--radius);
-            padding: 18px 16px;
+            padding: 16px 14px;
             box-shadow: var(--shadow);
             width: 100%;
+            max-width: 460px;
+            margin: 0 auto;
             border: 1px solid var(--border);
         }
 
         .progress-title {
-            font-size: 1rem;
+            font-size: 0.95rem;
             font-weight: 700;
             color: var(--text);
             display: flex;
             align-items: center;
             gap: 8px;
             justify-content: center;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         .progress-title i {
@@ -684,26 +697,26 @@
         .progress-stats {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 8px;
-            margin-bottom: 12px;
+            gap: 6px;
+            margin-bottom: 10px;
         }
 
         .stat-box {
             background: var(--bg);
-            padding: 10px;
+            padding: 8px;
             border-radius: var(--radius-sm);
             text-align: center;
         }
 
         .stat-box .number {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             font-weight: 700;
             color: var(--primary);
             line-height: 1.2;
         }
 
         .stat-box .label {
-            font-size: 0.6rem;
+            font-size: 0.55rem;
             color: var(--text-muted);
             margin-top: 2px;
             font-weight: 500;
@@ -711,11 +724,11 @@
 
         .progress-bar-wrap {
             width: 100%;
-            height: 8px;
+            height: 6px;
             background: var(--border);
             border-radius: var(--radius-full);
             overflow: hidden;
-            margin-bottom: 14px;
+            margin-bottom: 12px;
         }
 
         .progress-bar-wrap .fill {
@@ -728,7 +741,7 @@
 
         .char-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(38px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(34px, 1fr));
             gap: 4px;
         }
 
@@ -738,7 +751,7 @@
             align-items: center;
             justify-content: center;
             font-family: var(--font-tirhuta);
-            font-size: 1.1rem;
+            font-size: 1rem;
             background: var(--bg);
             border-radius: 8px;
             border: 2px solid var(--border);
@@ -765,8 +778,8 @@
             font-size: 0.4rem;
             background: #2e7d32;
             color: #fff;
-            width: 14px;
-            height: 14px;
+            width: 13px;
+            height: 13px;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -780,19 +793,21 @@
         }
 
         /* ================================================================
-           EXAM
+           EXAM - CENTRE & FULL TEXT
            ================================================================ */
         .exam-card {
             background: var(--white);
             border-radius: var(--radius);
-            padding: 18px 16px;
+            padding: 16px 14px;
             box-shadow: var(--shadow);
             width: 100%;
+            max-width: 460px;
+            margin: 0 auto;
             border: 1px solid var(--border);
         }
 
         .exam-title {
-            font-size: 1rem;
+            font-size: 0.95rem;
             font-weight: 700;
             color: var(--text);
             display: flex;
@@ -808,38 +823,48 @@
 
         .exam-subtitle {
             color: var(--text-secondary);
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             text-align: center;
-            margin-bottom: 14px;
+            margin-bottom: 12px;
         }
 
         .exam-question {
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             padding: 12px 14px;
             background: var(--bg);
             border-radius: var(--radius-sm);
             border-left: 4px solid var(--gold);
             margin-bottom: 12px;
             font-family: var(--font-primary);
+            text-align: center;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            max-width: 100%;
         }
 
         .exam-options {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 8px;
+            justify-items: center;
         }
 
         .exam-options button {
-            padding: 12px;
+            padding: 12px 8px;
             border: 2px solid var(--border);
             border-radius: var(--radius-sm);
             background: var(--white);
             font-family: var(--font-tirhuta);
-            font-size: 1.6rem;
+            font-size: 1.4rem;
             cursor: pointer;
             transition: var(--transition);
-            min-height: 56px;
+            min-height: 50px;
             touch-action: manipulation;
+            width: 100%;
+            max-width: 180px;
+            text-align: center;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
 
         .exam-options button:active:not(:disabled) {
@@ -864,30 +889,33 @@
         }
 
         .exam-feedback {
-            margin-top: 10px;
-            min-height: 24px;
+            margin-top: 8px;
+            min-height: 22px;
             font-weight: 600;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             text-align: center;
         }
 
         .exam-controls {
             display: flex;
             gap: 8px;
-            margin-top: 12px;
+            margin-top: 10px;
+            justify-content: center;
         }
 
         .exam-controls .btn {
             flex: 1;
-            padding: 10px;
+            max-width: 150px;
+            padding: 8px 16px;
             border: none;
             border-radius: var(--radius-full);
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             font-weight: 600;
             cursor: pointer;
             transition: var(--transition);
             font-family: var(--font-primary);
             touch-action: manipulation;
+            text-align: center;
         }
 
         .exam-controls .btn:active {
@@ -910,13 +938,13 @@
         }
 
         .exam-result {
-            margin-top: 12px;
-            padding: 12px 16px;
+            margin-top: 10px;
+            padding: 10px 14px;
             border-radius: var(--radius-sm);
             text-align: center;
             font-weight: 600;
             display: none;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
 
         .exam-result.show {
@@ -941,8 +969,13 @@
                 grid-template-columns: 1fr;
             }
             .exam-options button {
-                font-size: 1.4rem;
-                min-height: 48px;
+                font-size: 1.2rem;
+                min-height: 42px;
+                max-width: 100%;
+            }
+            .exam-question {
+                font-size: 0.8rem;
+                padding: 10px 12px;
             }
         }
 
@@ -952,14 +985,16 @@
         .cert-card {
             background: var(--white);
             border-radius: var(--radius);
-            padding: 18px 16px;
+            padding: 16px 14px;
             box-shadow: var(--shadow);
             width: 100%;
+            max-width: 460px;
+            margin: 0 auto;
             border: 1px solid var(--border);
         }
 
         .cert-title {
-            font-size: 1rem;
+            font-size: 0.95rem;
             font-weight: 700;
             color: var(--text);
             display: flex;
@@ -976,37 +1011,37 @@
         .cert-status {
             text-align: center;
             color: var(--text-secondary);
-            font-size: 0.75rem;
-            margin-bottom: 14px;
+            font-size: 0.7rem;
+            margin-bottom: 12px;
         }
 
         .certificate-preview {
             border: 3px double var(--gold);
             border-radius: var(--radius-sm);
-            padding: 18px 14px;
+            padding: 16px 12px;
             text-align: center;
             background: linear-gradient(135deg, #fffdf7, #fdf5e6);
-            max-width: 400px;
+            max-width: 380px;
             margin: 0 auto;
         }
 
         .certificate-preview .cert-heading {
             font-family: var(--font-tirhuta);
             color: var(--primary);
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             font-weight: 700;
         }
 
         .certificate-preview .cert-sub {
             color: var(--gold);
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             letter-spacing: 3px;
         }
 
         .certificate-preview .cert-name {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             font-weight: 700;
-            margin: 10px 0 4px;
+            margin: 8px 0 4px;
             border-bottom: 2px dashed var(--gold);
             padding-bottom: 6px;
             color: var(--text);
@@ -1014,38 +1049,38 @@
 
         .certificate-preview .cert-detail {
             color: var(--text-secondary);
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             margin: 2px 0;
         }
 
         .certificate-preview .cert-stamp {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             color: var(--gold);
             opacity: 0.3;
-            margin-top: 8px;
+            margin-top: 6px;
             letter-spacing: 6px;
         }
 
         .cert-actions {
             display: flex;
-            gap: 8px;
+            gap: 6px;
             justify-content: center;
             flex-wrap: wrap;
-            margin-top: 12px;
+            margin-top: 10px;
         }
 
         .cert-actions .btn {
-            padding: 8px 18px;
+            padding: 6px 14px;
             border: none;
             border-radius: var(--radius-full);
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             font-weight: 600;
             cursor: pointer;
             transition: var(--transition);
             font-family: var(--font-primary);
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 4px;
             touch-action: manipulation;
         }
 
@@ -1075,29 +1110,29 @@
 
         .cert-message {
             text-align: center;
-            margin-top: 10px;
+            margin-top: 8px;
             color: var(--text-secondary);
-            font-size: 0.75rem;
+            font-size: 0.7rem;
         }
 
         /* ================================================================
-           SHORTCUTS HINT - MOBILE
+           SHORTCUTS HINT
            ================================================================ */
         .shortcuts-hint {
             display: none;
             position: fixed;
-            bottom: 10px;
+            bottom: 8px;
             left: 50%;
             transform: translateX(-50%);
             background: var(--white);
             border: 1px solid var(--border);
             border-radius: var(--radius-full);
-            padding: 4px 14px;
-            font-size: 0.6rem;
+            padding: 3px 12px;
+            font-size: 0.55rem;
             color: var(--text-secondary);
             box-shadow: var(--shadow);
             z-index: 50;
-            gap: 10px;
+            gap: 8px;
             align-items: center;
             flex-wrap: wrap;
             justify-content: center;
@@ -1106,11 +1141,11 @@
 
         .shortcuts-hint kbd {
             background: var(--bg);
-            padding: 1px 8px;
+            padding: 1px 6px;
             border-radius: 4px;
             border: 1px solid var(--border);
             font-family: var(--font-primary);
-            font-size: 0.6rem;
+            font-size: 0.55rem;
             font-weight: 600;
         }
 
@@ -1127,11 +1162,11 @@
             width: 100%;
             max-width: 500px;
             text-align: center;
-            padding: 14px;
+            padding: 12px;
             color: var(--text-muted);
-            font-size: 0.6rem;
+            font-size: 0.55rem;
             border-top: 1px solid var(--border);
-            margin-top: 10px;
+            margin-top: 8px;
         }
 
         .footer i {
@@ -1143,11 +1178,11 @@
            ================================================================ */
         .toast-container {
             position: fixed;
-            bottom: 70px;
+            bottom: 60px;
             left: 50%;
             transform: translateX(-50%);
             z-index: 500;
-            max-width: 400px;
+            max-width: 380px;
             width: 90%;
             pointer-events: none;
         }
@@ -1155,15 +1190,15 @@
         .toast {
             background: var(--white);
             border-radius: var(--radius-sm);
-            padding: 10px 16px;
+            padding: 8px 14px;
             box-shadow: var(--shadow-lg);
             border: 1px solid var(--border);
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
             animation: slideUp 0.4s ease;
             pointer-events: auto;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
         }
 
         .toast.success {
@@ -1177,7 +1212,7 @@
         }
 
         .toast .icon {
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
         .toast .message {
             flex: 1;
@@ -1187,7 +1222,7 @@
             border: none;
             cursor: pointer;
             color: var(--text-muted);
-            font-size: 1rem;
+            font-size: 0.9rem;
             padding: 0 4px;
         }
 
@@ -1220,47 +1255,230 @@
         }
 
         /* ================================================================
+           DARK THEME
+           ================================================================ */
+        [data-theme="dark"] {
+            --white: #1A1A1A;
+            --bg: #121212;
+            --text: #F0EDE8;
+            --text-secondary: #B5A898;
+            --text-muted: #7A6A5A;
+            --border: #333333;
+            --shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+            --shadow-lg: 0 16px 56px rgba(0, 0, 0, 0.6);
+        }
+
+        [data-theme="dark"] .learning-card,
+        [data-theme="dark"] .progress-card,
+        [data-theme="dark"] .exam-card,
+        [data-theme="dark"] .cert-card,
+        [data-theme="dark"] .tip-card {
+            border-color: #333;
+        }
+
+        [data-theme="dark"] .char-info-item {
+            background: #1E1E1E;
+        }
+
+        [data-theme="dark"] .exam-question {
+            background: #1E1E1E;
+        }
+
+        [data-theme="dark"] .certificate-preview {
+            background: linear-gradient(135deg, #1A1A1A, #1E1E1E);
+            border-color: var(--gold);
+        }
+
+        [data-theme="dark"] .exam-options button {
+            background: #1A1A1A;
+            border-color: #333;
+        }
+
+        [data-theme="dark"] .exam-options button.correct {
+            background: #1A3A1A;
+            border-color: #2e7d32;
+        }
+
+        [data-theme="dark"] .exam-options button.wrong {
+            background: #3A1A1A;
+            border-color: #c62828;
+        }
+
+        [data-theme="dark"] .char-grid-item {
+            background: #1E1E1E;
+            border-color: #333;
+        }
+
+        [data-theme="dark"] .char-grid-item.done {
+            background: #1A3A1A;
+            border-color: #2e7d32;
+        }
+
+        [data-theme="dark"] .char-grid-item.current {
+            background: #2A2418;
+            border-color: var(--gold);
+        }
+
+        [data-theme="dark"] .canvas-container {
+            background: #1A1A1A;
+            border-color: #333;
+        }
+
+        [data-theme="dark"] .canvas-container canvas {
+            background: #1A1A1A;
+        }
+
+        [data-theme="dark"] .toolbar .btn-prev,
+        [data-theme="dark"] .toolbar .btn-clear {
+            background: #1E1E1E;
+            color: #B5A898;
+        }
+
+        [data-theme="dark"] .status {
+            background: #1E1E1E;
+            color: #B5A898;
+        }
+
+        [data-theme="dark"] .status.success {
+            background: #1A3A1A;
+            color: #4CAF50;
+        }
+
+        [data-theme="dark"] .user-info {
+            background: #1A1A1A;
+            border-color: #333;
+        }
+
+        [data-theme="dark"] .user-info .field {
+            background: #1E1E1E;
+            border-color: #333;
+        }
+
+        [data-theme="dark"] .user-info .field input {
+            color: #F0EDE8;
+        }
+
+        [data-theme="dark"] .nav-tabs {
+            background: #1A1A1A;
+            border-color: #333;
+        }
+
+        [data-theme="dark"] .shortcuts-hint {
+            background: #1A1A1A;
+            border-color: #333;
+            color: #B5A898;
+        }
+
+        [data-theme="dark"] .shortcuts-hint kbd {
+            background: #1E1E1E;
+            border-color: #333;
+        }
+
+        [data-theme="dark"] .toast {
+            background: #1A1A1A;
+            border-color: #333;
+            color: #F0EDE8;
+        }
+
+        [data-theme="dark"] .stroke-step {
+            background: #1E1E1E;
+            border-color: #333;
+            color: #B5A898;
+        }
+
+        [data-theme="dark"] .stroke-step.active {
+            background: var(--gold);
+            color: #fff;
+            border-color: var(--gold);
+        }
+
+        /* ================================================================
            RESPONSIVE
            ================================================================ */
         @media (max-width: 420px) {
             .learning-header .char-display {
-                font-size: 3.2rem;
+                font-size: 2.8rem;
             }
             .char-info-grid {
                 grid-template-columns: 1fr;
-                gap: 6px;
+                gap: 4px;
             }
             .char-grid {
-                grid-template-columns: repeat(auto-fill, minmax(34px, 1fr));
+                grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
                 gap: 3px;
             }
             .char-grid-item {
-                font-size: 0.9rem;
+                font-size: 0.8rem;
             }
             .user-info .field {
-                min-width: 80px;
+                min-width: 70px;
             }
             .toolbar .btn {
-                padding: 6px 12px;
-                font-size: 0.65rem;
-                min-height: 32px;
+                padding: 5px 10px;
+                font-size: 0.6rem;
+                min-height: 28px;
+            }
+            .canvas-container {
+                max-width: 320px;
+            }
+            .learning-header .char-display {
+                font-size: 2.8rem;
+            }
+            .exam-options button {
+                font-size: 1.1rem;
+                min-height: 38px;
+                padding: 8px 6px;
+            }
+            .exam-question {
+                font-size: 0.75rem;
+                padding: 8px 10px;
             }
         }
 
         @media (max-width: 350px) {
             .learning-header .char-display {
-                font-size: 2.6rem;
+                font-size: 2.2rem;
             }
             .nav-tab {
-                font-size: 0.6rem;
-                min-width: 44px;
-                padding: 6px 4px;
+                font-size: 0.55rem;
+                min-width: 40px;
+                padding: 4px 2px;
             }
             .nav-tab i {
-                font-size: 0.9rem;
+                font-size: 0.8rem;
             }
             .container {
-                padding: 8px 8px 60px;
+                padding: 6px 6px 50px;
+            }
+            .canvas-container {
+                max-width: 260px;
+            }
+            .char-grid {
+                grid-template-columns: repeat(auto-fill, minmax(26px, 1fr));
+                gap: 2px;
+            }
+            .char-grid-item {
+                font-size: 0.7rem;
+            }
+            .exam-options button {
+                font-size: 1rem;
+                min-height: 34px;
+            }
+            .certificate-preview {
+                padding: 12px 8px;
+            }
+            .certificate-preview .cert-heading {
+                font-size: 1rem;
+            }
+            .certificate-preview .cert-name {
+                font-size: 1rem;
+            }
+            .user-info .field {
+                min-width: 60px;
+                max-width: 120px;
+            }
+            .user-info .field input {
+                font-size: 0.6rem;
             }
         }
     </style>
@@ -1330,7 +1548,7 @@
     <div class="container">
 
         <!-- ============================================================
-        SECTION: LEARN
+        SECTION: LEARN (जहाँ उंगली/माउस से लिखना है)
         ============================================================ -->
         <section id="learnSection" class="section active">
 
@@ -1370,10 +1588,12 @@
                         <span class="stroke-step"><i class="fas fa-arrow-left"></i> बाएँ</span>
                     </div>
 
-                    <!-- Canvas -->
+                    <!-- CANVAS - यहाँ उंगली/माउस से लिखना है -->
                     <div class="canvas-wrapper">
                         <div class="canvas-container">
                             <canvas id="practiceCanvas"></canvas>
+                            <!-- हिंट टेक्स्ट -->
+                            <div class="canvas-hint"><i class="fas fa-hand-pointer"></i> उंगली या माउस से लिखें</div>
                         </div>
                     </div>
 
@@ -1492,7 +1712,7 @@
                     <div class="cert-name" id="certName">साधक</div>
                     <div class="cert-detail" id="certDistrict">𑒧𑒱𑒟𑒱𑒪𑒰 (मिथिला)</div>
                     <div class="cert-detail" id="certScore">स्कोर: —</div>
-                    <div class="cert-detail" style="font-size:0.65rem;color:var(--text-muted);">
+                    <div class="cert-detail" style="font-size:0.6rem;color:var(--text-muted);">
                         <span id="certDate">—</span>
                     </div>
                     <div class="cert-stamp">✦ ✦ ✦</div>
@@ -1547,7 +1767,7 @@
         const TIRHUTA_DATA = [
             // Ajji
             { char: '𑒀', name: 'अज्जी', pronounce: 'Ajji', category: 'पवित्र', strokes: 4,
-                example: 'प्रारम्भ में अज्जी' },
+            example: 'प्रारम्भ में अज्जी' },
             // OM
             { char: '𑓇', name: 'ॐ', pronounce: 'ॐ (Om)', category: 'पवित्र', strokes: 4, example: 'ॐ नमः शिवाय' },
             // Vowels
@@ -1614,7 +1834,7 @@
             { char: '𑒏𑒼', name: 'को', pronounce: 'ko', category: 'मात्रा', strokes: 2, example: '𑒏𑒼𑒞𑒱 (कोति)' },
             { char: '𑒏𑒽', name: 'कौ', pronounce: 'kau', category: 'मात्रा', strokes: 3, example: '𑒏𑒽𑒩𑒰 (कौरा)' },
             { char: '𑒏𑓂', name: 'क्', pronounce: 'k', category: 'हलन्त', strokes: 1, example: '𑒏𑓂𑒢 (क्न)' },
-            // Sanyukt
+            // Sanyukt (Compound)
             { char: '𑒏𑓂𑒏', name: 'क्क', pronounce: 'kka', category: 'संयुक्त', strokes: 4, example: '𑒏𑓂𑒏𑒩𑒰𑒕𑒰' },
             { char: '𑒏𑓂𑒐', name: 'क्ख', pronounce: 'kkha', category: 'संयुक्त', strokes: 4, example: '𑒏𑓂𑒐𑒩𑓂𑒧' },
             { char: '𑒏𑓂𑒑', name: 'क्ग', pronounce: 'kga', category: 'संयुक्त', strokes: 4, example: '𑒏𑓂𑒑𑒰𑒕𑒰' },
@@ -1726,12 +1946,12 @@
         }
 
         // ================================================================
-        // CANVAS
+        // CANVAS - यहाँ उंगली/माउस से लिखना है
         // ================================================================
         function initCanvas() {
             const canvas = $('practiceCanvas');
             const container = canvas.parentElement;
-            const size = Math.min(container.clientWidth || 400, 400);
+            const size = Math.min(container.clientWidth || 380, 380);
             canvas.width = size;
             canvas.height = size;
             canvas.style.width = size + 'px';
@@ -1746,13 +1966,13 @@
             ctx.lineJoin = 'round';
             ctx.strokeStyle = '#2D1B0E';
 
-            // Mouse
+            // Mouse events
             canvas.addEventListener('mousedown', startDraw);
             canvas.addEventListener('mousemove', draw);
             canvas.addEventListener('mouseup', stopDraw);
             canvas.addEventListener('mouseleave', stopDraw);
 
-            // Touch
+            // Touch events - Mobile finger writing
             canvas.addEventListener('touchstart', handleTouch, { passive: false });
             canvas.addEventListener('touchmove', handleTouchMove, { passive: false });
             canvas.addEventListener('touchend', stopDraw, { passive: false });
@@ -1823,7 +2043,7 @@
                 ctx.stroke();
             }
 
-            // Reference
+            // Reference character
             const data = TIRHUTA_DATA[STATE.currentIndex];
             if (data) {
                 ctx.fillStyle = '#f0ebe4';
@@ -2202,7 +2422,7 @@
             resizeTimer = setTimeout(() => {
                 if (STATE.canvas) {
                     const c = STATE.canvas.parentElement;
-                    const s = Math.min(c.clientWidth || 400, 400);
+                    const s = Math.min(c.clientWidth || 380, 380);
                     STATE.canvas.width = s;
                     STATE.canvas.height = s;
                     STATE.canvas.style.width = s + 'px';
@@ -2216,6 +2436,7 @@
         console.log('📖 कुल अक्षर:', TIRHUTA_DATA.length);
         console.log('⌨️  ← → नेविगेट, S सहेजें, R साफ़');
         console.log('👤 नाम:', STATE.userName, '| जिला:', STATE.userDistrict);
+        console.log('🖐️  Canvas पर उंगली/माउस से लिखें!');
     </script>
 
 </body>
