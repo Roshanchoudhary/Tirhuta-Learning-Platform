@@ -2045,13 +2045,15 @@
 
             // Reference character
             const data = TIRHUTA_DATA[STATE.currentIndex];
-            if (data) {
+         if (data) {
                 ctx.fillStyle = '#f0ebe4';
-                const fs = data.char.length > 2 ? c.width * 0.3 : c.width * 0.45;
-                ctx.font = fs + 'px "Noto Sans Tirhuta"';
-                ctx.textAlign = 'centre';
-                ctx.textBaseline = 'centre';
-                ctx.fillText(data.char, c.width - 12, 10);
+                const fontSize = data.char.length > 2 ? canvas.width * 0.3 : canvas.width * 0.45;
+                ctx.font = fontSize + 'px "Noto Sans Tirhuta"';
+                ctx.textAlign = 'right';
+                ctx.textBaseline = 'top';
+                ctx.textAlign = 'center';        // ← Centre में
+ctx.textBaseline = 'middle';     // ← Middle में
+ctx.fillText(data.char, canvas.width / 2, canvas.height / 2); 
             }
             ctx.strokeStyle = '#2D1B0E';
             ctx.lineWidth = 8;
