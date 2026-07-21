@@ -2,25 +2,12 @@
 <html lang="hi">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>तिरहुता लिपि - मिथिलाक्षर शिक्षण मंच</title>
 
     <!-- SEO Meta -->
-    <meta name="description" content="तिरहुता (मिथिलाक्षर) लिपि सीखने का आधुनिक, इंटरैक्टिव, और पूर्णतः निःशुल्क शिक्षण मंच। 120+ अक्षर, लेखन अभ्यास, परीक्षा, प्रमाणपत्र, और प्रगति ट्रैकिंग।" />
-    <meta name="keywords" content="तिरहुता, मिथिलाक्षर, Mithilakshar, Tirhuta, Maithili, लिपि, वर्णमाला, सीखें, अभ्यास, परीक्षा, प्रमाणपत्र" />
-    <link rel="canonical" href="https://tirhuta-learning.mithila.org" />
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="तिरहुता लिपि - मिथिलाक्षर शिक्षण मंच" />
-    <meta property="og:description" content="तिरहुता (मिथिलाक्षर) लिपि सीखने का आधुनिक, इंटरैक्टिव, और पूर्णतः निःशुल्क शिक्षण मंच।" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="/assets/images/og-image.jpg" />
-    <meta property="og:url" content="https://tirhuta-learning.mithila.org" />
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="तिरहुता लिपि - मिथिलाक्षर शिक्षण मंच" />
-    <meta name="twitter:description" content="तिरहुता (मिथिलाक्षर) लिपि सीखने का आधुनिक, इंटरैक्टिव, और पूर्णतः निःशुल्क शिक्षण मंच।" />
+    <meta name="description" content="तिरहुता (मिथिलाक्षर) लिपि सीखने का आधुनिक, इंटरैक्टिव, और पूर्णतः निःशुल्क शिक्षण मंच।" />
+    <meta name="keywords" content="तिरहुता, मिथिलाक्षर, Mithilakshar, Tirhuta, Maithili, लिपि, वर्णमाला" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕉️</text></svg>" />
@@ -28,123 +15,37 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tirhuta:wght@400;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tirhuta:wght@400;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
     <style>
         /* ================================================================
-           DESIGN SYSTEM - CSS VARIABLES
+           CSS VARIABLES
            ================================================================ */
         :root {
-            /* Brand Colors */
-            --color-primary: #7A1A1A;
-            --color-primary-dark: #4A0A0A;
-            --color-primary-light: #A52A2A;
-            --color-secondary: #C9920E;
-            --color-secondary-light: #E8B830;
-            --color-gold: #D4A017;
-            --color-gold-light: #F5D060;
-            --color-gold-lighter: #FFF3D6;
-
-            /* Neutral Colors */
-            --color-white: #FFFFFF;
-            --color-cream: #FFF9F0;
-            --color-bg: #F8F4EE;
-            --color-text: #2D1B0E;
-            --color-text-secondary: #6B5A4A;
-            --color-text-muted: #9B8A7A;
-            --color-border: #E8E0D8;
-            --color-border-light: #F0EBE4;
-
-            /* Status Colors */
-            --color-success: #2E7D32;
-            --color-success-bg: #E8F5E9;
-            --color-error: #C62828;
-            --color-error-bg: #FFEBEE;
-            --color-warning: #F57C00;
-            --color-warning-bg: #FFF3E0;
-            --color-info: #1565C0;
-            --color-info-bg: #E3F2FD;
-
-            /* Shadows */
-            --shadow-sm: 0 2px 8px rgba(74, 10, 10, 0.06);
-            --shadow-md: 0 8px 32px rgba(74, 10, 10, 0.10);
+            --primary: #7A1A1A;
+            --primary-dark: #4A0A0A;
+            --secondary: #C9920E;
+            --gold: #D4A017;
+            --gold-light: #F5D060;
+            --white: #FFFFFF;
+            --bg: #F8F4EE;
+            --text: #2D1B0E;
+            --text-secondary: #6B5A4A;
+            --text-muted: #9B8A7A;
+            --border: #E8E0D8;
+            --shadow: 0 8px 32px rgba(74, 10, 10, 0.10);
             --shadow-lg: 0 16px 56px rgba(74, 10, 10, 0.14);
-            --shadow-xl: 0 24px 80px rgba(74, 10, 10, 0.18);
-            --shadow-glow: 0 0 40px rgba(212, 160, 23, 0.15);
-
-            /* Border Radius */
-            --radius-sm: 10px;
-            --radius-md: 16px;
-            --radius-lg: 24px;
-            --radius-xl: 32px;
+            --radius: 20px;
+            --radius-sm: 14px;
             --radius-full: 9999px;
-
-            /* Spacing */
-            --space-1: 4px;
-            --space-2: 8px;
-            --space-3: 12px;
-            --space-4: 16px;
-            --space-5: 20px;
-            --space-6: 24px;
-            --space-8: 32px;
-            --space-10: 40px;
-            --space-12: 48px;
-            --space-16: 64px;
-
-            /* Typography */
-            --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             --font-tirhuta: 'Noto Sans Tirhuta', serif;
-            --font-size-xs: 0.75rem;
-            --font-size-sm: 0.875rem;
-            --font-size-base: 1rem;
-            --font-size-md: 1.125rem;
-            --font-size-lg: 1.25rem;
-            --font-size-xl: 1.5rem;
-            --font-size-2xl: 2rem;
-            --font-size-3xl: 2.5rem;
-            --font-size-4xl: 3rem;
-            --font-size-5xl: 4rem;
-
-            /* Transitions */
-            --transition-fast: 150ms ease;
-            --transition-base: 300ms ease;
-            --transition-slow: 500ms ease;
-            --transition-spring: 500ms cubic-bezier(0.34, 1.56, 0.64, 1);
-
-            /* Z-Index Scale */
-            --z-dropdown: 100;
-            --z-sticky: 200;
-            --z-modal: 300;
-            --z-tooltip: 400;
-            --z-toast: 500;
-
-            /* Container */
-            --container-max: 1200px;
-            --container-padding: 20px;
+            --font-primary: 'Inter', sans-serif;
+            --transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
         /* ================================================================
-           DARK THEME
-           ================================================================ */
-        [data-theme="dark"] {
-            --color-white: #1A1A1A;
-            --color-cream: #1E1E1E;
-            --color-bg: #121212;
-            --color-text: #F0EDE8;
-            --color-text-secondary: #B5A898;
-            --color-text-muted: #7A6A5A;
-            --color-border: #333333;
-            --color-border-light: #2A2A2A;
-            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
-            --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.5);
-            --shadow-lg: 0 16px 56px rgba(0, 0, 0, 0.6);
-            --shadow-xl: 0 24px 80px rgba(0, 0, 0, 0.7);
-            --color-gold-lighter: #2A2418;
-        }
-
-        /* ================================================================
-           RESET & BASE
+           RESET
            ================================================================ */
         * {
             margin: 0;
@@ -153,552 +54,253 @@
             -webkit-tap-highlight-color: transparent;
         }
 
-        html {
-            scroll-behavior: smooth;
-            font-size: 16px;
-        }
-
         body {
             font-family: var(--font-primary);
-            background: var(--color-bg);
-            color: var(--color-text);
+            background: var(--bg);
+            color: var(--text);
             min-height: 100vh;
-            transition: background var(--transition-slow), color var(--transition-slow);
-            overflow-x: hidden;
-            line-height: 1.6;
-        }
-
-        /* ================================================================
-           UTILITY CLASSES
-           ================================================================ */
-        .container {
-            max-width: var(--container-max);
-            margin: 0 auto;
-            padding: 0 var(--container-padding);
-            width: 100%;
-        }
-
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            border: 0;
-        }
-
-        .flex-center {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
-        }
-
-        .text-center {
-            text-align: center;
-        }
-
-        .hidden {
-            display: none !important;
+            padding: 0;
+            margin: 0;
+            overflow-x: hidden;
+            -webkit-user-select: none;
+            user-select: none;
         }
 
         /* ================================================================
-           SCROLLBAR STYLING
-           ================================================================ */
-        ::-webkit-scrollbar {
-            width: 8px;
-            height: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: var(--color-border-light);
-            border-radius: var(--radius-full);
-        }
-        ::-webkit-scrollbar-thumb {
-            background: var(--color-gold);
-            border-radius: var(--radius-full);
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--color-secondary);
-        }
-
-        /* ================================================================
-           HEADER / NAVIGATION
+           HEADER
            ================================================================ */
         .header {
+            width: 100%;
+            max-width: 500px;
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            padding: 14px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             position: sticky;
             top: 0;
-            z-index: var(--z-sticky);
-            background: var(--color-white);
-            border-bottom: 1px solid var(--color-border);
-            transition: background var(--transition-slow), border-color var(--transition-slow);
-            backdrop-filter: blur(12px);
-            background: rgba(255, 255, 255, 0.92);
+            z-index: 100;
+            box-shadow: 0 4px 20px rgba(74, 10, 10, 0.25);
         }
 
-        [data-theme="dark"] .header {
-            background: rgba(18, 18, 18, 0.92);
-        }
-
-        .header-content {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: var(--space-3) var(--space-4);
-            max-width: var(--container-max);
-            margin: 0 auto;
-            gap: var(--space-3);
-            flex-wrap: wrap;
-        }
-
-        .header-logo {
-            display: flex;
-            align-items: center;
-            gap: var(--space-3);
-            text-decoration: none;
-            color: var(--color-text);
+        .logo {
+            color: #fff;
+            font-size: 1.1rem;
             font-weight: 700;
-            font-size: var(--font-size-lg);
-            flex-shrink: 0;
-        }
-
-        .header-logo-icon {
-            width: 40px;
-            height: 40px;
-            background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
-            border-radius: var(--radius-sm);
             display: flex;
             align-items: center;
-            justify-content: center;
-            color: var(--color-gold-light);
-            font-size: var(--font-size-xl);
-            flex-shrink: 0;
-        }
-
-        .header-logo span {
-            color: var(--color-gold);
-        }
-        .header-logo .sub {
-            font-size: var(--font-size-xs);
-            font-weight: 400;
-            opacity: 0.6;
-            margin-left: var(--space-2);
-            display: none;
-        }
-
-        @media (min-width: 640px) {
-            .header-logo .sub {
-                display: inline;
-            }
-        }
-
-        .header-actions {
-            display: flex;
-            align-items: center;
-            gap: var(--space-2);
-        }
-
-        .theme-toggle {
-            background: none;
-            border: 1px solid var(--color-border);
-            border-radius: var(--radius-full);
-            padding: var(--space-2) var(--space-3);
-            cursor: pointer;
-            color: var(--color-text-secondary);
-            font-size: var(--font-size-base);
-            transition: all var(--transition-fast);
-            display: flex;
-            align-items: center;
-            gap: var(--space-2);
+            gap: 10px;
             font-family: var(--font-primary);
         }
 
-        .theme-toggle:hover {
-            border-color: var(--color-gold);
-            color: var(--color-text);
-            background: var(--color-gold-lighter);
-        }
-
-        .user-profile-btn {
-            background: none;
-            border: 1px solid var(--color-border);
-            border-radius: var(--radius-full);
-            padding: var(--space-2) var(--space-4);
-            cursor: pointer;
-            color: var(--color-text);
-            font-size: var(--font-size-sm);
-            display: flex;
-            align-items: center;
-            gap: var(--space-2);
-            font-family: var(--font-primary);
-            transition: all var(--transition-fast);
-            background: var(--color-bg);
-        }
-
-        .user-profile-btn:hover {
-            border-color: var(--color-gold);
-        }
-
-        .user-profile-btn .avatar {
-            width: 28px;
-            height: 28px;
-            border-radius: var(--radius-full);
-            background: linear-gradient(135deg, var(--color-gold), var(--color-secondary));
+        .logo-icon {
+            width: 34px;
+            height: 34px;
+            background: var(--gold);
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--color-white);
-            font-weight: 600;
-            font-size: var(--font-size-xs);
+            font-size: 1rem;
+            color: var(--primary-dark);
+            font-family: var(--font-tirhuta);
+        }
+
+        .logo span {
+            color: var(--gold-light);
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .theme-btn {
+            background: rgba(255, 255, 255, 0.15);
+            border: none;
+            color: #fff;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .theme-btn:hover {
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        .user-badge {
+            background: rgba(255, 255, 255, 0.12);
+            padding: 4px 14px;
+            border-radius: var(--radius-full);
+            color: #fff;
+            font-size: 0.7rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .user-badge i {
+            color: var(--gold-light);
+            font-size: 0.8rem;
         }
 
         /* ================================================================
-           NAVIGATION TABS
+           NAV TABS - MOBILE FRIENDLY
            ================================================================ */
-        .nav-tabs-wrapper {
-            background: var(--color-white);
-            border-bottom: 1px solid var(--color-border);
-            transition: background var(--transition-slow), border-color var(--transition-slow);
+        .nav-tabs {
+            width: 100%;
+            max-width: 500px;
+            display: flex;
+            background: var(--white);
+            padding: 4px;
+            gap: 4px;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 62px;
+            z-index: 99;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+            flex-wrap: nowrap;
             overflow-x: auto;
             -webkit-overflow-scrolling: touch;
             scrollbar-width: none;
-            position: sticky;
-            top: 60px;
-            z-index: var(--z-sticky);
         }
 
-        [data-theme="dark"] .nav-tabs-wrapper {
-            background: var(--color-white);
-        }
-
-        .nav-tabs-wrapper::-webkit-scrollbar {
+        .nav-tabs::-webkit-scrollbar {
             display: none;
         }
 
-        .nav-tabs {
-            display: flex;
-            gap: var(--space-1);
-            padding: var(--space-2) var(--space-4);
-            max-width: var(--container-max);
-            margin: 0 auto;
-            min-width: max-content;
-        }
-
         .nav-tab {
-            padding: var(--space-2) var(--space-4);
+            flex: 1;
+            min-width: 60px;
+            padding: 8px 6px;
             border: none;
             background: transparent;
-            border-radius: var(--radius-full);
-            font-size: var(--font-size-sm);
-            font-weight: 500;
+            border-radius: var(--radius-sm);
+            font-size: 0.7rem;
+            font-weight: 600;
             cursor: pointer;
-            transition: all var(--transition-base);
+            transition: var(--transition);
             font-family: var(--font-primary);
-            color: var(--color-text-secondary);
-            white-space: nowrap;
+            color: var(--text-secondary);
             display: flex;
+            flex-direction: column;
             align-items: center;
-            gap: var(--space-2);
-            position: relative;
+            gap: 2px;
+            white-space: nowrap;
         }
 
         .nav-tab i {
-            font-size: var(--font-size-base);
-        }
-
-        .nav-tab:hover {
-            background: var(--color-border-light);
-            color: var(--color-text);
+            font-size: 1.1rem;
         }
 
         .nav-tab.active {
-            background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
-            color: var(--color-white);
-            box-shadow: 0 4px 16px rgba(122, 26, 26, 0.25);
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: #fff;
+            box-shadow: 0 4px 16px rgba(122, 26, 26, 0.2);
         }
 
         .nav-tab.active i {
-            color: var(--color-gold-light);
+            color: var(--gold-light);
         }
 
         .nav-tab .badge {
-            background: var(--color-gold);
-            color: var(--color-white);
-            font-size: var(--font-size-xs);
-            padding: 0 var(--space-2);
+            background: var(--gold);
+            color: #fff;
+            font-size: 0.55rem;
+            padding: 0 6px;
             border-radius: var(--radius-full);
-            font-weight: 600;
-        }
-
-        @media (max-width: 640px) {
-            .nav-tab span {
-                display: none;
-            }
-            .nav-tab i {
-                font-size: var(--font-size-lg);
-            }
-            .nav-tab {
-                padding: var(--space-2) var(--space-3);
-            }
-            .nav-tabs {
-                padding: var(--space-2) var(--space-2);
-            }
-            .nav-tabs-wrapper {
-                top: 56px;
-            }
+            font-weight: 700;
         }
 
         /* ================================================================
-           LANDING / HERO SECTION
+           USER INFO - MOBILE FRIENDLY
            ================================================================ */
-        .hero {
-            padding: var(--space-8) 0 var(--space-6);
-            background: linear-gradient(180deg, var(--color-cream) 0%, var(--color-bg) 100%);
-            transition: background var(--transition-slow);
-            border-bottom: 1px solid var(--color-border);
-        }
-
-        [data-theme="dark"] .hero {
-            background: linear-gradient(180deg, #1A1A1A 0%, #121212 100%);
-        }
-
-        .hero-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--space-8);
-            align-items: center;
-        }
-
-        .hero-text h1 {
-            font-size: var(--font-size-4xl);
-            font-weight: 900;
-            line-height: 1.1;
-            color: var(--color-text);
-            margin-bottom: var(--space-3);
-        }
-
-        .hero-text h1 .highlight {
-            color: var(--color-gold);
-            background: linear-gradient(135deg, var(--color-gold), var(--color-secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero-text p {
-            font-size: var(--font-size-md);
-            color: var(--color-text-secondary);
-            max-width: 480px;
-            margin-bottom: var(--space-5);
-            line-height: 1.7;
-        }
-
-        .hero-stats {
+        .user-info {
+            width: 100%;
+            max-width: 500px;
+            background: var(--white);
+            padding: 10px 16px;
             display: flex;
-            gap: var(--space-6);
-            margin-bottom: var(--space-5);
             flex-wrap: wrap;
-        }
-
-        .hero-stat {
-            text-align: center;
-        }
-
-        .hero-stat .number {
-            font-size: var(--font-size-2xl);
-            font-weight: 800;
-            color: var(--color-primary);
-            display: block;
-        }
-
-        .hero-stat .label {
-            font-size: var(--font-size-sm);
-            color: var(--color-text-secondary);
-        }
-
-        .hero-actions {
-            display: flex;
-            gap: var(--space-3);
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-flex;
+            gap: 8px;
             align-items: center;
-            gap: var(--space-2);
-            padding: var(--space-3) var(--space-6);
-            border: none;
+            justify-content: center;
+            border-bottom: 1px solid var(--border);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+        }
+
+        .user-info .field {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--bg);
+            padding: 4px 12px 4px 8px;
             border-radius: var(--radius-full);
-            font-size: var(--font-size-base);
+            border: 1px solid var(--border);
+            flex: 1;
+            min-width: 100px;
+            max-width: 200px;
+        }
+
+        .user-info .field i {
+            color: var(--gold);
+            font-size: 0.8rem;
+        }
+
+        .user-info .field input {
+            border: none;
+            background: transparent;
+            padding: 4px 0;
+            font-size: 0.8rem;
+            font-family: var(--font-primary);
+            color: var(--text);
+            width: 100%;
+            outline: none;
+        }
+
+        .user-info .field input::placeholder {
+            color: var(--text-muted);
+        }
+
+        .user-info .btn-update {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: #fff;
+            border: none;
+            padding: 4px 16px;
+            border-radius: var(--radius-full);
+            font-size: 0.7rem;
             font-weight: 600;
             cursor: pointer;
-            transition: all var(--transition-base);
             font-family: var(--font-primary);
-            text-decoration: none;
-            background: var(--color-border-light);
-            color: var(--color-text);
+            transition: var(--transition);
         }
 
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-md);
-        }
-
-        .btn:active {
-            transform: scale(0.97);
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
-            color: var(--color-white);
-            box-shadow: 0 4px 16px rgba(122, 26, 26, 0.25);
-        }
-
-        .btn-primary:hover {
-            box-shadow: 0 8px 32px rgba(122, 26, 26, 0.35);
-        }
-
-        .btn-secondary {
-            background: var(--color-white);
-            color: var(--color-text);
-            border: 1px solid var(--color-border);
-        }
-
-        .btn-secondary:hover {
-            border-color: var(--color-gold);
-        }
-
-        .btn-gold {
-            background: linear-gradient(135deg, var(--color-gold), var(--color-secondary));
-            color: var(--color-white);
-            box-shadow: 0 4px 16px rgba(212, 160, 23, 0.25);
-        }
-
-        .btn-gold:hover {
-            box-shadow: 0 8px 32px rgba(212, 160, 23, 0.35);
-        }
-
-        .btn-lg {
-            padding: var(--space-4) var(--space-8);
-            font-size: var(--font-size-md);
-        }
-
-        .hero-visual {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .hero-char-display {
-            font-family: var(--font-tirhuta);
-            font-size: 10rem;
-            line-height: 1;
-            color: var(--color-primary);
-            text-shadow: 0 8px 40px rgba(74, 10, 10, 0.08);
-            animation: float 6s ease-in-out infinite;
-            position: relative;
-        }
-
-        .hero-char-display::after {
-            content: '✦';
-            position: absolute;
-            bottom: -10px;
-            right: -20px;
-            font-size: 2rem;
-            color: var(--color-gold);
-            opacity: 0.3;
-            font-family: var(--font-primary);
-        }
-
-        @keyframes float {
-            0%,
-            100% {
-                transform: translateY(0px);
-            }
-            50% {
-                transform: translateY(-16px);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .hero-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-            .hero-text p {
-                margin-left: auto;
-                margin-right: auto;
-            }
-            .hero-stats {
-                justify-content: center;
-            }
-            .hero-actions {
-                justify-content: center;
-            }
-            .hero-text h1 {
-                font-size: var(--font-size-3xl);
-            }
-            .hero-char-display {
-                font-size: 6rem;
-            }
+        .user-info .btn-update:active {
+            transform: scale(0.95);
         }
 
         /* ================================================================
-           DASHBOARD
+           MAIN CONTAINER
            ================================================================ */
-        .dashboard-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-            gap: var(--space-4);
-            margin: var(--space-4) 0;
-        }
-
-        .stat-card {
-            background: var(--color-white);
-            border-radius: var(--radius-md);
-            padding: var(--space-4) var(--space-5);
-            box-shadow: var(--shadow-sm);
-            border: 1px solid var(--color-border);
-            transition: all var(--transition-base);
-            text-align: center;
-        }
-
-        .stat-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-md);
-        }
-
-        .stat-card .icon {
-            font-size: var(--font-size-2xl);
-            color: var(--color-gold);
-            margin-bottom: var(--space-2);
-        }
-
-        .stat-card .value {
-            font-size: var(--font-size-2xl);
-            font-weight: 800;
-            color: var(--color-text);
-            line-height: 1.2;
-        }
-
-        .stat-card .value.animate {
-            animation: countUp 1s ease-out;
-        }
-
-        @keyframes countUp {
-            from {
-                opacity: 0;
-                transform: scale(0.8);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
-        .stat-card .label {
-            font-size: var(--font-size-sm);
-            color: var(--color-text-secondary);
-            margin-top: var(--space-1);
+        .container {
+            width: 100%;
+            max-width: 500px;
+            padding: 12px 14px 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         /* ================================================================
@@ -706,8 +308,8 @@
            ================================================================ */
         .section {
             display: none;
-            animation: fadeSlide 0.5s ease;
-            padding: var(--space-4) 0;
+            width: 100%;
+            animation: fadeSlide 0.4s ease;
         }
 
         .section.active {
@@ -717,7 +319,7 @@
         @keyframes fadeSlide {
             from {
                 opacity: 0;
-                transform: translateY(20px);
+                transform: translateY(16px);
             }
             to {
                 opacity: 1;
@@ -725,54 +327,29 @@
             }
         }
 
-        .section-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: var(--space-3);
-            margin-bottom: var(--space-5);
-        }
-
-        .section-title {
-            font-size: var(--font-size-xl);
-            font-weight: 700;
-            color: var(--color-text);
-            display: flex;
-            align-items: center;
-            gap: var(--space-3);
-        }
-
-        .section-title i {
-            color: var(--color-gold);
-        }
-
         /* ================================================================
-           LEARNING CARD
+           LEARNING CARD - CENTRE
            ================================================================ */
         .learning-card {
-            background: var(--color-white);
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-md);
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
             overflow: hidden;
-            max-width: 800px;
-            margin: 0 auto;
-            border: 1px solid var(--color-border);
-            transition: all var(--transition-slow);
+            width: 100%;
+            transition: var(--transition);
         }
 
-        .learning-card:hover {
-            box-shadow: var(--shadow-lg);
+        .learning-card:active {
+            transform: scale(0.99);
         }
 
         .learning-header {
-            background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
-            padding: var(--space-5) var(--space-6);
+            background: linear-gradient(135deg, var(--primary), #6B1515);
+            padding: 18px 16px;
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
-            flex-wrap: wrap;
-            gap: var(--space-3);
+            text-align: center;
             position: relative;
             overflow: hidden;
         }
@@ -781,108 +358,157 @@
             content: '';
             position: absolute;
             top: -50%;
-            right: -10%;
-            width: 300px;
-            height: 300px;
-            background: radial-gradient(circle, rgba(212, 160, 23, 0.1) 0%, transparent 70%);
+            right: -20%;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(212, 160, 23, 0.08) 0%, transparent 70%);
             border-radius: 50%;
         }
 
         .learning-header .char-display {
             font-family: var(--font-tirhuta);
-            font-size: 5rem;
+            font-size: 4rem;
             font-weight: 700;
-            color: var(--color-white);
+            color: var(--white);
             text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
             line-height: 1;
             position: relative;
             z-index: 1;
         }
 
-        .learning-header .char-meta {
-            text-align: right;
+        .learning-header .char-name {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--white);
+            opacity: 0.9;
             position: relative;
             z-index: 1;
-            color: var(--color-white);
-        }
-
-        .learning-header .char-name {
-            font-size: var(--font-size-lg);
-            font-weight: 600;
-            opacity: 0.95;
+            margin-top: 2px;
         }
 
         .learning-header .char-counter {
-            font-size: var(--font-size-sm);
+            font-size: 0.7rem;
+            color: var(--white);
             opacity: 0.6;
             background: rgba(255, 255, 255, 0.1);
-            padding: 2px var(--space-3);
+            padding: 2px 14px;
             border-radius: var(--radius-full);
             display: inline-block;
-            margin-top: var(--space-1);
+            margin-top: 4px;
+            position: relative;
+            z-index: 1;
         }
 
         .learning-body {
-            padding: var(--space-5) var(--space-6);
+            padding: 16px;
         }
 
-        /* Character Info Grid */
+        /* ================================================================
+           CHAR INFO - CENTRE
+           ================================================================ */
         .char-info-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: var(--space-3);
-            margin-bottom: var(--space-4);
+            gap: 8px;
+            margin-bottom: 14px;
         }
 
         .char-info-item {
-            background: var(--color-bg);
-            padding: var(--space-3) var(--space-4);
+            background: var(--bg);
+            padding: 10px 12px;
             border-radius: var(--radius-sm);
-            border-left: 3px solid var(--color-gold);
-            transition: all var(--transition-fast);
-        }
-
-        .char-info-item:hover {
-            transform: translateX(4px);
+            border-left: 3px solid var(--gold);
+            text-align: center;
         }
 
         .char-info-item .label {
-            font-size: var(--font-size-xs);
+            font-size: 0.6rem;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            color: var(--color-text-secondary);
+            color: var(--text-muted);
             font-weight: 600;
         }
 
         .char-info-item .value {
-            font-size: var(--font-size-base);
+            font-size: 0.85rem;
             font-weight: 600;
             margin-top: 2px;
-            color: var(--color-text);
+            color: var(--text);
+            word-break: break-word;
         }
 
-        /* Canvas */
+        .char-info-item .value i {
+            color: var(--gold);
+            margin-right: 4px;
+        }
+
+        @media (max-width: 380px) {
+            .char-info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ================================================================
+           STROKE GUIDE - CENTRE
+           ================================================================ */
+        .stroke-guide {
+            display: flex;
+            gap: 6px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 12px;
+        }
+
+        .stroke-step {
+            padding: 4px 12px;
+            background: var(--bg);
+            border-radius: var(--radius-full);
+            font-size: 0.7rem;
+            border: 1.5px solid var(--border);
+            color: var(--text-secondary);
+            font-family: var(--font-primary);
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .stroke-step.active {
+            background: var(--gold);
+            color: #fff;
+            border-color: var(--gold);
+            box-shadow: 0 4px 16px rgba(212, 160, 23, 0.2);
+        }
+
+        .stroke-step i {
+            font-size: 0.6rem;
+        }
+
+        /* ================================================================
+           CANVAS - CENTRE
+           ================================================================ */
         .canvas-wrapper {
             display: flex;
             justify-content: center;
-            margin: var(--space-4) 0;
+            width: 100%;
         }
 
         .canvas-container {
             position: relative;
             width: 100%;
-            max-width: 450px;
+            max-width: 400px;
             aspect-ratio: 1 / 1;
-            background: var(--color-white);
-            border-radius: var(--radius-md);
-            border: 2px solid var(--color-border);
+            background: var(--white);
+            border-radius: var(--radius-sm);
+            border: 3px solid var(--border);
             touch-action: none;
             box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.03);
-            transition: border-color var(--transition-fast);
+            transition: border-color var(--transition);
+            margin: 0 auto;
         }
 
         .canvas-container:focus-within {
-            border-color: var(--color-gold);
+            border-color: var(--gold);
             box-shadow: 0 0 0 4px rgba(212, 160, 23, 0.1), inset 0 0 30px rgba(0, 0, 0, 0.03);
         }
 
@@ -890,163 +516,220 @@
             width: 100%;
             height: 100%;
             display: block;
-            border-radius: calc(var(--radius-md) - 2px);
+            border-radius: calc(var(--radius-sm) - 2px);
             touch-action: none;
             cursor: crosshair;
+            background: #fff;
         }
 
-        /* Toolbar */
+        /* ================================================================
+           TOOLBAR - CENTRE
+           ================================================================ */
         .toolbar {
             display: flex;
             flex-wrap: wrap;
-            gap: var(--space-2);
+            gap: 6px;
             justify-content: center;
-            margin-top: var(--space-3);
+            margin-top: 12px;
         }
 
         .toolbar .btn {
-            padding: var(--space-2) var(--space-4);
-            font-size: var(--font-size-sm);
+            padding: 8px 16px;
+            border: none;
+            border-radius: var(--radius-full);
+            font-size: 0.7rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: var(--font-primary);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            touch-action: manipulation;
+            min-height: 36px;
         }
 
-        .toolbar .btn-sm {
-            padding: var(--space-2) var(--space-3);
-            font-size: var(--font-size-sm);
+        .toolbar .btn:active {
+            transform: scale(0.95);
         }
 
-        /* Status */
+        .btn-prev {
+            background: var(--bg);
+            color: var(--text-secondary);
+        }
+        .btn-prev:active {
+            background: #e8e0d8;
+        }
+
+        .btn-clear {
+            background: var(--bg);
+            color: var(--text-secondary);
+        }
+        .btn-clear:active {
+            background: #e8e0d8;
+        }
+
+        .btn-save {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: #fff;
+            box-shadow: 0 4px 16px rgba(122, 26, 26, 0.2);
+        }
+        .btn-save:active {
+            transform: scale(0.95);
+        }
+
+        .btn-next {
+            background: linear-gradient(135deg, var(--secondary), var(--gold));
+            color: #fff;
+            box-shadow: 0 4px 16px rgba(212, 160, 23, 0.2);
+        }
+        .btn-next:active {
+            transform: scale(0.95);
+        }
+
+        /* ================================================================
+           STATUS - CENTRE
+           ================================================================ */
         .practice-status {
             text-align: center;
-            margin-top: var(--space-3);
+            margin-top: 10px;
         }
 
         .practice-status .status {
             display: inline-block;
-            padding: var(--space-2) var(--space-5);
+            padding: 4px 18px;
             border-radius: var(--radius-full);
-            font-size: var(--font-size-sm);
+            font-size: 0.75rem;
             font-weight: 500;
-            background: var(--color-bg);
-            color: var(--color-text-secondary);
+            background: var(--bg);
+            color: var(--text-secondary);
+            font-family: var(--font-primary);
         }
 
         .practice-status .status.success {
-            background: var(--color-success-bg);
-            color: var(--color-success);
+            background: #e8f5e9;
+            color: #2e7d32;
         }
 
         /* ================================================================
-           STROKE GUIDE
-           ================================================================ */
-        .stroke-guide {
-            display: flex;
-            gap: var(--space-2);
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: var(--space-3);
-        }
-
-        .stroke-step {
-            padding: var(--space-2) var(--space-4);
-            background: var(--color-bg);
-            border-radius: var(--radius-full);
-            font-size: var(--font-size-sm);
-            border: 1px solid var(--color-border);
-            color: var(--color-text-secondary);
-            transition: all var(--transition-fast);
-            display: flex;
-            align-items: center;
-            gap: var(--space-2);
-        }
-
-        .stroke-step.active {
-            background: var(--color-gold);
-            color: var(--color-white);
-            border-color: var(--color-gold);
-            box-shadow: 0 4px 16px rgba(212, 160, 23, 0.2);
-        }
-
-        .stroke-step i {
-            font-size: var(--font-size-sm);
-        }
-
-        /* ================================================================
-           TIP CARD
+           TIP CARD - CENTRE
            ================================================================ */
         .tip-card {
-            background: var(--color-white);
-            border-radius: var(--radius-md);
-            padding: var(--space-4) var(--space-5);
-            box-shadow: var(--shadow-sm);
-            border: 1px solid var(--color-border);
-            max-width: 800px;
-            margin: var(--space-4) auto 0;
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 12px 16px;
+            box-shadow: var(--shadow);
+            width: 100%;
+            margin-top: 14px;
             display: flex;
             align-items: center;
-            gap: var(--space-4);
+            gap: 10px;
             flex-wrap: wrap;
             justify-content: center;
+            border: 1px solid var(--border);
         }
 
         .tip-card i {
-            color: var(--color-gold);
-            font-size: var(--font-size-xl);
+            color: var(--gold);
+            font-size: 1rem;
         }
 
         .tip-card p {
-            color: var(--color-text-secondary);
-            font-size: var(--font-size-sm);
+            color: var(--text-secondary);
+            font-size: 0.75rem;
             flex: 1;
-            min-width: 160px;
+            min-width: 140px;
             text-align: center;
         }
 
         .tip-card .badge-device {
             display: inline-flex;
             align-items: center;
-            gap: var(--space-2);
-            background: var(--color-bg);
-            padding: var(--space-1) var(--space-4);
+            gap: 4px;
+            background: var(--bg);
+            padding: 2px 12px;
             border-radius: var(--radius-full);
-            font-size: var(--font-size-xs);
-            color: var(--color-text-secondary);
+            font-size: 0.6rem;
+            color: var(--text-secondary);
+            font-weight: 500;
         }
 
         /* ================================================================
-           PROGRESS / GRID
+           PROGRESS
            ================================================================ */
         .progress-card {
-            background: var(--color-white);
-            border-radius: var(--radius-lg);
-            padding: var(--space-5) var(--space-6);
-            box-shadow: var(--shadow-md);
-            border: 1px solid var(--color-border);
-            max-width: 800px;
-            margin: 0 auto;
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 18px 16px;
+            box-shadow: var(--shadow);
+            width: 100%;
+            border: 1px solid var(--border);
+        }
+
+        .progress-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            justify-content: center;
+            margin-bottom: 12px;
+        }
+
+        .progress-title i {
+            color: var(--gold);
+        }
+
+        .progress-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .stat-box {
+            background: var(--bg);
+            padding: 10px;
+            border-radius: var(--radius-sm);
+            text-align: center;
+        }
+
+        .stat-box .number {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1.2;
+        }
+
+        .stat-box .label {
+            font-size: 0.6rem;
+            color: var(--text-muted);
+            margin-top: 2px;
+            font-weight: 500;
         }
 
         .progress-bar-wrap {
             width: 100%;
-            height: 10px;
-            background: var(--color-border);
+            height: 8px;
+            background: var(--border);
             border-radius: var(--radius-full);
             overflow: hidden;
-            margin: var(--space-3) 0;
+            margin-bottom: 14px;
         }
 
         .progress-bar-wrap .fill {
             height: 100%;
-            background: linear-gradient(90deg, var(--color-gold), var(--color-secondary-light));
+            background: linear-gradient(90deg, var(--gold), var(--gold-light));
             border-radius: var(--radius-full);
-            transition: width 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transition: width 0.8s ease;
             width: 0%;
         }
 
         .char-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(48px, 1fr));
-            gap: var(--space-2);
-            margin-top: var(--space-3);
+            grid-template-columns: repeat(auto-fill, minmax(38px, 1fr));
+            gap: 4px;
         }
 
         .char-grid-item {
@@ -1055,119 +738,185 @@
             align-items: center;
             justify-content: center;
             font-family: var(--font-tirhuta);
-            font-size: var(--font-size-lg);
-            background: var(--color-bg);
-            border-radius: var(--radius-sm);
-            border: 2px solid var(--color-border);
-            transition: all var(--transition-fast);
+            font-size: 1.1rem;
+            background: var(--bg);
+            border-radius: 8px;
+            border: 2px solid var(--border);
+            transition: var(--transition);
             cursor: pointer;
             position: relative;
         }
 
-        .char-grid-item:hover {
-            transform: scale(1.05);
-            border-color: var(--color-gold);
-            z-index: 1;
+        .char-grid-item:active {
+            transform: scale(0.92);
         }
 
         .char-grid-item.done {
-            background: var(--color-success-bg);
-            border-color: #A5D6A7;
-            color: var(--color-success);
+            background: #e8f5e9;
+            border-color: #a5d6a7;
+            color: #2e7d32;
         }
 
         .char-grid-item.done::after {
             content: "✓";
             position: absolute;
-            top: -6px;
-            right: -6px;
-            font-size: 0.5rem;
-            background: var(--color-success);
-            color: var(--color-white);
-            width: 18px;
-            height: 18px;
-            border-radius: var(--radius-full);
+            top: -4px;
+            right: -4px;
+            font-size: 0.4rem;
+            background: #2e7d32;
+            color: #fff;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
         .char-grid-item.current {
-            border-color: var(--color-gold);
-            background: var(--color-gold-lighter);
-            box-shadow: 0 0 0 3px rgba(212, 160, 23, 0.2);
+            border-color: var(--gold);
+            background: #fff8e1;
+            box-shadow: 0 0 0 2px rgba(212, 160, 23, 0.2);
         }
 
         /* ================================================================
            EXAM
            ================================================================ */
         .exam-card {
-            background: var(--color-white);
-            border-radius: var(--radius-lg);
-            padding: var(--space-5) var(--space-6);
-            box-shadow: var(--shadow-md);
-            border: 1px solid var(--color-border);
-            max-width: 800px;
-            margin: 0 auto;
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 18px 16px;
+            box-shadow: var(--shadow);
+            width: 100%;
+            border: 1px solid var(--border);
+        }
+
+        .exam-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            justify-content: center;
+            margin-bottom: 4px;
+        }
+
+        .exam-title i {
+            color: var(--gold);
+        }
+
+        .exam-subtitle {
+            color: var(--text-secondary);
+            font-size: 0.75rem;
+            text-align: center;
+            margin-bottom: 14px;
         }
 
         .exam-question {
-            font-size: var(--font-size-md);
-            padding: var(--space-4) var(--space-5);
-            background: var(--color-bg);
+            font-size: 0.95rem;
+            padding: 12px 14px;
+            background: var(--bg);
             border-radius: var(--radius-sm);
-            border-left: 4px solid var(--color-gold);
-            margin-bottom: var(--space-4);
+            border-left: 4px solid var(--gold);
+            margin-bottom: 12px;
+            font-family: var(--font-primary);
         }
 
         .exam-options {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: var(--space-3);
+            gap: 8px;
         }
 
         .exam-options button {
-            padding: var(--space-4);
-            border: 2px solid var(--color-border);
+            padding: 12px;
+            border: 2px solid var(--border);
             border-radius: var(--radius-sm);
-            background: var(--color-white);
+            background: var(--white);
             font-family: var(--font-tirhuta);
-            font-size: var(--font-size-2xl);
+            font-size: 1.6rem;
             cursor: pointer;
-            transition: all var(--transition-fast);
-            min-height: 70px;
+            transition: var(--transition);
+            min-height: 56px;
+            touch-action: manipulation;
         }
 
-        .exam-options button:hover:not(:disabled) {
-            border-color: var(--color-gold);
-            background: var(--color-gold-lighter);
-            transform: translateY(-2px);
+        .exam-options button:active:not(:disabled) {
+            transform: scale(0.95);
         }
 
         .exam-options button.correct {
-            border-color: var(--color-success);
-            background: var(--color-success-bg);
-            box-shadow: 0 4px 16px rgba(46, 125, 50, 0.15);
+            border-color: #2e7d32;
+            background: #e8f5e9;
+            box-shadow: 0 4px 16px rgba(46, 125, 50, 0.12);
         }
 
         .exam-options button.wrong {
-            border-color: var(--color-error);
-            background: var(--color-error-bg);
-            box-shadow: 0 4px 16px rgba(198, 40, 40, 0.15);
+            border-color: #c62828;
+            background: #ffebee;
+            box-shadow: 0 4px 16px rgba(198, 40, 40, 0.12);
         }
 
         .exam-options button:disabled {
             cursor: default;
-            opacity: 0.7;
+            opacity: 0.6;
+        }
+
+        .exam-feedback {
+            margin-top: 10px;
+            min-height: 24px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-align: center;
+        }
+
+        .exam-controls {
+            display: flex;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .exam-controls .btn {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: var(--radius-full);
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: var(--font-primary);
+            touch-action: manipulation;
+        }
+
+        .exam-controls .btn:active {
+            transform: scale(0.95);
+        }
+
+        .btn-exam-next {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: #fff;
+        }
+
+        .btn-exam-next:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .btn-exam-reset {
+            background: var(--bg);
+            color: var(--text-secondary);
         }
 
         .exam-result {
-            margin-top: var(--space-4);
-            padding: var(--space-4) var(--space-5);
+            margin-top: 12px;
+            padding: 12px 16px;
             border-radius: var(--radius-sm);
             text-align: center;
             font-weight: 600;
             display: none;
+            font-size: 0.9rem;
         }
 
         .exam-result.show {
@@ -1176,31 +925,24 @@
         }
 
         .exam-result.pass {
-            background: var(--color-success-bg);
-            color: var(--color-success);
-            border: 2px solid var(--color-success);
+            background: #e8f5e9;
+            color: #2e7d32;
+            border: 2px solid #2e7d32;
         }
 
         .exam-result.fail {
-            background: var(--color-error-bg);
-            color: var(--color-error);
-            border: 2px solid var(--color-error);
+            background: #ffebee;
+            color: #c62828;
+            border: 2px solid #c62828;
         }
 
-        .exam-feedback {
-            margin-top: var(--space-3);
-            min-height: 28px;
-            font-weight: 600;
-            text-align: center;
-        }
-
-        @media (max-width: 480px) {
+        @media (max-width: 380px) {
             .exam-options {
                 grid-template-columns: 1fr;
             }
             .exam-options button {
-                font-size: var(--font-size-xl);
-                min-height: 56px;
+                font-size: 1.4rem;
+                min-height: 48px;
             }
         }
 
@@ -1208,149 +950,251 @@
            CERTIFICATE
            ================================================================ */
         .cert-card {
-            background: var(--color-white);
-            border-radius: var(--radius-lg);
-            padding: var(--space-5) var(--space-6);
-            box-shadow: var(--shadow-md);
-            border: 1px solid var(--color-border);
-            max-width: 800px;
-            margin: 0 auto;
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 18px 16px;
+            box-shadow: var(--shadow);
+            width: 100%;
+            border: 1px solid var(--border);
+        }
+
+        .cert-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            justify-content: center;
+            margin-bottom: 4px;
+        }
+
+        .cert-title i {
+            color: var(--gold);
+        }
+
+        .cert-status {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.75rem;
+            margin-bottom: 14px;
         }
 
         .certificate-preview {
-            border: 4px double var(--color-gold);
-            border-radius: var(--radius-md);
-            padding: var(--space-6) var(--space-5);
+            border: 3px double var(--gold);
+            border-radius: var(--radius-sm);
+            padding: 18px 14px;
             text-align: center;
-            background: linear-gradient(135deg, #FFFDF7, #FDF5E6);
-            position: relative;
-            max-width: 600px;
+            background: linear-gradient(135deg, #fffdf7, #fdf5e6);
+            max-width: 400px;
             margin: 0 auto;
-            transition: background var(--transition-slow);
-        }
-
-        [data-theme="dark"] .certificate-preview {
-            background: linear-gradient(135deg, #1A1A1A, #1E1E1E);
-            border-color: var(--color-gold);
-        }
-
-        .certificate-preview::before {
-            content: "✦";
-            font-size: 4rem;
-            color: var(--color-gold);
-            opacity: 0.06;
-            position: absolute;
-            top: 10px;
-            right: 20px;
         }
 
         .certificate-preview .cert-heading {
             font-family: var(--font-tirhuta);
-            color: var(--color-primary);
-            font-size: var(--font-size-2xl);
+            color: var(--primary);
+            font-size: 1.3rem;
             font-weight: 700;
         }
 
         .certificate-preview .cert-sub {
-            color: var(--color-gold);
-            font-size: var(--font-size-base);
-            letter-spacing: 4px;
+            color: var(--gold);
+            font-size: 0.8rem;
+            letter-spacing: 3px;
         }
 
         .certificate-preview .cert-name {
-            font-size: var(--font-size-2xl);
+            font-size: 1.4rem;
             font-weight: 700;
-            margin: var(--space-3) 0 var(--space-2);
-            border-bottom: 2px dashed var(--color-gold);
-            padding-bottom: var(--space-2);
-            color: var(--color-text);
+            margin: 10px 0 4px;
+            border-bottom: 2px dashed var(--gold);
+            padding-bottom: 6px;
+            color: var(--text);
         }
 
         .certificate-preview .cert-detail {
-            color: var(--color-text-secondary);
-            font-size: var(--font-size-sm);
-            margin: var(--space-1) 0;
+            color: var(--text-secondary);
+            font-size: 0.75rem;
+            margin: 2px 0;
         }
 
         .certificate-preview .cert-stamp {
-            font-size: 2.5rem;
-            color: var(--color-gold);
+            font-size: 1.8rem;
+            color: var(--gold);
             opacity: 0.3;
-            margin-top: var(--space-3);
-            letter-spacing: 8px;
+            margin-top: 8px;
+            letter-spacing: 6px;
         }
 
         .cert-actions {
             display: flex;
-            gap: var(--space-3);
+            gap: 8px;
             justify-content: center;
             flex-wrap: wrap;
-            margin-top: var(--space-4);
+            margin-top: 12px;
+        }
+
+        .cert-actions .btn {
+            padding: 8px 18px;
+            border: none;
+            border-radius: var(--radius-full);
+            font-size: 0.75rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: var(--font-primary);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            touch-action: manipulation;
+        }
+
+        .cert-actions .btn:active {
+            transform: scale(0.95);
+        }
+
+        .cert-actions .btn:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+
+        .btn-pdf {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: #fff;
+        }
+
+        .btn-share {
+            background: linear-gradient(135deg, var(--secondary), var(--gold));
+            color: #fff;
+        }
+
+        .btn-print {
+            background: var(--bg);
+            color: var(--text-secondary);
+        }
+
+        .cert-message {
+            text-align: center;
+            margin-top: 10px;
+            color: var(--text-secondary);
+            font-size: 0.75rem;
         }
 
         /* ================================================================
-           TOAST NOTIFICATIONS
+           SHORTCUTS HINT - MOBILE
+           ================================================================ */
+        .shortcuts-hint {
+            display: none;
+            position: fixed;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-full);
+            padding: 4px 14px;
+            font-size: 0.6rem;
+            color: var(--text-secondary);
+            box-shadow: var(--shadow);
+            z-index: 50;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+            white-space: nowrap;
+        }
+
+        .shortcuts-hint kbd {
+            background: var(--bg);
+            padding: 1px 8px;
+            border-radius: 4px;
+            border: 1px solid var(--border);
+            font-family: var(--font-primary);
+            font-size: 0.6rem;
+            font-weight: 600;
+        }
+
+        @media (min-width: 500px) {
+            .shortcuts-hint {
+                display: flex;
+            }
+        }
+
+        /* ================================================================
+           FOOTER
+           ================================================================ */
+        .footer {
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+            padding: 14px;
+            color: var(--text-muted);
+            font-size: 0.6rem;
+            border-top: 1px solid var(--border);
+            margin-top: 10px;
+        }
+
+        .footer i {
+            color: var(--gold);
+        }
+
+        /* ================================================================
+           TOAST
            ================================================================ */
         .toast-container {
             position: fixed;
-            bottom: var(--space-6);
-            right: var(--space-6);
-            z-index: var(--z-toast);
-            display: flex;
-            flex-direction: column;
-            gap: var(--space-2);
+            bottom: 70px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 500;
             max-width: 400px;
-            width: 100%;
+            width: 90%;
             pointer-events: none;
         }
 
         .toast {
-            background: var(--color-white);
-            border-radius: var(--radius-md);
-            padding: var(--space-3) var(--space-5);
+            background: var(--white);
+            border-radius: var(--radius-sm);
+            padding: 10px 16px;
             box-shadow: var(--shadow-lg);
-            border: 1px solid var(--color-border);
+            border: 1px solid var(--border);
             display: flex;
             align-items: center;
-            gap: var(--space-3);
+            gap: 10px;
             animation: slideUp 0.4s ease;
             pointer-events: auto;
-            transform-origin: bottom;
+            font-size: 0.8rem;
         }
 
         .toast.success {
-            border-left: 4px solid var(--color-success);
+            border-left: 4px solid #2e7d32;
         }
         .toast.error {
-            border-left: 4px solid var(--color-error);
+            border-left: 4px solid #c62828;
         }
         .toast.warning {
-            border-left: 4px solid var(--color-warning);
-        }
-        .toast.info {
-            border-left: 4px solid var(--color-info);
+            border-left: 4px solid #f57c00;
         }
 
         .toast .icon {
-            font-size: var(--font-size-xl);
+            font-size: 1.1rem;
         }
         .toast .message {
             flex: 1;
-            font-size: var(--font-size-sm);
         }
         .toast .close {
             background: none;
             border: none;
             cursor: pointer;
-            color: var(--color-text-muted);
-            font-size: var(--font-size-base);
-            padding: var(--space-1);
+            color: var(--text-muted);
+            font-size: 1rem;
+            padding: 0 4px;
         }
 
         @keyframes slideUp {
             from {
                 opacity: 0;
-                transform: translateY(20px) scale(0.95);
+                transform: translateY(16px) scale(0.95);
             }
             to {
                 opacity: 1;
@@ -1359,166 +1203,64 @@
         }
 
         /* ================================================================
-           FOOTER
-           ================================================================ */
-        .footer {
-            text-align: center;
-            padding: var(--space-5) var(--space-4);
-            color: var(--color-text-muted);
-            font-size: var(--font-size-sm);
-            border-top: 1px solid var(--color-border);
-            margin-top: var(--space-8);
-        }
-
-        .footer i {
-            color: var(--color-gold);
-        }
-
-        /* ================================================================
-           RESPONSIVE
-           ================================================================ */
-        @media (max-width: 768px) {
-            .learning-header {
-                flex-direction: column;
-                text-align: center;
-            }
-            .learning-header .char-meta {
-                text-align: center;
-            }
-            .learning-header .char-display {
-                font-size: 3.5rem;
-            }
-            .learning-body {
-                padding: var(--space-4);
-            }
-            .char-info-grid {
-                grid-template-columns: 1fr;
-            }
-            .dashboard-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .container {
-                --container-padding: 12px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .dashboard-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: var(--space-2);
-            }
-            .stat-card {
-                padding: var(--space-3);
-            }
-            .stat-card .value {
-                font-size: var(--font-size-xl);
-            }
-            .hero-text h1 {
-                font-size: var(--font-size-2xl);
-            }
-            .hero-char-display {
-                font-size: 4rem;
-            }
-            .char-grid {
-                grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
-                gap: var(--space-1);
-            }
-            .char-grid-item {
-                font-size: var(--font-size-base);
-            }
-        }
-
-        @media (max-width: 380px) {
-            .dashboard-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-            .nav-tab {
-                padding: var(--space-1) var(--space-2);
-            }
-            .header-logo {
-                font-size: var(--font-size-base);
-            }
-            .header-logo-icon {
-                width: 32px;
-                height: 32px;
-                font-size: var(--font-size-base);
-            }
-        }
-
-        /* ================================================================
-           LOADING SKELETON
-           ================================================================ */
-        .skeleton {
-            background: linear-gradient(90deg, var(--color-border-light) 25%, var(--color-border) 50%, var(--color-border-light) 75%);
-            background-size: 200% 100%;
-            animation: shimmer 1.5s infinite;
-            border-radius: var(--radius-sm);
-        }
-
-        @keyframes shimmer {
-            0% {
-                background-position: 200% 0;
-            }
-            100% {
-                background-position: -200% 0;
-            }
-        }
-
-        /* ================================================================
-           KEYBOARD SHORTCUTS HINT
-           ================================================================ */
-        .shortcuts-hint {
-            display: none;
-            position: fixed;
-            bottom: var(--space-4);
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--color-white);
-            border: 1px solid var(--color-border);
-            border-radius: var(--radius-full);
-            padding: var(--space-2) var(--space-4);
-            font-size: var(--font-size-xs);
-            color: var(--color-text-secondary);
-            box-shadow: var(--shadow-md);
-            z-index: var(--z-tooltip);
-            gap: var(--space-3);
-            align-items: center;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .shortcuts-hint kbd {
-            background: var(--color-bg);
-            padding: 2px var(--space-2);
-            border-radius: var(--radius-sm);
-            border: 1px solid var(--color-border);
-            font-family: var(--font-primary);
-            font-size: var(--font-size-xs);
-            font-weight: 600;
-        }
-
-        @media (min-width: 768px) {
-            .shortcuts-hint {
-                display: flex;
-            }
-        }
-
-        /* ================================================================
-           ACCESSIBILITY: FOCUS VISIBLE
+           ACCESSIBILITY
            ================================================================ */
         :focus-visible {
-            outline: 2px solid var(--color-gold);
+            outline: 2px solid var(--gold);
             outline-offset: 2px;
         }
 
-        /* Reduced Motion */
         @media (prefers-reduced-motion: reduce) {
             *,
             *::before,
             *::after {
                 animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
                 transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* ================================================================
+           RESPONSIVE
+           ================================================================ */
+        @media (max-width: 420px) {
+            .learning-header .char-display {
+                font-size: 3.2rem;
+            }
+            .char-info-grid {
+                grid-template-columns: 1fr;
+                gap: 6px;
+            }
+            .char-grid {
+                grid-template-columns: repeat(auto-fill, minmax(34px, 1fr));
+                gap: 3px;
+            }
+            .char-grid-item {
+                font-size: 0.9rem;
+            }
+            .user-info .field {
+                min-width: 80px;
+            }
+            .toolbar .btn {
+                padding: 6px 12px;
+                font-size: 0.65rem;
+                min-height: 32px;
+            }
+        }
+
+        @media (max-width: 350px) {
+            .learning-header .char-display {
+                font-size: 2.6rem;
+            }
+            .nav-tab {
+                font-size: 0.6rem;
+                min-width: 44px;
+                padding: 6px 4px;
+            }
+            .nav-tab i {
+                font-size: 0.9rem;
+            }
+            .container {
+                padding: 8px 8px 60px;
             }
         }
     </style>
@@ -1528,167 +1270,78 @@
     <!-- ================================================================
     HEADER
     ================================================================ -->
-    <header class="header" role="banner">
-        <div class="header-content">
-            <a href="#" class="header-logo" aria-label="तिरहुता लिपि होम">
-                <span class="header-logo-icon" aria-hidden="true">𑒀</span>
-                <span>तिरहुता <span>लिपि</span></span>
-                <span class="sub">मिथिलाक्षर</span>
-            </a>
-            <div class="header-actions">
-                <button class="theme-toggle" id="themeToggle" aria-label="थीम बदलें">
-                    <i class="fas fa-moon" id="themeIcon" aria-hidden="true"></i>
-                    <span id="themeLabel">डार्क</span>
-                </button>
-                <button class="user-profile-btn" id="profileBtn" aria-label="प्रोफ़ाइल">
-                    <span class="avatar" aria-hidden="true">सा</span>
-                    <span id="userNameDisplay">साधक</span>
-                </button>
+    <header class="header">
+        <div class="logo">
+            <span class="logo-icon">𑒀</span>
+            <span>तिरहुता <span>लिपि</span></span>
+        </div>
+        <div class="header-right">
+            <button class="theme-btn" id="themeBtn" aria-label="थीम बदलें">
+                <i class="fas fa-moon" id="themeIcon"></i>
+            </button>
+            <div class="user-badge" id="profileBtn">
+                <i class="fas fa-user-circle"></i>
+                <span id="userNameDisplay">साधक</span>
             </div>
         </div>
     </header>
 
     <!-- ================================================================
-    NAVIGATION TABS
+    NAV TABS
     ================================================================ -->
-    <nav class="nav-tabs-wrapper" role="navigation" aria-label="मुख्य नेविगेशन">
-        <div class="nav-tabs" id="navTabs">
-            <button class="nav-tab active" data-section="dashboard" aria-current="page">
-                <i class="fas fa-th-large" aria-hidden="true"></i>
-                <span>डैशबोर्ड</span>
-            </button>
-            <button class="nav-tab" data-section="learn">
-                <i class="fas fa-pen-fancy" aria-hidden="true"></i>
-                <span>सीखें</span>
-                <span class="badge" id="learnBadge">0%</span>
-            </button>
-            <button class="nav-tab" data-section="progress">
-                <i class="fas fa-chart-simple" aria-hidden="true"></i>
-                <span>प्रगति</span>
-            </button>
-            <button class="nav-tab" data-section="exam">
-                <i class="fas fa-clipboard-question" aria-hidden="true"></i>
-                <span>परीक्षा</span>
-            </button>
-            <button class="nav-tab" data-section="certificate">
-                <i class="fas fa-award" aria-hidden="true"></i>
-                <span>प्रमाणपत्र</span>
-            </button>
-        </div>
+    <nav class="nav-tabs" id="navTabs">
+        <button class="nav-tab active" data-section="learn">
+            <i class="fas fa-pen-fancy"></i>
+            <span>सीखें</span>
+            <span class="badge" id="learnBadge">0%</span>
+        </button>
+        <button class="nav-tab" data-section="progress">
+            <i class="fas fa-chart-simple"></i>
+            <span>प्रगति</span>
+        </button>
+        <button class="nav-tab" data-section="exam">
+            <i class="fas fa-clipboard-question"></i>
+            <span>परीक्षा</span>
+        </button>
+        <button class="nav-tab" data-section="certificate">
+            <i class="fas fa-award"></i>
+            <span>प्रमाण</span>
+        </button>
     </nav>
 
     <!-- ================================================================
-    MAIN CONTAINER
+    USER INFO
     ================================================================ -->
-    <main class="container" role="main">
+    <div class="user-info">
+        <div class="field">
+            <i class="fas fa-user"></i>
+            <input type="text" id="userName" placeholder="नाम" value="साधक" />
+        </div>
+        <div class="field">
+            <i class="fas fa-map-marker-alt"></i>
+            <input type="text" id="userDistrict" placeholder="जिला" value="मिथिला" />
+        </div>
+        <button class="btn-update" id="updateUserBtn">✅</button>
+    </div>
 
-        <!-- ============================================================
-        SECTION: DASHBOARD
-        ============================================================ -->
-        <section id="dashboardSection" class="section active" aria-label="डैशबोर्ड">
-
-            <!-- Hero -->
-            <div class="hero">
-                <div class="hero-content">
-                    <div class="hero-text">
-                        <h1>
-                            𑒞𑒱𑒩𑒯𑒳𑒞𑒰 𑒪𑒱𑒣𑒱
-                            <br />
-                            <span class="highlight">सीखें · अभ्यास करें · प्रमाणित हों</span>
-                        </h1>
-                        <p>तिरहुता (मिथिलाक्षर) लिपि को आधुनिक, इंटरैक्टिव, और पूर्णतः निःशुल्क मंच पर सीखें। 120+ अक्षर, लेखन अभ्यास, परीक्षा, और प्रमाणपत्र।</p>
-                        <div class="hero-stats">
-                            <div class="hero-stat">
-                                <span class="number" id="heroTotal">122</span>
-                                <span class="label">कुल अक्षर</span>
-                            </div>
-                            <div class="hero-stat">
-                                <span class="number" id="heroDone">0</span>
-                                <span class="label">सीखे गए</span>
-                            </div>
-                            <div class="hero-stat">
-                                <span class="number" id="heroPercent">0%</span>
-                                <span class="label">प्रगति</span>
-                            </div>
-                        </div>
-                        <div class="hero-actions">
-                            <button class="btn btn-primary btn-lg" id="startLearningBtn">
-                                <i class="fas fa-play" aria-hidden="true"></i> अभी सीखें
-                            </button>
-                            <button class="btn btn-secondary btn-lg" id="continueLearningBtn">
-                                <i class="fas fa-arrow-right" aria-hidden="true"></i> जारी रखें
-                            </button>
-                        </div>
-                    </div>
-                    <div class="hero-visual">
-                        <div class="hero-char-display" aria-hidden="true">𑒀</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Dashboard Stats -->
-            <div class="dashboard-grid" id="dashboardStats">
-                <div class="stat-card">
-                    <div class="icon"><i class="fas fa-font"></i></div>
-                    <div class="value" id="statTotal">122</div>
-                    <div class="label">कुल अक्षर</div>
-                </div>
-                <div class="stat-card">
-                    <div class="icon"><i class="fas fa-check-circle"></i></div>
-                    <div class="value" id="statDone">0</div>
-                    <div class="label">पूर्ण किए</div>
-                </div>
-                <div class="stat-card">
-                    <div class="icon"><i class="fas fa-clock"></i></div>
-                    <div class="value" id="statTime">0m</div>
-                    <div class="label">अभ्यास समय</div>
-                </div>
-                <div class="stat-card">
-                    <div class="icon"><i class="fas fa-fire"></i></div>
-                    <div class="value" id="statStreak">0</div>
-                    <div class="label">लगातार दिन</div>
-                </div>
-                <div class="stat-card">
-                    <div class="icon"><i class="fas fa-star"></i></div>
-                    <div class="value" id="statAccuracy">0%</div>
-                    <div class="label">औसत सटीकता</div>
-                </div>
-                <div class="stat-card">
-                    <div class="icon"><i class="fas fa-calendar-day"></i></div>
-                    <div class="value" id="statLast">—</div>
-                    <div class="label">अंतिम अभ्यास</div>
-                </div>
-            </div>
-
-            <!-- Quick Actions -->
-            <div style="display:flex; gap:var(--space-3); flex-wrap:wrap; justify-content:center; margin-top:var(--space-4);">
-                <button class="btn btn-gold" onclick="navigateTo('learn')">
-                    <i class="fas fa-pen-fancy"></i> अभ्यास शुरू करें
-                </button>
-                <button class="btn btn-secondary" onclick="navigateTo('exam')">
-                    <i class="fas fa-clipboard-check"></i> परीक्षा दें
-                </button>
-                <button class="btn btn-secondary" onclick="navigateTo('certificate')">
-                    <i class="fas fa-award"></i> प्रमाणपत्र देखें
-                </button>
-            </div>
-        </section>
+    <!-- ================================================================
+    CONTAINER
+    ================================================================ -->
+    <div class="container">
 
         <!-- ============================================================
         SECTION: LEARN
         ============================================================ -->
-        <section id="learnSection" class="section" aria-label="अभ्यास">
+        <section id="learnSection" class="section active">
 
             <div class="learning-card">
                 <div class="learning-header">
                     <div class="char-display" id="currentChar">𑒀</div>
-                    <div class="char-meta">
-                        <div class="char-name" id="charName">𑒀 - अज्जी</div>
-                        <div class="char-counter" id="charCounter">1 / 122</div>
-                    </div>
+                    <div class="char-name" id="charName">𑒀 - अज्जी</div>
+                    <div class="char-counter" id="charCounter">1 / 122</div>
                 </div>
-                <div class="learning-body">
 
+                <div class="learning-body">
                     <!-- Character Info -->
                     <div class="char-info-grid">
                         <div class="char-info-item">
@@ -1697,7 +1350,7 @@
                         </div>
                         <div class="char-info-item">
                             <div class="label"><i class="fas fa-layer-group"></i> वर्ग</div>
-                            <div class="value" id="charCategory">पवित्र (गणेश)</div>
+                            <div class="value" id="charCategory">पवित्र</div>
                         </div>
                         <div class="char-info-item">
                             <div class="label"><i class="fas fa-pen-fancy"></i> स्ट्रोक</div>
@@ -1705,15 +1358,7 @@
                         </div>
                         <div class="char-info-item">
                             <div class="label"><i class="fas fa-lightbulb"></i> उदाहरण</div>
-                            <div class="value" id="charExample">प्रारम्भ में अज्जी लिखल जायत अछि</div>
-                        </div>
-                        <div class="char-info-item">
-                            <div class="label"><i class="fas fa-code"></i> यूनिकोड</div>
-                            <div class="value" id="charUnicode">U+11480</div>
-                        </div>
-                        <div class="char-info-item">
-                            <div class="label"><i class="fas fa-arrow-right"></i> अगला</div>
-                            <div class="value" id="charNext">𑓇 - ॐ</div>
+                            <div class="value" id="charExample">प्रारम्भ में अज्जी</div>
                         </div>
                     </div>
 
@@ -1728,95 +1373,87 @@
                     <!-- Canvas -->
                     <div class="canvas-wrapper">
                         <div class="canvas-container">
-                            <canvas id="practiceCanvas" aria-label="लेखन अभ्यास कैनवास"></canvas>
+                            <canvas id="practiceCanvas"></canvas>
                         </div>
                     </div>
 
                     <!-- Toolbar -->
                     <div class="toolbar">
-                        <button class="btn btn-sm btn-secondary" id="prevChar" aria-label="पिछला अक्षर">
-                            <i class="fas fa-chevron-left"></i> पिछला
-                        </button>
-                        <button class="btn btn-sm btn-secondary" id="clearCanvas" aria-label="कैनवास साफ करें">
-                            <i class="fas fa-eraser"></i> साफ़
-                        </button>
-                        <button class="btn btn-sm btn-primary" id="savePractice" aria-label="अभ्यास सहेजें">
-                            <i class="fas fa-save"></i> सहेजें
-                        </button>
-                        <button class="btn btn-sm btn-gold" id="nextChar" aria-label="अगला अक्षर">
-                            अगला <i class="fas fa-chevron-right"></i>
-                        </button>
+                        <button class="btn btn-prev" id="prevChar"><i class="fas fa-chevron-left"></i> पिछला</button>
+                        <button class="btn btn-clear" id="clearCanvas"><i class="fas fa-eraser"></i> साफ़</button>
+                        <button class="btn btn-save" id="savePractice"><i class="fas fa-save"></i> सहेजें</button>
+                        <button class="btn btn-next" id="nextChar">अगला <i class="fas fa-chevron-right"></i></button>
                     </div>
 
                     <!-- Status -->
                     <div class="practice-status">
-                        <span class="status info" id="practiceStatus">✍️ उंगली या माउस से लिखें</span>
+                        <span class="status" id="practiceStatus">✍️ उंगली या माउस से लिखें</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Tip -->
+            <!-- Tip Card -->
             <div class="tip-card">
                 <i class="fas fa-lightbulb"></i>
-                <p><strong>टिप:</strong> हर अक्षर को ध्यान से देखें, स्ट्रोक दिशा का पालन करें और अभ्यास करें।</p>
+                <p><strong>टिप:</strong> स्ट्रोक दिशा का पालन करें और अभ्यास करें।</p>
                 <span class="badge-device">
                     <i class="fas fa-mobile-alt"></i> फिंगर
                     <span style="opacity:0.3;margin:0 4px;">|</span>
                     <i class="fas fa-mouse"></i> माउस
                 </span>
             </div>
+
         </section>
 
         <!-- ============================================================
         SECTION: PROGRESS
         ============================================================ -->
-        <section id="progressSection" class="section" aria-label="प्रगति">
+        <section id="progressSection" class="section">
+
             <div class="progress-card">
-                <div class="section-header">
-                    <h2 class="section-title"><i class="fas fa-chart-simple"></i> आपकी प्रगति</h2>
+                <div class="progress-title">
+                    <i class="fas fa-chart-simple"></i> आपकी प्रगति
                 </div>
 
-                <div class="dashboard-grid" style="grid-template-columns: repeat(4,1fr);">
-                    <div class="stat-card">
-                        <div class="value" id="progDone">0</div>
-                        <div class="label">पूर्ण किए</div>
+                <div class="progress-stats">
+                    <div class="stat-box">
+                        <div class="number" id="progDone">0</div>
+                        <div class="label">पूर्ण</div>
                     </div>
-                    <div class="stat-card">
-                        <div class="value" id="progTotal">122</div>
-                        <div class="label">कुल अक्षर</div>
+                    <div class="stat-box">
+                        <div class="number" id="progTotal">122</div>
+                        <div class="label">कुल</div>
                     </div>
-                    <div class="stat-card">
-                        <div class="value" id="progPercent">0%</div>
-                        <div class="label">पूर्णता</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="value" id="progRemaining">122</div>
-                        <div class="label">शेष</div>
+                    <div class="stat-box">
+                        <div class="number" id="progPercent">0%</div>
+                        <div class="label">प्रगति</div>
                     </div>
                 </div>
 
                 <div class="progress-bar-wrap">
-                    <div class="fill" id="progressFill" style="width:0%;"></div>
+                    <div class="fill" id="progressFill"></div>
                 </div>
 
                 <div class="char-grid" id="charGrid"></div>
             </div>
+
         </section>
 
         <!-- ============================================================
         SECTION: EXAM
         ============================================================ -->
-        <section id="examSection" class="section" aria-label="परीक्षा">
+        <section id="examSection" class="section">
+
             <div class="exam-card">
-                <div class="section-header">
-                    <h2 class="section-title"><i class="fas fa-clipboard-question"></i> परीक्षा</h2>
-                    <span style="font-size:var(--font-size-sm);color:var(--color-text-secondary);">
-                        <i class="fas fa-info-circle"></i> 70%+ पास
-                    </span>
+                <div class="exam-title">
+                    <i class="fas fa-clipboard-question"></i> परीक्षा
+                </div>
+                <div class="exam-subtitle">
+                    <i class="fas fa-info-circle"></i> 70%+ पास
                 </div>
 
                 <div id="examContent">
-                    <div class="exam-question" id="examQuestion">
+                    <div class="exam-question">
                         <strong>प्रश्न:</strong> <span id="examQuestionText">कौन सा अक्षर है?</span>
                     </div>
 
@@ -1824,27 +1461,29 @@
 
                     <div class="exam-feedback" id="examFeedback"></div>
 
-                    <div class="toolbar" style="margin-top:var(--space-3);">
-                        <button class="btn btn-primary" id="examNextBtn">अगला <i class="fas fa-arrow-right"></i></button>
-                        <button class="btn btn-secondary" id="examResetBtn"><i class="fas fa-rotate"></i> पुनः</button>
+                    <div class="exam-controls">
+                        <button class="btn btn-exam-next" id="examNextBtn">अगला <i class="fas fa-arrow-right"></i></button>
+                        <button class="btn btn-exam-reset" id="examResetBtn"><i class="fas fa-rotate"></i></button>
                     </div>
 
                     <div class="exam-result" id="examResult"></div>
                 </div>
             </div>
+
         </section>
 
         <!-- ============================================================
         SECTION: CERTIFICATE
         ============================================================ -->
-        <section id="certificateSection" class="section" aria-label="प्रमाणपत्र">
+        <section id="certificateSection" class="section">
+
             <div class="cert-card">
-                <div class="section-header">
-                    <h2 class="section-title"><i class="fas fa-award"></i> प्रमाणपत्र</h2>
+                <div class="cert-title">
+                    <i class="fas fa-award"></i> प्रमाणपत्र
                 </div>
 
-                <div class="cert-status" id="certStatus" style="text-align:center;color:var(--color-text-secondary);margin-bottom:var(--space-4);">
-                    <i class="fas fa-info-circle"></i> परीक्षा पास करने पर प्रमाणपत्र जारी होगा।
+                <div class="cert-status" id="certStatus">
+                    <i class="fas fa-info-circle"></i> परीक्षा पास करें
                 </div>
 
                 <div class="certificate-preview" id="certificatePreview">
@@ -1853,51 +1492,44 @@
                     <div class="cert-name" id="certName">साधक</div>
                     <div class="cert-detail" id="certDistrict">𑒧𑒱𑒟𑒱𑒪𑒰 (मिथिला)</div>
                     <div class="cert-detail" id="certScore">स्कोर: —</div>
-                    <div class="cert-detail" style="font-size:0.8rem;color:var(--color-text-muted);margin-top:var(--space-2);">
-                        प्रमाणपत्र क्रमांक: <span id="certNumber">—</span>
-                    </div>
-                    <div class="cert-detail" style="font-size:0.8rem;color:var(--color-text-muted);">
-                        जारी: <span id="certDate">—</span>
+                    <div class="cert-detail" style="font-size:0.65rem;color:var(--text-muted);">
+                        <span id="certDate">—</span>
                     </div>
                     <div class="cert-stamp">✦ ✦ ✦</div>
                 </div>
 
                 <div class="cert-actions">
-                    <button class="btn btn-primary" id="downloadCert"><i class="fas fa-file-pdf"></i> PDF डाउनलोड</button>
-                    <button class="btn btn-gold" id="shareCert"><i class="fas fa-share-alt"></i> शेयर करें</button>
-                    <button class="btn btn-secondary" onclick="window.print()"><i class="fas fa-print"></i> प्रिंट</button>
+                    <button class="btn btn-pdf" id="downloadCert"><i class="fas fa-file-pdf"></i> PDF</button>
+                    <button class="btn btn-share" id="shareCert"><i class="fas fa-share-alt"></i> शेयर</button>
+                    <button class="btn btn-print" onclick="window.print()"><i class="fas fa-print"></i></button>
                 </div>
 
-                <div id="certMessage" style="text-align:center;margin-top:var(--space-3);color:var(--color-text-secondary);font-size:var(--font-size-sm);"></div>
+                <div class="cert-message" id="certMessage"></div>
             </div>
+
         </section>
 
-    </main>
+    </div>
 
     <!-- ================================================================
     SHORTCUTS HINT
     ================================================================ -->
-    <div class="shortcuts-hint" role="note" aria-label="कीबोर्ड शॉर्टकट">
-        <span><kbd>←</kbd> <kbd>→</kbd> नेविगेट</span>
+    <div class="shortcuts-hint">
+        <span><kbd>←</kbd> <kbd>→</kbd></span>
         <span><kbd>S</kbd> सहेजें</span>
-        <span><kbd>R</kbd> साफ़ करें</span>
-        <span><kbd>D</kbd> डैशबोर्ड</span>
+        <span><kbd>R</kbd> साफ़</span>
     </div>
 
     <!-- ================================================================
     TOAST CONTAINER
     ================================================================ -->
-    <div class="toast-container" id="toastContainer" role="status" aria-live="polite"></div>
+    <div class="toast-container" id="toastContainer"></div>
 
     <!-- ================================================================
     FOOTER
     ================================================================ -->
-    <footer class="footer" role="contentinfo">
-        <i class="fas fa-om" aria-hidden="true"></i>
-        𑒞𑒱𑒩𑒯𑒳𑒞𑒰 𑒪𑒱𑒣𑒱 · मिथिलाक्षर शिक्षण मंच
-        <span style="display:block;font-size:var(--font-size-xs);margin-top:var(--space-2);">
-            निर्मित ❤️ से · सभी अधिकार सुरक्षित
-        </span>
+    <footer class="footer">
+        <i class="fas fa-om"></i> 𑒞𑒱𑒩𑒯𑒳𑒞𑒰 𑒪𑒱𑒣𑒱 · मिथिलाक्षर
     </footer>
 
     <!-- ================================================================
@@ -1914,267 +1546,161 @@
         // ================================================================
         const TIRHUTA_DATA = [
             // Ajji
-            { char: '𑒀', name: 'अज्जी', pronounce: 'Ajji', category: 'पवित्र (गणेश)', strokes: 4,
-                example: 'प्रारम्भ में अज्जी लिखल जायत अछि', unicode: 'U+11480' },
+            { char: '𑒀', name: 'अज्जी', pronounce: 'Ajji', category: 'पवित्र', strokes: 4,
+                example: 'प्रारम्भ में अज्जी' },
             // OM
-            { char: '𑓇', name: 'ॐ', pronounce: 'ॐ (Om)', category: 'पवित्र', strokes: 4, example: 'ॐ नमः शिवाय',
-                unicode: 'U+114C7' },
+            { char: '𑓇', name: 'ॐ', pronounce: 'ॐ (Om)', category: 'पवित्र', strokes: 4, example: 'ॐ नमः शिवाय' },
             // Vowels
-            { char: '𑒁', name: 'अ', pronounce: 'a', category: 'स्वर (कण्ठ्य)', strokes: 2, example: '𑒁𑒧𑓃𑒞 (अमृत)',
-                unicode: 'U+11481' },
-            { char: '𑒂', name: 'आ', pronounce: 'ā', category: 'स्वर (कण्ठ्य)', strokes: 3, example: '𑒂𑒧 (आम)',
-                unicode: 'U+11482' },
-            { char: '𑒃', name: 'इ', pronounce: 'i', category: 'स्वर (तालव्य)', strokes: 2, example: '𑒃𑒧𑒪𑒲 (इमली)',
-                unicode: 'U+11483' },
-            { char: '𑒄', name: 'ई', pronounce: 'ī', category: 'स्वर (तालव्य)', strokes: 3, example: '𑒄𑒕 (ईख)',
-                unicode: 'U+11484' },
-            { char: '𑒅', name: 'उ', pronounce: 'u', category: 'स्वर (ओष्ठ्य)', strokes: 2, example: '𑒅𑒪𑓂𑒪𑒴𑒏 (उलूक)',
-                unicode: 'U+11485' },
-            { char: '𑒆', name: 'ऊ', pronounce: 'ū', category: 'स्वर (ओष्ठ्य)', strokes: 3, example: '𑒆𑒢 (ऊन)',
-                unicode: 'U+11486' },
-            { char: '𑒇', name: 'ऋ', pronounce: 'ṛ', category: 'स्वर (मूर्धन्य)', strokes: 3, example: '𑒇𑒭𑒱 (ऋषि)',
-                unicode: 'U+11487' },
-            { char: '𑒈', name: 'ए', pronounce: 'e', category: 'स्वर (कण्ठ-तालव्य)', strokes: 2, example: '𑒈𑒏 (एक)',
-                unicode: 'U+11488' },
-            { char: '𑒉', name: 'ऐ', pronounce: 'ai', category: 'स्वर (कण्ठ-तालव्य)', strokes: 3, example: '𑒉𑒢𑒏 (ऐनक)',
-                unicode: 'U+11489' },
-            { char: '𑒊', name: 'ओ', pronounce: 'o', category: 'स्वर (कण्ठ-ओष्ठ्य)', strokes: 2,
-                example: '𑒊𑒒𑒾𑒪𑒲 (ओखली)', unicode: 'U+1148A' },
-            { char: '𑒋', name: 'औ', pronounce: 'au', category: 'स्वर (कण्ठ-ओष्ठ्य)', strokes: 3,
-                example: '𑒋𑒩𑒞 (औरत)', unicode: 'U+1148B' },
+            { char: '𑒁', name: 'अ', pronounce: 'a', category: 'स्वर', strokes: 2, example: '𑒁𑒧𑓃𑒞 (अमृत)' },
+            { char: '𑒂', name: 'आ', pronounce: 'ā', category: 'स्वर', strokes: 3, example: '𑒂𑒧 (आम)' },
+            { char: '𑒃', name: 'इ', pronounce: 'i', category: 'स्वर', strokes: 2, example: '𑒃𑒧𑒪𑒲 (इमली)' },
+            { char: '𑒄', name: 'ई', pronounce: 'ī', category: 'स्वर', strokes: 3, example: '𑒄𑒕 (ईख)' },
+            { char: '𑒅', name: 'उ', pronounce: 'u', category: 'स्वर', strokes: 2, example: '𑒅𑒪𑓂𑒪𑒴𑒏 (उलूक)' },
+            { char: '𑒆', name: 'ऊ', pronounce: 'ū', category: 'स्वर', strokes: 3, example: '𑒆𑒢 (ऊन)' },
+            { char: '𑒇', name: 'ऋ', pronounce: 'ṛ', category: 'स्वर', strokes: 3, example: '𑒇𑒭𑒱 (ऋषि)' },
+            { char: '𑒈', name: 'ए', pronounce: 'e', category: 'स्वर', strokes: 2, example: '𑒈𑒏 (एक)' },
+            { char: '𑒉', name: 'ऐ', pronounce: 'ai', category: 'स्वर', strokes: 3, example: '𑒉𑒢𑒏 (ऐनक)' },
+            { char: '𑒊', name: 'ओ', pronounce: 'o', category: 'स्वर', strokes: 2, example: '𑒊𑒒𑒾𑒪𑒲 (ओखली)' },
+            { char: '𑒋', name: 'औ', pronounce: 'au', category: 'स्वर', strokes: 3, example: '𑒋𑒩𑒞 (औरत)' },
             // Ka Varga
-            { char: '𑒏', name: 'क', pronounce: 'ka', category: 'व्यंजन (क-वर्ग)', strokes: 3, example: '𑒏𑒧𑒪 (कमल)',
-                unicode: 'U+1148F' },
-            { char: '𑒐', name: 'ख', pronounce: 'kha', category: 'व्यंजन (क-वर्ग)', strokes: 3,
-                example: '𑒐𑒕𑒯𑓂𑒩𑒴𑒁𑒻 (खजूर)', unicode: 'U+11490' },
-            { char: '𑒑', name: 'ग', pronounce: 'ga', category: 'व्यंजन (क-वर्ग)', strokes: 3, example: '𑒑𑒰𑒨 (गाय)',
-                unicode: 'U+11491' },
-            { char: '𑒒', name: 'घ', pronounce: 'gha', category: 'व्यंजन (क-वर्ग)', strokes: 4, example: '𑒒𑒩 (घर)',
-                unicode: 'U+11492' },
-            { char: '𑒓', name: 'ङ', pronounce: 'ṅa', category: 'व्यंजन (क-वर्ग)', strokes: 2, example: '𑒩𑒓𑓂𑒑 (रङ्ग)',
-                unicode: 'U+11493' },
+            { char: '𑒏', name: 'क', pronounce: 'ka', category: 'व्यंजन', strokes: 3, example: '𑒏𑒧𑒪 (कमल)' },
+            { char: '𑒐', name: 'ख', pronounce: 'kha', category: 'व्यंजन', strokes: 3, example: '𑒐𑒕𑒯𑓂𑒩𑒴𑒁𑒻 (खजूर)' },
+            { char: '𑒑', name: 'ग', pronounce: 'ga', category: 'व्यंजन', strokes: 3, example: '𑒑𑒰𑒨 (गाय)' },
+            { char: '𑒒', name: 'घ', pronounce: 'gha', category: 'व्यंजन', strokes: 4, example: '𑒒𑒩 (घर)' },
+            { char: '𑒓', name: 'ङ', pronounce: 'ṅa', category: 'व्यंजन', strokes: 2, example: '𑒩𑒓𑓂𑒑 (रङ्ग)' },
             // Cha Varga
-            { char: '𑒔', name: 'च', pronounce: 'ca', category: 'व्यंजन (च-वर्ग)', strokes: 3,
-                example: '𑒔𑒰𑒢𑓂𑒠 (चाँद)', unicode: 'U+11494' },
-            { char: '𑒕', name: 'छ', pronounce: 'cha', category: 'व्यंजन (च-वर्ग)', strokes: 3, example: '𑒕𑒞 (छत)',
-                unicode: 'U+11495' },
-            { char: '𑒖', name: 'ज', pronounce: 'ja', category: 'व्यंजन (च-वर्ग)', strokes: 3, example: '𑒖𑒪 (जल)',
-                unicode: 'U+11496' },
-            { char: '𑒗', name: 'झ', pronounce: 'jha', category: 'व्यंजन (च-वर्ग)', strokes: 4,
-                example: '𑒗𑓂𑒛𑒜𑒰 (झंडा)', unicode: 'U+11497' },
-            { char: '𑒘', name: 'ञ', pronounce: 'ña', category: 'व्यंजन (च-वर्ग)', strokes: 3, example: '𑒘𑒰𑒢 (ज्ञान)',
-                unicode: 'U+11498' },
+            { char: '𑒔', name: 'च', pronounce: 'ca', category: 'व्यंजन', strokes: 3, example: '𑒔𑒰𑒢𑓂𑒠 (चाँद)' },
+            { char: '𑒕', name: 'छ', pronounce: 'cha', category: 'व्यंजन', strokes: 3, example: '𑒕𑒞 (छत)' },
+            { char: '𑒖', name: 'ज', pronounce: 'ja', category: 'व्यंजन', strokes: 3, example: '𑒖𑒪 (जल)' },
+            { char: '𑒗', name: 'झ', pronounce: 'jha', category: 'व्यंजन', strokes: 4, example: '𑒗𑓂𑒛𑒜𑒰 (झंडा)' },
+            { char: '𑒘', name: 'ञ', pronounce: 'ña', category: 'व्यंजन', strokes: 3, example: '𑒘𑒰𑒢 (ज्ञान)' },
             // Ta Varga (Murdhanya)
-            { char: '𑒙', name: 'ट', pronounce: 'ṭa', category: 'व्यंजन (ट-वर्ग)', strokes: 3, example: '𑒙𑒰𑒕𑒲 (टाटी)',
-                unicode: 'U+11499' },
-            { char: '𑒚', name: 'ठ', pronounce: 'ṭha', category: 'व्यंजन (ट-वर्ग)', strokes: 3, example: '𑒚𑒲𑒕 (ठीक)',
-                unicode: 'U+1149A' },
-            { char: '𑒛', name: 'ड', pronounce: 'ḍa', category: 'व्यंजन (ट-वर्ग)', strokes: 3, example: '𑒛𑒩 (डर)',
-                unicode: 'U+1149B' },
-            { char: '𑒜', name: 'ढ', pronounce: 'ḍha', category: 'व्यंजन (ट-वर्ग)', strokes: 4,
-                example: '𑒜𑒱𑒪𑒾𑒞𑒹𑒯 (ढिलाई)', unicode: 'U+1149C' },
-            { char: '𑒝', name: 'ण', pronounce: 'ṇa', category: 'व्यंजन (ट-वर्ग)', strokes: 3, example: '𑒝𑒱𑒢 (णिन)',
-                unicode: 'U+1149D' },
+            { char: '𑒙', name: 'ट', pronounce: 'ṭa', category: 'व्यंजन', strokes: 3, example: '𑒙𑒰𑒕𑒲 (टाटी)' },
+            { char: '𑒚', name: 'ठ', pronounce: 'ṭha', category: 'व्यंजन', strokes: 3, example: '𑒚𑒲𑒕 (ठीक)' },
+            { char: '𑒛', name: 'ड', pronounce: 'ḍa', category: 'व्यंजन', strokes: 3, example: '𑒛𑒩 (डर)' },
+            { char: '𑒜', name: 'ढ', pronounce: 'ḍha', category: 'व्यंजन', strokes: 4, example: '𑒜𑒱𑒪𑒾𑒞𑒹𑒯 (ढिलाई)' },
+            { char: '𑒝', name: 'ण', pronounce: 'ṇa', category: 'व्यंजन', strokes: 3, example: '𑒝𑒱𑒢 (णिन)' },
             // Ta Varga (Dantya)
-            { char: '𑒞', name: 'त', pronounce: 'ta', category: 'व्यंजन (त-वर्ग)', strokes: 3, example: '𑒞𑒪 (तल)',
-                unicode: 'U+1149E' },
-            { char: '𑒟', name: 'थ', pronounce: 'tha', category: 'व्यंजन (त-वर्ग)', strokes: 3,
-                example: '𑒟𑒰𑒢𑒻 (थानी)', unicode: 'U+1149F' },
-            { char: '𑒠', name: 'द', pronounce: 'da', category: 'व्यंजन (त-वर्ग)', strokes: 3, example: '𑒠𑒰𑒢 (दान)',
-                unicode: 'U+114A0' },
-            { char: '𑒡', name: 'ध', pronounce: 'dha', category: 'व्यंजन (त-वर्ग)', strokes: 4,
-                example: '𑒡𑒩𑓂𑒧 (धर्म)', unicode: 'U+114A1' },
-            { char: '𑒢', name: 'न', pronounce: 'na', category: 'व्यंजन (त-वर्ग)', strokes: 3, example: '𑒢𑒩 (नर)',
-                unicode: 'U+114A2' },
+            { char: '𑒞', name: 'त', pronounce: 'ta', category: 'व्यंजन', strokes: 3, example: '𑒞𑒪 (तल)' },
+            { char: '𑒟', name: 'थ', pronounce: 'tha', category: 'व्यंजन', strokes: 3, example: '𑒟𑒰𑒢𑒻 (थानी)' },
+            { char: '𑒠', name: 'द', pronounce: 'da', category: 'व्यंजन', strokes: 3, example: '𑒠𑒰𑒢 (दान)' },
+            { char: '𑒡', name: 'ध', pronounce: 'dha', category: 'व्यंजन', strokes: 4, example: '𑒡𑒩𑓂𑒧 (धर्म)' },
+            { char: '𑒢', name: 'न', pronounce: 'na', category: 'व्यंजन', strokes: 3, example: '𑒢𑒩 (नर)' },
             // Pa Varga
-            { char: '𑒣', name: 'प', pronounce: 'pa', category: 'व्यंजन (प-वर्ग)', strokes: 3, example: '𑒣𑒰𑒢𑒲 (पानी)',
-                unicode: 'U+114A3' },
-            { char: '𑒤', name: 'फ', pronounce: 'pha', category: 'व्यंजन (प-वर्ग)', strokes: 3, example: '𑒤𑒪 (फल)',
-                unicode: 'U+114A4' },
-            { char: '𑒥', name: 'ब', pronounce: 'ba', category: 'व्यंजन (प-वर्ग)', strokes: 3, example: '𑒥𑒰𑒕 (बाट)',
-                unicode: 'U+114A5' },
-            { char: '𑒦', name: 'भ', pronounce: 'bha', category: 'व्यंजन (प-वर्ग)', strokes: 4, example: '𑒦𑒰𑒞 (भात)',
-                unicode: 'U+114A6' },
-            { char: '𑒧', name: 'म', pronounce: 'ma', category: 'व्यंजन (प-वर्ग)', strokes: 3, example: '𑒧𑒰𑒞 (मात)',
-                unicode: 'U+114A7' },
+            { char: '𑒣', name: 'प', pronounce: 'pa', category: 'व्यंजन', strokes: 3, example: '𑒣𑒰𑒢𑒲 (पानी)' },
+            { char: '𑒤', name: 'फ', pronounce: 'pha', category: 'व्यंजन', strokes: 3, example: '𑒤𑒪 (फल)' },
+            { char: '𑒥', name: 'ब', pronounce: 'ba', category: 'व्यंजन', strokes: 3, example: '𑒥𑒰𑒕 (बाट)' },
+            { char: '𑒦', name: 'भ', pronounce: 'bha', category: 'व्यंजन', strokes: 4, example: '𑒦𑒰𑒞 (भात)' },
+            { char: '𑒧', name: 'म', pronounce: 'ma', category: 'व्यंजन', strokes: 3, example: '𑒧𑒰𑒞 (मात)' },
             // Antastha
-            { char: '𑒨', name: 'य', pronounce: 'ya', category: 'व्यंजन (अन्तस्थ)', strokes: 3,
-                example: '𑒨𑒞𑒹𑒢 (यत्न)', unicode: 'U+114A8' },
-            { char: '𑒩', name: 'र', pronounce: 'ra', category: 'व्यंजन (अन्तस्थ)', strokes: 3, example: '𑒩𑒰𑒨 (राय)',
-                unicode: 'U+114A9' },
-            { char: '𑒪', name: 'ल', pronounce: 'la', category: 'व्यंजन (अन्तस्थ)', strokes: 3, example: '𑒪𑒰𑒪 (लाल)',
-                unicode: 'U+114AA' },
-            { char: '𑒫', name: 'व', pronounce: 'va', category: 'व्यंजन (अन्तस्थ)', strokes: 3,
-                example: '𑒫𑒰𑒕𑒰 (वाटा)', unicode: 'U+114AB' },
+            { char: '𑒨', name: 'य', pronounce: 'ya', category: 'व्यंजन', strokes: 3, example: '𑒨𑒞𑒹𑒢 (यत्न)' },
+            { char: '𑒩', name: 'र', pronounce: 'ra', category: 'व्यंजन', strokes: 3, example: '𑒩𑒰𑒨 (राय)' },
+            { char: '𑒪', name: 'ल', pronounce: 'la', category: 'व्यंजन', strokes: 3, example: '𑒪𑒰𑒪 (लाल)' },
+            { char: '𑒫', name: 'व', pronounce: 'va', category: 'व्यंजन', strokes: 3, example: '𑒫𑒰𑒕𑒰 (वाटा)' },
             // Ushma
-            { char: '𑒬', name: 'श', pronounce: 'śa', category: 'व्यंजन (उष्म)', strokes: 3, example: '𑒬𑒱𑒫 (शिव)',
-                unicode: 'U+114AC' },
-            { char: '𑒭', name: 'ष', pronounce: 'ṣa', category: 'व्यंजन (उष्म)', strokes: 3, example: '𑒭𑒵𑒯𑒴 (षड्)',
-                unicode: 'U+114AD' },
-            { char: '𑒮', name: 'स', pronounce: 'sa', category: 'व्यंजन (उष्म)', strokes: 3,
-                example: '𑒮𑒳𑒩𑓂𑒨 (सूर्य)', unicode: 'U+114AE' },
-            { char: '𑒯', name: 'ह', pronounce: 'ha', category: 'व्यंजन (उष्म)', strokes: 3, example: '𑒯𑒰𑒞𑒲 (हाथी)',
-                unicode: 'U+114AF' },
+            { char: '𑒬', name: 'श', pronounce: 'śa', category: 'व्यंजन', strokes: 3, example: '𑒬𑒱𑒫 (शिव)' },
+            { char: '𑒭', name: 'ष', pronounce: 'ṣa', category: 'व्यंजन', strokes: 3, example: '𑒭𑒵𑒯𑒴 (षड्)' },
+            { char: '𑒮', name: 'स', pronounce: 'sa', category: 'व्यंजन', strokes: 3, example: '𑒮𑒳𑒩𑓂𑒨 (सूर्य)' },
+            { char: '𑒯', name: 'ह', pronounce: 'ha', category: 'व्यंजन', strokes: 3, example: '𑒯𑒰𑒞𑒲 (हाथी)' },
             // Matra (with क)
-            { char: '𑒏𑒰', name: 'का', pronounce: 'kā', category: 'मात्रा (आ)', strokes: 3, example: '𑒏𑒰𑒧 (काम)',
-                unicode: 'U+1148F U+114B0' },
-            { char: '𑒏𑒱', name: 'कि', pronounce: 'ki', category: 'मात्रा (इ)', strokes: 2, example: '𑒏𑒱𑒞𑒰𑒥 (किताब)',
-                unicode: 'U+1148F U+114B1' },
-            { char: '𑒏𑒲', name: 'की', pronounce: 'kī', category: 'मात्रा (ई)', strokes: 3, example: '𑒏𑒲𑒩𑒞𑒲 (कीरती)',
-                unicode: 'U+1148F U+114B2' },
-            { char: '𑒏𑒳', name: 'कु', pronounce: 'ku', category: 'मात्रा (उ)', strokes: 2, example: '𑒏𑒳𑒩𑒱 (कुरी)',
-                unicode: 'U+1148F U+114B3' },
-            { char: '𑒏𑒴', name: 'कू', pronounce: 'kū', category: 'मात्रा (ऊ)', strokes: 3, example: '𑒏𑒴𑒟 (कूट)',
-                unicode: 'U+1148F U+114B4' },
-            { char: '𑒏𑒵', name: 'कृ', pronounce: 'kṛ', category: 'मात्रा (ऋ)', strokes: 3, example: '𑒏𑒵𑒞𑓂𑒨 (कृत्य)',
-                unicode: 'U+1148F U+114B5' },
-            { char: '𑒏𑒺', name: 'के', pronounce: 'ke', category: 'मात्रा (ए)', strokes: 2, example: '𑒏𑒺𑒪 (केल)',
-                unicode: 'U+1148F U+114BA' },
-            { char: '𑒏𑒻', name: 'कै', pronounce: 'kai', category: 'मात्रा (ऐ)', strokes: 3, example: '𑒏𑒻𑒩 (कैर)',
-                unicode: 'U+1148F U+114BB' },
-            { char: '𑒏𑒼', name: 'को', pronounce: 'ko', category: 'मात्रा (ओ)', strokes: 2, example: '𑒏𑒼𑒞𑒱 (कोति)',
-                unicode: 'U+1148F U+114BC' },
-            { char: '𑒏𑒽', name: 'कौ', pronounce: 'kau', category: 'मात्रा (औ)', strokes: 3, example: '𑒏𑒽𑒩𑒰 (कौरा)',
-                unicode: 'U+1148F U+114BD' },
-            { char: '𑒏𑓂', name: 'क्', pronounce: 'k', category: 'हलन्त', strokes: 1, example: '𑒏𑓂𑒢 (क्न)',
-                unicode: 'U+1148F U+114C2' },
-            // Sanyukt (Compound) - 33
-            { char: '𑒏𑓂𑒏', name: 'क्क', pronounce: 'kka', category: 'संयुक्त (क्क)', strokes: 4,
-                example: '𑒏𑓂𑒏𑒩𑒰𑒕𑒰 (क्कराटा)', unicode: 'U+1148F U+114C2 U+1148F' },
-            { char: '𑒏𑓂𑒐', name: 'क्ख', pronounce: 'kkha', category: 'संयुक्त (क्ख)', strokes: 4,
-                example: '𑒏𑓂𑒐𑒩𑓂𑒧 (क्खर्म)', unicode: 'U+1148F U+114C2 U+11490' },
-            { char: '𑒏𑓂𑒑', name: 'क्ग', pronounce: 'kga', category: 'संयुक्त (क्ग)', strokes: 4,
-                example: '𑒏𑓂𑒑𑒰𑒕𑒰 (क्गाटा)', unicode: 'U+1148F U+114C2 U+11491' },
-            { char: '𑒏𑓂𑒒', name: 'क्घ', pronounce: 'kgha', category: 'संयुक्त (क्घ)', strokes: 5,
-                example: '𑒏𑓂𑒒𑒩 (क्घर)', unicode: 'U+1148F U+114C2 U+11492' },
-            { char: '𑒏𑓂𑒔', name: 'क्च', pronounce: 'kca', category: 'संयुक्त (क्च)', strokes: 4,
-                example: '𑒏𑓂𑒔𑒪𑒾𑒞 (क्चलित)', unicode: 'U+1148F U+114C2 U+11494' },
-            { char: '𑒏𑓂𑒕', name: 'क्छ', pronounce: 'kcha', category: 'संयुक्त (क्छ)', strokes: 4,
-                example: '𑒏𑓂𑒕𑒞𑓂𑒩 (क्छत्र)', unicode: 'U+1148F U+114C2 U+11495' },
-            { char: '𑒏𑓂𑒖', name: 'क्ज', pronounce: 'kja', category: 'संयुक्त (क्ज)', strokes: 4,
-                example: '𑒏𑓂𑒖𑒰𑒢𑒲 (क्जानी)', unicode: 'U+1148F U+114C2 U+11496' },
-            { char: '𑒏𑓂𑒗', name: 'क्झ', pronounce: 'kjha', category: 'संयुक्त (क्झ)', strokes: 5,
-                example: '𑒏𑓂𑒗𑒩 (क्झर)', unicode: 'U+1148F U+114C2 U+11497' },
-            { char: '𑒏𑓂𑒙', name: 'क्ट', pronounce: 'kṭa', category: 'संयुक्त (क्ट)', strokes: 4,
-                example: '𑒏𑓂𑒙𑒱𑒞𑒰 (क्टिता)', unicode: 'U+1148F U+114C2 U+11499' },
-            { char: '𑒏𑓂𑒚', name: 'क्ठ', pronounce: 'kṭha', category: 'संयुक्त (क्ठ)', strokes: 4,
-                example: '𑒏𑓂𑒚𑒱𑒞 (क्ठित)', unicode: 'U+1148F U+114C2 U+1149A' },
-            { char: '𑒏𑓂𑒛', name: 'क्ड', pronounce: 'kḍa', category: 'संयुक्त (क्ड)', strokes: 4,
-                example: '𑒏𑓂𑒛𑒱𑒞 (क्डित)', unicode: 'U+1148F U+114C2 U+1149B' },
-            { char: '𑒏𑓂𑒜', name: 'क्ढ', pronounce: 'kḍha', category: 'संयुक्त (क्ढ)', strokes: 5,
-                example: '𑒏𑓂𑒜𑒩 (क्ढर)', unicode: 'U+1148F U+114C2 U+1149C' },
-            { char: '𑒏𑓂𑒞', name: 'क्त', pronounce: 'kta', category: 'संयुक्त (क्त)', strokes: 4,
-                example: '𑒏𑓂𑒞𑒱𑒞𑒱 (क्तिति)', unicode: 'U+1148F U+114C2 U+1149E' },
-            { char: '𑒏𑓂𑒟', name: 'क्थ', pronounce: 'ktha', category: 'संयुक्त (क्थ)', strokes: 4,
-                example: '𑒏𑓂𑒟𑒱𑒞𑒱 (क्थिति)', unicode: 'U+1148F U+114C2 U+1149F' },
-            { char: '𑒏𑓂𑒠', name: 'क्द', pronounce: 'kda', category: 'संयुक्त (क्द)', strokes: 4,
-                example: '𑒏𑓂𑒠𑒱𑒞 (क्दित)', unicode: 'U+1148F U+114C2 U+114A0' },
-            { char: '𑒏𑓂𑒡', name: 'क्ध', pronounce: 'kdha', category: 'संयुक्त (क्ध)', strokes: 5,
-                example: '𑒏𑓂𑒡𑒩 (क्धर)', unicode: 'U+1148F U+114C2 U+114A1' },
-            { char: '𑒏𑓂𑒢', name: 'क्न', pronounce: 'kna', category: 'संयुक्त (क्न)', strokes: 4,
-                example: '𑒏𑓂𑒢𑒩𑒠𑒩 (क्नरदर)', unicode: 'U+1148F U+114C2 U+114A2' },
-            { char: '𑒏𑓂𑒣', name: 'क्प', pronounce: 'kpa', category: 'संयुक्त (क्प)', strokes: 4,
-                example: '𑒏𑓂𑒣𑒱𑒞 (क्पित)', unicode: 'U+1148F U+114C2 U+114A3' },
-            { char: '𑒏𑓂𑒤', name: 'क्फ', pronounce: 'kpha', category: 'संयुक्त (क्फ)', strokes: 4,
-                example: '𑒏𑓂𑒤𑒪 (क्फल)', unicode: 'U+1148F U+114C2 U+114A4' },
-            { char: '𑒏𑓂𑒥', name: 'क्ब', pronounce: 'kba', category: 'संयुक्त (क्ब)', strokes: 4,
-                example: '𑒏𑓂𑒥𑒱𑒞 (क्बित)', unicode: 'U+1148F U+114C2 U+114A5' },
-            { char: '𑒏𑓂𑒦', name: 'क्भ', pronounce: 'kbha', category: 'संयुक्त (क्भ)', strokes: 5,
-                example: '𑒏𑓂𑒦𑒩 (क्भर)', unicode: 'U+1148F U+114C2 U+114A6' },
-            { char: '𑒏𑓂𑒧', name: 'क्म', pronounce: 'kma', category: 'संयुक्त (क्म)', strokes: 4,
-                example: '𑒏𑓂𑒧𑒱𑒞𑒱 (क्मिति)', unicode: 'U+1148F U+114C2 U+114A7' },
-            { char: '𑒏𑓂𑒨', name: 'क्य', pronounce: 'kya', category: 'संयुक्त (क्य)', strokes: 4,
-                example: '𑒏𑓂𑒨𑒰𑒢𑒹 (क्याने)', unicode: 'U+1148F U+114C2 U+114A8' },
-            { char: '𑒏𑓂𑒩', name: 'क्र', pronounce: 'kra', category: 'संयुक्त (क्र)', strokes: 4,
-                example: '𑒏𑓂𑒩𑒱𑒞𑒱 (क्रिति)', unicode: 'U+1148F U+114C2 U+114A9' },
-            { char: '𑒏𑓂𑒪', name: 'क्ल', pronounce: 'kla', category: 'संयुक्त (क्ल)', strokes: 4,
-                example: '𑒏𑓂𑒪𑒱𑒞 (क्लित)', unicode: 'U+1148F U+114C2 U+114AA' },
-            { char: '𑒏𑓂𑒫', name: 'क्व', pronounce: 'kva', category: 'संयुक्त (क्व)', strokes: 4,
-                example: '𑒏𑓂𑒫𑒰𑒕𑒰 (क्वाटा)', unicode: 'U+1148F U+114C2 U+114AB' },
-            { char: '𑒏𑓂𑒬', name: 'क्श', pronounce: 'kśa', category: 'संयुक्त (क्श)', strokes: 4,
-                example: '𑒏𑓂𑒬𑒩𑒱𑒞 (क्शरित)', unicode: 'U+1148F U+114C2 U+114AC' },
-            { char: '𑒏𑓂𑒭', name: 'क्ष', pronounce: 'kṣa', category: 'संयुक्त (क्ष)', strokes: 4,
-                example: '𑒏𑓂𑒭𑒱𑒞𑒱 (क्षिति)', unicode: 'U+1148F U+114C2 U+114AD' },
-            { char: '𑒏𑓂𑒮', name: 'क्स', pronounce: 'ksa', category: 'संयुक्त (क्स)', strokes: 4,
-                example: '𑒏𑓂𑒮𑒱𑒞 (क्सित)', unicode: 'U+1148F U+114C2 U+114AE' },
-            { char: '𑒏𑓂𑒯', name: 'क्ह', pronounce: 'kha', category: 'संयुक्त (क्ह)', strokes: 4,
-                example: '𑒏𑓂𑒯𑒱𑒞 (क्हित)', unicode: 'U+1148F U+114C2 U+114AF' },
+            { char: '𑒏𑒰', name: 'का', pronounce: 'kā', category: 'मात्रा', strokes: 3, example: '𑒏𑒰𑒧 (काम)' },
+            { char: '𑒏𑒱', name: 'कि', pronounce: 'ki', category: 'मात्रा', strokes: 2, example: '𑒏𑒱𑒞𑒰𑒥 (किताब)' },
+            { char: '𑒏𑒲', name: 'की', pronounce: 'kī', category: 'मात्रा', strokes: 3, example: '𑒏𑒲𑒩𑒞𑒲 (कीरती)' },
+            { char: '𑒏𑒳', name: 'कु', pronounce: 'ku', category: 'मात्रा', strokes: 2, example: '𑒏𑒳𑒩𑒱 (कुरी)' },
+            { char: '𑒏𑒴', name: 'कू', pronounce: 'kū', category: 'मात्रा', strokes: 3, example: '𑒏𑒴𑒟 (कूट)' },
+            { char: '𑒏𑒵', name: 'कृ', pronounce: 'kṛ', category: 'मात्रा', strokes: 3, example: '𑒏𑒵𑒞𑓂𑒨 (कृत्य)' },
+            { char: '𑒏𑒺', name: 'के', pronounce: 'ke', category: 'मात्रा', strokes: 2, example: '𑒏𑒺𑒪 (केल)' },
+            { char: '𑒏𑒻', name: 'कै', pronounce: 'kai', category: 'मात्रा', strokes: 3, example: '𑒏𑒻𑒩 (कैर)' },
+            { char: '𑒏𑒼', name: 'को', pronounce: 'ko', category: 'मात्रा', strokes: 2, example: '𑒏𑒼𑒞𑒱 (कोति)' },
+            { char: '𑒏𑒽', name: 'कौ', pronounce: 'kau', category: 'मात्रा', strokes: 3, example: '𑒏𑒽𑒩𑒰 (कौरा)' },
+            { char: '𑒏𑓂', name: 'क्', pronounce: 'k', category: 'हलन्त', strokes: 1, example: '𑒏𑓂𑒢 (क्न)' },
+            // Sanyukt
+            { char: '𑒏𑓂𑒏', name: 'क्क', pronounce: 'kka', category: 'संयुक्त', strokes: 4, example: '𑒏𑓂𑒏𑒩𑒰𑒕𑒰' },
+            { char: '𑒏𑓂𑒐', name: 'क्ख', pronounce: 'kkha', category: 'संयुक्त', strokes: 4, example: '𑒏𑓂𑒐𑒩𑓂𑒧' },
+            { char: '𑒏𑓂𑒑', name: 'क्ग', pronounce: 'kga', category: 'संयुक्त', strokes: 4, example: '𑒏𑓂𑒑𑒰𑒕𑒰' },
+            { char: '𑒏𑓂𑒒', name: 'क्घ', pronounce: 'kgha', category: 'संयुक्त', strokes: 5, example: '𑒏𑓂𑒒𑒩' },
+            { char: '𑒏𑓂𑒔', name: 'क्च', pronounce: 'kca', category: 'संयुक्त', strokes: 4, example: '𑒏𑓂𑒔𑒪𑒾𑒞' },
+            { char: '𑒏𑓂𑒕', name: 'क्छ', pronounce: 'kcha', category: 'संयुक्त', strokes: 4, example: '𑒏𑓂𑒕𑒞𑓂𑒩' },
+            { char: '𑒏𑓂𑒖', name: 'क्ज', pronounce: 'kja', category: 'संयुक्त', strokes: 4, example: '𑒏𑓂𑒖𑒰𑒢𑒲' },
+            { char: '𑒏𑓂𑒗', name: 'क्झ', pronounce: 'kjha', category: 'संयुक्त', strokes: 5, example: '𑒏𑓂𑒗𑒩' },
+            { char: '𑒏𑓂𑒙', name: 'क्ट', pronounce: 'kṭa', category: 'संयुक्त', strokes: 4, example: '𑒏𑓂𑒙𑒱𑒞𑒰' },
+            { char: '𑒏𑓂𑒚', name: 'क्ठ', pronounce: 'kṭha', category: 'संयुक्त', strokes: 4, example: '𑒏𑓂𑒚𑒱𑒞' },
+            { char: '𑒏𑓂𑒛', name: 'क्ड', pronounce: 'kḍa', category: 'संयुक्त', strokes: 4, example: '𑒏𑓂𑒛𑒱𑒞' },
+            { char: '𑒏𑓂𑒜', name: 'क्ढ', pronounce: 'kḍha', category: 'संयुक्त', strokes: 5, example: '𑒏𑓂𑒜𑒩' },
+            { char: '𑒏𑓂𑒞', name: 'क्त', pronounce: 'kta', category: 'संयुक्त', strokes: 4, example: '𑒏𑓂𑒞𑒱𑒞𑒱' },
+            { char: '𑒏𑓂𑒟', name: 'क्थ', pronounce: 'ktha', category: 'संयुक्त', strokes: 4, example: '𑒏𑓂𑒟𑒱𑒞𑒱' },
+            { char: '𑒏𑓂𑒠', name: 'क्द', pronounce: 'kda', category: 'संयुक्त', strokes: 4, example: '𑒏𑓂𑒠𑒱𑒞' },
+            { char: '𑒏𑓂𑒡', name: 'क्ध', pronounce: 'kdha', category: 'संयुक्त', strokes: 5, example: '𑒏𑓂𑒡𑒩' },
+            { char: '𑒏𑓂𑒢', name: 'क्न', pronounce: 'kna', category: 'संयुक्त', strokes: 4, example: '𑒏𑓂𑒢𑒩𑒠𑒩' },
+            { char: '𑒏𑓂𑒣', name: 'क्प', pronounce: 'kpa', category: 'संयुक्त', strokes: 4, example: '𑒏𑓂𑒣𑒱𑒞' },
+            { char: '𑒏𑓂𑒤', name: 'क्फ', pronounce: 'kpha', category: 'संयुक्त', strokes: 4, example: '𑒏𑓂𑒤𑒪' },
+            { char: '𑒏𑓂𑒥', name: 'क्ब', pronounce: 'kba', category: 'संयुक्त', strokes: 4, example: '𑒏𑓂𑒥𑒱𑒞' },
+            { char: '𑒏𑓂𑒦', name: 'क्भ', pronounce: 'kbha', category: 'संयुक्त', strokes: 5, example: '𑒏𑓂𑒦𑒩' },
+            { char: '𑒏𑓂𑒧', name: 'क्म', pronounce: 'kma', category: 'संयुक्त', strokes: 4, example: '𑒏𑓂𑒧𑒱𑒞𑒱' },
+            { char: '𑒏𑓂𑒨', name: 'क्य', pronounce: 'kya', category: 'संयुक्त', strokes: 4, example: '𑒏𑓂𑒨𑒰𑒢𑒹' },
+            { char: '𑒏𑓂𑒩', name: 'क्र', pronounce: 'kra', category: 'संयुक्त', strokes: 4, example: '𑒏𑓂𑒩𑒱𑒞𑒱' },
+            { char: '𑒏𑓂𑒪', name: 'क्ल', pronounce: 'kla', category: 'संयुक्त', strokes: 4, example: '𑒏𑓂𑒪𑒱𑒞' },
+            { char: '𑒏𑓂𑒫', name: 'क्व', pronounce: 'kva', category: 'संयुक्त', strokes: 4, example: '𑒏𑓂𑒫𑒰𑒕𑒰' },
+            { char: '𑒏𑓂𑒬', name: 'क्श', pronounce: 'kśa', category: 'संयुक्त', strokes: 4, example: '𑒏𑓂𑒬𑒩𑒱𑒞' },
+            { char: '𑒏𑓂𑒭', name: 'क्ष', pronounce: 'kṣa', category: 'संयुक्त', strokes: 4, example: '𑒏𑓂𑒭𑒱𑒞𑒱' },
+            { char: '𑒏𑓂𑒮', name: 'क्स', pronounce: 'ksa', category: 'संयुक्त', strokes: 4, example: '𑒏𑓂𑒮𑒱𑒞' },
+            { char: '𑒏𑓂𑒯', name: 'क्ह', pronounce: 'kha', category: 'संयुक्त', strokes: 4, example: '𑒏𑓂𑒯𑒱𑒞' },
             // Numbers
-            { char: '𑓐', name: '०', pronounce: 'शून्य', category: 'संख्या', strokes: 1, example: '०',
-                unicode: 'U+114D0' },
-            { char: '𑓑', name: '१', pronounce: 'एक', category: 'संख्या', strokes: 1, example: '१',
-                unicode: 'U+114D1' },
-            { char: '𑓒', name: '२', pronounce: 'द्वि', category: 'संख्या', strokes: 1, example: '२',
-                unicode: 'U+114D2' },
-            { char: '𑓓', name: '३', pronounce: 'त्रि', category: 'संख्या', strokes: 2, example: '३',
-                unicode: 'U+114D3' },
-            { char: '𑓔', name: '४', pronounce: 'चतुर', category: 'संख्या', strokes: 2, example: '४',
-                unicode: 'U+114D4' },
-            { char: '𑓕', name: '५', pronounce: 'पञ्च', category: 'संख्या', strokes: 2, example: '५',
-                unicode: 'U+114D5' },
-            { char: '𑓖', name: '६', pronounce: 'षष्', category: 'संख्या', strokes: 2, example: '६',
-                unicode: 'U+114D6' },
-            { char: '𑓗', name: '७', pronounce: 'सप्त', category: 'संख्या', strokes: 2, example: '७',
-                unicode: 'U+114D7' },
-            { char: '𑓘', name: '८', pronounce: 'अष्ट', category: 'संख्या', strokes: 2, example: '८',
-                unicode: 'U+114D8' },
-            { char: '𑓙', name: '९', pronounce: 'नव', category: 'संख्या', strokes: 2, example: '९',
-                unicode: 'U+114D9' },
+            { char: '𑓐', name: '०', pronounce: 'शून्य', category: 'संख्या', strokes: 1, example: '०' },
+            { char: '𑓑', name: '१', pronounce: 'एक', category: 'संख्या', strokes: 1, example: '१' },
+            { char: '𑓒', name: '२', pronounce: 'द्वि', category: 'संख्या', strokes: 1, example: '२' },
+            { char: '𑓓', name: '३', pronounce: 'त्रि', category: 'संख्या', strokes: 2, example: '३' },
+            { char: '𑓔', name: '४', pronounce: 'चतुर', category: 'संख्या', strokes: 2, example: '४' },
+            { char: '𑓕', name: '५', pronounce: 'पञ्च', category: 'संख्या', strokes: 2, example: '५' },
+            { char: '𑓖', name: '६', pronounce: 'षष्', category: 'संख्या', strokes: 2, example: '६' },
+            { char: '𑓗', name: '७', pronounce: 'सप्त', category: 'संख्या', strokes: 2, example: '७' },
+            { char: '𑓘', name: '८', pronounce: 'अष्ट', category: 'संख्या', strokes: 2, example: '८' },
+            { char: '𑓙', name: '९', pronounce: 'नव', category: 'संख्या', strokes: 2, example: '९' },
         ];
 
         // ================================================================
-        // STATE MANAGEMENT
+        // STATE
         // ================================================================
         const STATE = {
             currentIndex: 0,
-            practiced: JSON.parse(localStorage.getItem('tirhuta_practiced_full') || '{}'),
+            practiced: JSON.parse(localStorage.getItem('tirhuta_practiced') || '{}'),
             userName: localStorage.getItem('tirhuta_user_name') || 'साधक',
             userDistrict: localStorage.getItem('tirhuta_user_district') || 'मिथिला',
             theme: localStorage.getItem('tirhuta_theme') || 'light',
-            examQuestions: [],
-            examIndex: 0,
-            examScore: 0,
-            examAnswered: false,
-            examTotal: 0,
             isDrawing: false,
             lastX: 0,
             lastY: 0,
             canvas: null,
             ctx: null,
-            practiceTime: 0,
-            streak: parseInt(localStorage.getItem('tirhuta_streak')) || 0,
-            lastPractice: localStorage.getItem('tirhuta_last_practice') || null,
+            examQuestions: [],
+            examIndex: 0,
+            examScore: 0,
+            examAnswered: false,
+            examTotal: 0,
         };
 
         // ================================================================
-        // DOM HELPERS
+        // DOM REFS
         // ================================================================
-        const $ = (id) => document.getElementById(id);
-        const $$ = (sel) => document.querySelectorAll(sel);
+        const $ = id => document.getElementById(id);
+        const $$ = sel => document.querySelectorAll(sel);
 
         // ================================================================
-        // TOAST SYSTEM
+        // TOAST
         // ================================================================
-        function showToast(message, type = 'info', duration = 3000) {
+        function showToast(msg, type = 'info') {
             const container = $('toastContainer');
-            const icons = {
-                success: 'fas fa-check-circle',
-                error: 'fas fa-exclamation-circle',
-                warning: 'fas fa-triangle-exclamation',
-                info: 'fas fa-info-circle'
-            };
+            const icons = { success: '✅', error: '❌', warning: '⚠️', info: 'ℹ️' };
             const toast = document.createElement('div');
             toast.className = `toast ${type}`;
             toast.innerHTML = `
-                <span class="icon"><i class="${icons[type] || icons.info}"></i></span>
-                <span class="message">${message}</span>
-                <button class="close" aria-label="बंद करें">&times;</button>
+                <span class="icon">${icons[type] || 'ℹ️'}</span>
+                <span class="message">${msg}</span>
+                <button class="close">&times;</button>
             `;
-            toast.querySelector('.close').addEventListener('click', () => toast.remove());
+            toast.querySelector('.close').onclick = () => toast.remove();
             container.appendChild(toast);
-            setTimeout(() => {
-                if (toast.parentNode) toast.remove();
-            }, duration);
+            setTimeout(() => { if (toast.parentNode) toast.remove(); }, 3000);
         }
 
         // ================================================================
@@ -2184,96 +1710,19 @@
             STATE.theme = STATE.theme === 'light' ? 'dark' : 'light';
             document.documentElement.setAttribute('data-theme', STATE.theme);
             localStorage.setItem('tirhuta_theme', STATE.theme);
-            updateThemeUI();
-            showToast(`थीम: ${STATE.theme === 'light' ? 'लाइट' : 'डार्क'}`, 'info', 1500);
-        }
-
-        function updateThemeUI() {
             const icon = $('themeIcon');
-            const label = $('themeLabel');
-            if (STATE.theme === 'dark') {
-                icon.className = 'fas fa-sun';
-                label.textContent = 'लाइट';
-            } else {
-                icon.className = 'fas fa-moon';
-                label.textContent = 'डार्क';
-            }
+            icon.className = STATE.theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
         }
 
         // ================================================================
         // NAVIGATION
         // ================================================================
         function navigateTo(section) {
-            // Update tabs
-            $$('.nav-tab').forEach(tab => {
-                tab.classList.toggle('active', tab.dataset.section === section);
-            });
-
-            // Update sections
-            $$('.section').forEach(el => {
-                el.classList.toggle('active', el.id === section + 'Section');
-            });
-
-            // Update URL hash
-            if (section !== 'dashboard') {
-                window.location.hash = section;
-            } else {
-                window.location.hash = '';
-            }
-
-            // Refresh data
+            $$('.nav-tab').forEach(t => t.classList.toggle('active', t.dataset.section === section));
+            $$('.section').forEach(s => s.classList.toggle('active', s.id === section + 'Section'));
             if (section === 'progress') updateProgressUI();
             if (section === 'exam') initExam();
             if (section === 'certificate') updateCertificateUI();
-            if (section === 'dashboard') updateDashboardUI();
-        }
-
-        // ================================================================
-        // DASHBOARD
-        // ================================================================
-        function updateDashboardUI() {
-            const total = TIRHUTA_DATA.length;
-            const done = Object.keys(STATE.practiced).filter(k => STATE.practiced[k]).length;
-            const pct = Math.round((done / total) * 100);
-
-            $('heroDone').textContent = done;
-            $('heroTotal').textContent = total;
-            $('heroPercent').textContent = pct + '%';
-
-            $('statTotal').textContent = total;
-            $('statDone').textContent = done;
-            $('statPercent').textContent = pct + '%';
-
-            // Streak
-            const streak = STATE.streak || 0;
-            $('statStreak').textContent = streak;
-
-            // Last practice
-            if (STATE.lastPractice) {
-                const date = new Date(STATE.lastPractice);
-                $('statLast').textContent = date.toLocaleDateString('hi-IN');
-            } else {
-                $('statLast').textContent = '—';
-            }
-
-            // Accuracy (mock)
-            const accuracy = done > 0 ? Math.min(85 + Math.floor(Math.random() * 15), 98) : 0;
-            $('statAccuracy').textContent = accuracy + '%';
-
-            // Practice time (mock)
-            const mins = done > 0 ? Math.max(1, Math.floor(done * 0.7)) : 0;
-            $('statTime').textContent = mins + 'm';
-
-            // Learn badge
-            $('learnBadge').textContent = pct + '%';
-
-            // Update dashboard grid with animation
-            $$('.stat-card .value').forEach(el => {
-                el.classList.remove('animate');
-                // Trigger reflow
-                void el.offsetWidth;
-                el.classList.add('animate');
-            });
         }
 
         // ================================================================
@@ -2282,29 +1731,29 @@
         function initCanvas() {
             const canvas = $('practiceCanvas');
             const container = canvas.parentElement;
-            const size = Math.min(container.clientWidth || 420, 450);
+            const size = Math.min(container.clientWidth || 400, 400);
             canvas.width = size;
             canvas.height = size;
             canvas.style.width = size + 'px';
             canvas.style.height = size + 'px';
 
             STATE.canvas = canvas;
-            const ctx = canvas.getContext('2d');
-            STATE.ctx = ctx;
+            STATE.ctx = canvas.getContext('2d');
+            const ctx = STATE.ctx;
 
             ctx.lineWidth = 8;
             ctx.lineCap = 'round';
             ctx.lineJoin = 'round';
             ctx.strokeStyle = '#2D1B0E';
 
-            // Mouse events
+            // Mouse
             canvas.addEventListener('mousedown', startDraw);
             canvas.addEventListener('mousemove', draw);
             canvas.addEventListener('mouseup', stopDraw);
             canvas.addEventListener('mouseleave', stopDraw);
 
-            // Touch events
-            canvas.addEventListener('touchstart', handleTouchStart, { passive: false });
+            // Touch
+            canvas.addEventListener('touchstart', handleTouch, { passive: false });
             canvas.addEventListener('touchmove', handleTouchMove, { passive: false });
             canvas.addEventListener('touchend', stopDraw, { passive: false });
 
@@ -2312,36 +1761,36 @@
             loadChar(STATE.currentIndex);
         }
 
-        function handleTouchStart(e) {
+        function handleTouch(e) {
             e.preventDefault();
-            const touch = e.touches[0];
-            if (!touch) return;
-            startDraw({ clientX: touch.clientX, clientY: touch.clientY });
+            const t = e.touches[0];
+            if (!t) return;
+            startDraw({ clientX: t.clientX, clientY: t.clientY });
         }
 
         function handleTouchMove(e) {
             e.preventDefault();
-            const touch = e.touches[0];
-            if (!touch) return;
-            draw({ clientX: touch.clientX, clientY: touch.clientY });
+            const t = e.touches[0];
+            if (!t) return;
+            draw({ clientX: t.clientX, clientY: t.clientY });
         }
 
         function startDraw(e) {
-            const canvas = STATE.canvas;
-            if (!canvas) return;
+            const c = STATE.canvas;
+            if (!c) return;
             STATE.isDrawing = true;
-            const rect = canvas.getBoundingClientRect();
-            STATE.lastX = (e.clientX - rect.left) * (canvas.width / rect.width);
-            STATE.lastY = (e.clientY - rect.top) * (canvas.height / rect.height);
+            const r = c.getBoundingClientRect();
+            STATE.lastX = (e.clientX - r.left) * (c.width / r.width);
+            STATE.lastY = (e.clientY - r.top) * (c.height / r.height);
         }
 
         function draw(e) {
-            const canvas = STATE.canvas;
-            const ctx = STATE.ctx;
-            if (!STATE.isDrawing || !canvas || !ctx) return;
-            const rect = canvas.getBoundingClientRect();
-            const x = (e.clientX - rect.left) * (canvas.width / rect.width);
-            const y = (e.clientY - rect.top) * (canvas.height / rect.height);
+            const c = STATE.canvas,
+                ctx = STATE.ctx;
+            if (!STATE.isDrawing || !c || !ctx) return;
+            const r = c.getBoundingClientRect();
+            const x = (e.clientX - r.left) * (c.width / r.width);
+            const y = (e.clientY - r.top) * (c.height / r.height);
             ctx.beginPath();
             ctx.moveTo(STATE.lastX, STATE.lastY);
             ctx.lineTo(x, y);
@@ -2350,43 +1799,40 @@
             STATE.lastY = y;
         }
 
-        function stopDraw() {
-            STATE.isDrawing = false;
-        }
+        function stopDraw() { STATE.isDrawing = false; }
 
         function clearCanvas() {
-            const canvas = STATE.canvas;
-            const ctx = STATE.ctx;
-            if (!canvas || !ctx) return;
+            const c = STATE.canvas,
+                ctx = STATE.ctx;
+            if (!c || !ctx) return;
             ctx.fillStyle = '#fff';
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            ctx.fillRect(0, 0, c.width, c.height);
 
             // Grid
             ctx.strokeStyle = '#f0ebe4';
             ctx.lineWidth = 0.5;
             for (let i = 0; i < 10; i++) {
-                const pos = (i / 10) * canvas.width;
+                const p = (i / 10) * c.width;
                 ctx.beginPath();
-                ctx.moveTo(pos, 0);
-                ctx.lineTo(pos, canvas.height);
+                ctx.moveTo(p, 0);
+                ctx.lineTo(p, c.height);
                 ctx.stroke();
                 ctx.beginPath();
-                ctx.moveTo(0, pos);
-                ctx.lineTo(canvas.width, pos);
+                ctx.moveTo(0, p);
+                ctx.lineTo(c.width, p);
                 ctx.stroke();
             }
 
-            // Reference character
+            // Reference
             const data = TIRHUTA_DATA[STATE.currentIndex];
             if (data) {
                 ctx.fillStyle = '#f0ebe4';
-                const fontSize = data.char.length > 2 ? canvas.width * 0.3 : canvas.width * 0.45;
-                ctx.font = fontSize + 'px "Noto Sans Tirhuta"';
+                const fs = data.char.length > 2 ? c.width * 0.3 : c.width * 0.45;
+                ctx.font = fs + 'px "Noto Sans Tirhuta"';
                 ctx.textAlign = 'right';
                 ctx.textBaseline = 'top';
-                ctx.fillText(data.char, canvas.width - 12, 10);
+                ctx.fillText(data.char, c.width - 12, 10);
             }
-
             ctx.strokeStyle = '#2D1B0E';
             ctx.lineWidth = 8;
         }
@@ -2405,10 +1851,6 @@
             $('charCategory').textContent = data.category;
             $('charStrokes').textContent = data.strokes + ' स्ट्रोक';
             $('charExample').textContent = data.example || '—';
-            $('charUnicode').textContent = data.unicode || '—';
-            $('charNext').textContent = index < TIRHUTA_DATA.length - 1 ?
-                TIRHUTA_DATA[index + 1].char + ' - ' + TIRHUTA_DATA[index + 1].name :
-                '—';
 
             // Stroke guide
             const steps = $$('.stroke-step');
@@ -2428,49 +1870,37 @@
 
             clearCanvas();
             updateProgressUI();
-            updateDashboardUI();
+            updateBadge();
         }
 
         function savePractice() {
-            const canvas = STATE.canvas;
             const data = TIRHUTA_DATA[STATE.currentIndex];
-            if (!canvas || !data) return;
+            if (!data) return;
 
             STATE.practiced[STATE.currentIndex] = {
                 char: data.char,
                 name: data.name,
-                dataUrl: canvas.toDataURL('image/png'),
                 timestamp: new Date().toISOString()
             };
 
-            localStorage.setItem('tirhuta_practiced_full', JSON.stringify(STATE.practiced));
-
-            // Update streak
-            const today = new Date().toDateString();
-            if (STATE.lastPractice !== today) {
-                STATE.streak = (STATE.streak || 0) + 1;
-                STATE.lastPractice = today;
-                localStorage.setItem('tirhuta_streak', STATE.streak);
-                localStorage.setItem('tirhuta_last_practice', today);
-            }
+            localStorage.setItem('tirhuta_practiced', JSON.stringify(STATE.practiced));
 
             const status = $('practiceStatus');
             status.className = 'status success';
             status.textContent = '✅ सहेजा गया!';
 
-            showToast('अभ्यास सहेजा गया! 🎉', 'success', 2000);
+            showToast('अभ्यास सहेजा गया! 🎉', 'success');
             updateProgressUI();
-            updateDashboardUI();
+            updateBadge();
 
-            // Auto advance
             setTimeout(() => {
                 if (STATE.currentIndex < TIRHUTA_DATA.length - 1) {
                     STATE.currentIndex++;
                     loadChar(STATE.currentIndex);
                 } else {
-                    showToast('🎉 सभी अक्षरों का अभ्यास पूरा!', 'success', 3000);
+                    showToast('🎉 सभी अक्षर पूरे!', 'success');
                 }
-            }, 600);
+            }, 500);
         }
 
         // ================================================================
@@ -2484,7 +1914,6 @@
             $('progDone').textContent = done;
             $('progTotal').textContent = total;
             $('progPercent').textContent = pct + '%';
-            $('progRemaining').textContent = total - done;
             $('progressFill').style.width = pct + '%';
 
             const grid = $('charGrid');
@@ -2495,23 +1924,20 @@
                 if (STATE.practiced[i]) div.classList.add('done');
                 if (i === STATE.currentIndex) div.classList.add('current');
                 div.textContent = data.char;
-                div.title = data.name + ' (' + data.category + ')';
-                div.setAttribute('role', 'button');
-                div.setAttribute('tabindex', '0');
-                div.addEventListener('click', () => {
+                div.title = data.name;
+                div.onclick = () => {
                     STATE.currentIndex = i;
                     loadChar(i);
                     navigateTo('learn');
-                });
-                div.addEventListener('keydown', (e) => {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                        STATE.currentIndex = i;
-                        loadChar(i);
-                        navigateTo('learn');
-                    }
-                });
+                };
                 grid.appendChild(div);
             });
+        }
+
+        function updateBadge() {
+            const total = TIRHUTA_DATA.length;
+            const done = Object.keys(STATE.practiced).filter(k => STATE.practiced[k]).length;
+            $('learnBadge').textContent = Math.round((done / total) * 100) + '%';
         }
 
         // ================================================================
@@ -2523,10 +1949,10 @@
                 const wrongs = TIRHUTA_DATA.filter(c => c.char !== item.char)
                     .sort(() => Math.random() - 0.5)
                     .slice(0, 3);
-                const options = [item, ...wrongs].sort(() => Math.random() - 0.5);
+                const opts = [item, ...wrongs].sort(() => Math.random() - 0.5);
                 return {
                     char: item.char,
-                    options: options.map(o => o.char),
+                    options: opts.map(o => o.char),
                     correct: item.char,
                     name: item.name
                 };
@@ -2557,19 +1983,18 @@
                 const btn = document.createElement('button');
                 btn.textContent = opt;
                 btn.dataset.value = opt;
-                btn.addEventListener('click', () => handleExamAnswer(btn, opt, q.correct));
+                btn.onclick = () => handleExamAnswer(btn, opt, q.correct);
                 options.appendChild(btn);
             });
-            $('examNextBtn').textContent = STATE.examIndex === STATE.examQuestions.length - 1 ? 'समाप्त करें' :
-            'अगला प्रश्न';
+            $('examNextBtn').textContent = STATE.examIndex === STATE.examQuestions.length - 1 ? 'समाप्त' : 'अगला';
             $('examResult').className = 'exam-result';
         }
 
         function handleExamAnswer(btn, selected, correct) {
             if (STATE.examAnswered) return;
             STATE.examAnswered = true;
-            const allBtns = $('examOptions').querySelectorAll('button');
-            allBtns.forEach(b => {
+            const all = $('examOptions').querySelectorAll('button');
+            all.forEach(b => {
                 b.disabled = true;
                 if (b.dataset.value === correct) b.classList.add('correct');
                 if (b === btn && selected !== correct) b.classList.add('wrong');
@@ -2585,20 +2010,16 @@
             }
         }
 
-        $('examNextBtn').addEventListener('click', () => {
+        $('examNextBtn').onclick = () => {
             if (!STATE.examAnswered && STATE.examIndex < STATE.examQuestions.length) {
-                showToast('कृपया पहले उत्तर दें', 'warning');
+                showToast('पहले उत्तर दें', 'warning');
                 return;
             }
             STATE.examIndex++;
-            if (STATE.examIndex >= STATE.examQuestions.length) {
-                showExamResult();
-            } else {
-                renderExamQuestion();
-            }
-        });
+            STATE.examIndex >= STATE.examQuestions.length ? showExamResult() : renderExamQuestion();
+        };
 
-        $('examResetBtn').addEventListener('click', initExam);
+        $('examResetBtn').onclick = initExam;
 
         function showExamResult() {
             const pct = Math.round((STATE.examScore / STATE.examTotal) * 100);
@@ -2606,27 +2027,25 @@
             const result = $('examResult');
             result.className = 'exam-result show ' + (passed ? 'pass' : 'fail');
             result.innerHTML = `
-                <strong>${passed ? '🎉 बधाई हो!' : '😞 पुनः प्रयास करें'}</strong><br>
-                स्कोर: ${STATE.examScore}/${STATE.examTotal} (${pct}%)<br>
-                ${passed ? '✅ आपने परीक्षा पास कर ली! प्रमाणपत्र देखें।' : '❌ 70%+ स्कोर करें।'}
+                <strong>${passed ? '🎉 बधाई हो!' : '😞 पुनः प्रयास'}</strong><br>
+                स्कोर: ${STATE.examScore}/${STATE.examTotal} (${pct}%)
             `;
             $('examOptions').innerHTML = '';
             $('examFeedback').textContent = '';
             $('examNextBtn').disabled = true;
 
             if (passed) {
-                const certData = {
-                    name: STATE.userName || 'साधक',
-                    district: STATE.userDistrict || 'मिथिला',
+                const cert = {
+                    name: STATE.userName,
+                    district: STATE.userDistrict,
                     score: STATE.examScore,
                     total: STATE.examTotal,
                     pct: pct,
-                    date: new Date().toISOString(),
-                    number: 'TC-' + Date.now().toString(36).toUpperCase()
+                    date: new Date().toISOString()
                 };
-                localStorage.setItem('tirhuta_certificate_full', JSON.stringify(certData));
+                localStorage.setItem('tirhuta_certificate', JSON.stringify(cert));
                 updateCertificateUI();
-                showToast('🎉 परीक्षा पास! प्रमाणपत्र देखें।', 'success', 3000);
+                showToast('🎉 परीक्षा पास! प्रमाणपत्र देखें।', 'success');
             }
         }
 
@@ -2634,30 +2053,23 @@
         // CERTIFICATE
         // ================================================================
         function updateCertificateUI() {
-            const cert = JSON.parse(localStorage.getItem('tirhuta_certificate_full'));
+            const cert = JSON.parse(localStorage.getItem('tirhuta_certificate'));
             if (cert && cert.pct >= 70) {
                 $('certName').textContent = cert.name || 'साधक';
                 $('certDistrict').textContent = cert.district ? '𑒧𑒱𑒟𑒱𑒪𑒰 (' + cert.district + ')' : '';
                 $('certScore').textContent = 'स्कोर: ' + cert.score + '/' + cert.total + ' (' + cert.pct + '%)';
-                $('certNumber').textContent = cert.number || '—';
-                $('certDate').textContent = new Date(cert.date).toLocaleDateString('hi-IN', {
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric'
-                });
-                $('certStatus').innerHTML = '✅ प्रमाणपत्र तैयार है! PDF डाउनलोड करें।';
+                $('certDate').textContent = new Date(cert.date).toLocaleDateString('hi-IN');
+                $('certStatus').innerHTML = '✅ प्रमाणपत्र तैयार!';
                 $('certStatus').style.color = '#2e7d32';
                 $('downloadCert').disabled = false;
                 $('shareCert').disabled = false;
-                $('certMessage').textContent = '✨ आपका प्रमाणपत्र जारी हो गया है।';
-                $('certMessage').style.color = '#2e7d32';
+                $('certMessage').textContent = '✨ प्रमाणपत्र जारी हो गया।';
             } else {
                 $('certName').textContent = STATE.userName || 'साधक';
                 $('certDistrict').textContent = STATE.userDistrict ? '𑒧𑒱𑒟𑒱𑒪𑒰 (' + STATE.userDistrict + ')' : '';
                 $('certScore').textContent = 'स्कोर: —';
-                $('certNumber').textContent = '—';
                 $('certDate').textContent = '—';
-                $('certStatus').innerHTML = 'ℹ️ परीक्षा में 70%+ स्कोर करने पर प्रमाणपत्र जारी होगा।';
+                $('certStatus').innerHTML = 'ℹ️ परीक्षा पास करें (70%+)';
                 $('certStatus').style.color = '#888';
                 $('downloadCert').disabled = true;
                 $('shareCert').disabled = true;
@@ -2666,236 +2078,144 @@
         }
 
         // PDF Download
-        $('downloadCert').addEventListener('click', function() {
+        $('downloadCert').onclick = function() {
             const el = document.querySelector('.certificate-preview');
             html2canvas(el, { scale: 2, backgroundColor: '#fffdf7', useCORS: true, logging: false })
-                .then((canvas) => {
-                    const imgData = canvas.toDataURL('image/png');
+                .then(c => {
+                    const img = c.toDataURL('image/png');
                     const { jsPDF } = window.jspdf;
                     const pdf = new jsPDF('l', 'mm', 'a4');
                     const pw = 297,
                         ph = 210;
-                    const ratio = Math.min(pw / canvas.width, ph / canvas.height);
-                    const w = canvas.width * ratio,
-                        h = canvas.height * ratio;
-                    pdf.addImage(imgData, 'PNG', (pw - w) / 2, (ph - h) / 2, w, h);
-                    pdf.save('Tirhuta_Certificate_' + (STATE.userName || 'Sadhak') + '.pdf');
-                    showToast('PDF डाउनलोड हो रहा है...', 'success', 2000);
+                    const r = Math.min(pw / c.width, ph / c.height);
+                    pdf.addImage(img, 'PNG', (pw - c.width * r) / 2, (ph - c.height * r) / 2, c.width * r, c.height *
+                    r);
+                    pdf.save('Tirhuta_Certificate.pdf');
+                    showToast('PDF डाउनलोड हो रहा है...', 'success');
                 })
                 .catch(() => showToast('PDF बनाने में त्रुटि', 'error'));
-        });
+        };
 
         // Share
-        $('shareCert').addEventListener('click', function() {
+        $('shareCert').onclick = function() {
             const el = document.querySelector('.certificate-preview');
             html2canvas(el, { scale: 2, backgroundColor: '#fffdf7', useCORS: true, logging: false })
-                .then((canvas) => {
-                    canvas.toBlob((blob) => {
+                .then(c => {
+                    c.toBlob(b => {
                         if (navigator.share) {
                             navigator.share({
                                 title: 'तिरहुता लिपि प्रमाणपत्र',
-                                text: 'मेरा तिरहुता लिपि प्रमाणपत्र देखें!',
-                                files: [new File([blob], 'certificate.png', { type: 'image/png' })]
+                                files: [new File([b], 'certificate.png', { type: 'image/png' })]
                             }).catch(() => {});
                         } else {
-                            const link = document.createElement('a');
-                            link.download = 'Tirhuta_Certificate.png';
-                            link.href = canvas.toDataURL('image/png');
-                            link.click();
-                            showToast('चित्र डाउनलोड हो रहा है...', 'success', 2000);
+                            const a = document.createElement('a');
+                            a.download = 'Tirhuta_Certificate.png';
+                            a.href = c.toDataURL('image/png');
+                            a.click();
                         }
                     });
                 })
                 .catch(() => showToast('शेयर करने में त्रुटि', 'error'));
-        });
+        };
+
+        // ================================================================
+        // USER INFO
+        // ================================================================
+        function updateUserInfo() {
+            STATE.userName = $('userName').value.trim() || 'साधक';
+            STATE.userDistrict = $('userDistrict').value.trim() || 'मिथिला';
+            localStorage.setItem('tirhuta_user_name', STATE.userName);
+            localStorage.setItem('tirhuta_user_district', STATE.userDistrict);
+            $('userNameDisplay').textContent = STATE.userName;
+            updateCertificateUI();
+            showToast('✅ अपडेट हो गया!', 'success');
+        }
 
         // ================================================================
         // EVENT BINDINGS
         // ================================================================
+        $('themeBtn').onclick = toggleTheme;
+        $('updateUserBtn').onclick = updateUserInfo;
 
-        // Theme
-        $('themeToggle').addEventListener('click', toggleTheme);
+        $('profileBtn').onclick = () => {
+            const n = prompt('नाम:', STATE.userName);
+            if (n && n.trim()) { $('userName').value = n.trim();
+                updateUserInfo(); }
+            const d = prompt('जिला:', STATE.userDistrict);
+            if (d && d.trim()) { $('userDistrict').value = d.trim();
+                updateUserInfo(); }
+        };
 
-        // Navigation
         $$('.nav-tab').forEach(tab => {
-            tab.addEventListener('click', () => {
-                navigateTo(tab.dataset.section);
-            });
+            tab.onclick = () => navigateTo(tab.dataset.section);
         });
 
-        // Hero buttons
-        $('startLearningBtn').addEventListener('click', () => navigateTo('learn'));
-        $('continueLearningBtn').addEventListener('click', () => navigateTo('learn'));
+        $('clearCanvas').onclick = clearCanvas;
+        $('savePractice').onclick = savePractice;
+        $('prevChar').onclick = () => {
+            if (STATE.currentIndex > 0) { STATE.currentIndex--;
+                loadChar(STATE.currentIndex); }
+        };
+        $('nextChar').onclick = () => {
+            if (STATE.currentIndex < TIRHUTA_DATA.length - 1) { STATE.currentIndex++;
+                loadChar(STATE.currentIndex); }
+        };
 
-        // Practice controls
-        $('clearCanvas').addEventListener('click', clearCanvas);
-        $('savePractice').addEventListener('click', savePractice);
-        $('prevChar').addEventListener('click', () => {
-            if (STATE.currentIndex > 0) {
-                STATE.currentIndex--;
-                loadChar(STATE.currentIndex);
-            }
-        });
-        $('nextChar').addEventListener('click', () => {
-            if (STATE.currentIndex < TIRHUTA_DATA.length - 1) {
-                STATE.currentIndex++;
-                loadChar(STATE.currentIndex);
-            } else {
-                showToast('🎉 सभी अक्षर पूरे हो गए!', 'success', 2000);
-            }
-        });
-
-        // Profile
-        $('profileBtn').addEventListener('click', function() {
-            const name = prompt('अपना नाम दर्ज करें:', STATE.userName);
-            if (name && name.trim()) {
-                STATE.userName = name.trim();
-                localStorage.setItem('tirhuta_user_name', STATE.userName);
-                $('userNameDisplay').textContent = STATE.userName;
-                updateCertificateUI();
-                showToast('नाम अपडेट किया गया!', 'success', 2000);
-            }
-
-            const district = prompt('अपना जिला दर्ज करें:', STATE.userDistrict);
-            if (district && district.trim()) {
-                STATE.userDistrict = district.trim();
-                localStorage.setItem('tirhuta_user_district', STATE.userDistrict);
-                updateCertificateUI();
-                showToast('जिला अपडेट किया गया!', 'success', 2000);
-            }
-        });
-
-        // ================================================================
-        // KEYBOARD SHORTCUTS
-        // ================================================================
+        // Keyboard Shortcuts
         document.addEventListener('keydown', (e) => {
-            // Only if not in input/textarea
-            if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
-
-            const activeSection = document.querySelector('.section.active');
-            if (!activeSection) return;
-
-            switch (e.key) {
-                case 'ArrowLeft':
-                    if (STATE.currentIndex > 0) {
-                        STATE.currentIndex--;
-                        loadChar(STATE.currentIndex);
-                        e.preventDefault();
-                    }
-                    break;
-                case 'ArrowRight':
-                    if (STATE.currentIndex < TIRHUTA_DATA.length - 1) {
-                        STATE.currentIndex++;
-                        loadChar(STATE.currentIndex);
-                        e.preventDefault();
-                    }
-                    break;
-                case 's':
-                case 'S':
-                    if (activeSection.id === 'learnSection') {
-                        savePractice();
-                        e.preventDefault();
-                    }
-                    break;
-                case 'r':
-                case 'R':
-                    if (activeSection.id === 'learnSection') {
-                        clearCanvas();
-                        e.preventDefault();
-                    }
-                    break;
-                case 'd':
-                case 'D':
-                    navigateTo('dashboard');
-                    e.preventDefault();
-                    break;
-                case 'l':
-                case 'L':
-                    navigateTo('learn');
-                    e.preventDefault();
-                    break;
-                case 'p':
-                case 'P':
-                    navigateTo('progress');
-                    e.preventDefault();
-                    break;
-                case 'e':
-                case 'E':
-                    navigateTo('exam');
-                    e.preventDefault();
-                    break;
-                case 'c':
-                case 'C':
-                    navigateTo('certificate');
-                    e.preventDefault();
-                    break;
-            }
+            const tag = e.target.tagName;
+            if (tag === 'INPUT' || tag === 'TEXTAREA') return;
+            if (e.key === 'ArrowLeft' && STATE.currentIndex > 0) { STATE.currentIndex--;
+                loadChar(STATE.currentIndex);
+                e.preventDefault(); }
+            if (e.key === 'ArrowRight' && STATE.currentIndex < TIRHUTA_DATA.length - 1) { STATE.currentIndex++;
+                loadChar(STATE.currentIndex);
+                e.preventDefault(); }
+            if (e.key === 's' || e.key === 'S') { savePractice();
+                e.preventDefault(); }
+            if (e.key === 'r' || e.key === 'R') { clearCanvas();
+                e.preventDefault(); }
         });
 
         // ================================================================
-        // RESIZE HANDLER
+        // INIT
         // ================================================================
+        document.documentElement.setAttribute('data-theme', STATE.theme);
+        if (STATE.theme === 'dark') $('themeIcon').className = 'fas fa-sun';
+        $('userName').value = STATE.userName;
+        $('userDistrict').value = STATE.userDistrict;
+        $('userNameDisplay').textContent = STATE.userName;
+
+        setTimeout(() => {
+            initCanvas();
+            loadChar(0);
+            updateProgressUI();
+            updateBadge();
+            initExam();
+            updateCertificateUI();
+        }, 100);
+
+        // Resize
         let resizeTimer;
         window.addEventListener('resize', () => {
             clearTimeout(resizeTimer);
             resizeTimer = setTimeout(() => {
                 if (STATE.canvas) {
-                    const container = STATE.canvas.parentElement;
-                    const size = Math.min(container.clientWidth || 420, 450);
-                    STATE.canvas.width = size;
-                    STATE.canvas.height = size;
-                    STATE.canvas.style.width = size + 'px';
-                    STATE.canvas.style.height = size + 'px';
+                    const c = STATE.canvas.parentElement;
+                    const s = Math.min(c.clientWidth || 400, 400);
+                    STATE.canvas.width = s;
+                    STATE.canvas.height = s;
+                    STATE.canvas.style.width = s + 'px';
+                    STATE.canvas.style.height = s + 'px';
                     loadChar(STATE.currentIndex);
                 }
             }, 300);
         });
 
-        // ================================================================
-        // HASH ROUTING
-        // ================================================================
-        function handleHash() {
-            const hash = window.location.hash.replace('#', '');
-            if (hash && ['dashboard', 'learn', 'progress', 'exam', 'certificate'].includes(hash)) {
-                navigateTo(hash);
-            } else {
-                navigateTo('dashboard');
-            }
-        }
-
-        window.addEventListener('hashchange', handleHash);
-
-        // ================================================================
-        // INIT
-        // ================================================================
-        function init() {
-            // Set theme
-            document.documentElement.setAttribute('data-theme', STATE.theme);
-            updateThemeUI();
-
-            // User name
-            $('userNameDisplay').textContent = STATE.userName;
-
-            // Init canvas
-            setTimeout(() => {
-                initCanvas();
-                updateDashboardUI();
-                updateProgressUI();
-                initExam();
-                updateCertificateUI();
-
-                // Handle hash
-                handleHash();
-
-                console.log('🙏 तिरहुता शिक्षण मंच तैयार!');
-                console.log('📖 कुल अक्षर:', TIRHUTA_DATA.length);
-                console.log('⌨️  कीबोर्ड शॉर्टकट: ← → नेविगेट, S सहेजें, R साफ़ करें');
-                console.log('👤 नाम:', STATE.userName, '| जिला:', STATE.userDistrict);
-            }, 100);
-        }
-
-        // Start
-        init();
+        console.log('🙏 तिरहुता शिक्षण मंच तैयार!');
+        console.log('📖 कुल अक्षर:', TIRHUTA_DATA.length);
+        console.log('⌨️  ← → नेविगेट, S सहेजें, R साफ़');
+        console.log('👤 नाम:', STATE.userName, '| जिला:', STATE.userDistrict);
     </script>
 
 </body>
