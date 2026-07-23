@@ -3,889 +3,1914 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>तिरहुता लिपि - अभ्यास</title>
+    <title>तिरहुता लिपि - शिक्षण मंच</title>
 
-    <!-- Fonts -->
+    <!-- Google Fonts - Tirhuta + Devanagari Fallback -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tirhuta:wght@400;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tirhuta:wght@400;600;700&family=Noto+Sans+Devanagari:wght@400;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
     <style>
-        /* ===== ROOT VARIABLES ===== */
-:root {
-    --primary: #7A1A1A;
-    --primary-dark: #4A0A0A;
-    --secondary: #C9920E;
-    --gold: #D4A017;
-    --gold-light: #F5D060;
-    --white: #FFFFFF;
-    --bg: #F8F4EE;
-    --text: #2D1B0E;
-    --text-secondary: #6B5A4A;
-    --text-muted: #9B8A7A;
-    --border: #E8E0D8;
-    --shadow: 0 8px 32px rgba(74, 10, 10, 0.10);
-    --radius: 20px;
-    --radius-sm: 14px;
-    --radius-full: 9999px;
-    --font-tirhuta: 'Noto Sans Tirhuta', serif;
-    --font-primary: 'Inter', sans-serif;
-    --transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
+        /* ===== CSS VARIABLES ===== */
+        :root {
+            --primary: #7A1A1A;
+            --primary-dark: #4A0A0A;
+            --secondary: #C9920E;
+            --gold: #D4A017;
+            --gold-light: #F5D060;
+            --success: #2E7D32;
+            --danger: #C62828;
+            --warning: #F57C00;
+            --info: #1565C0;
+            --white: #FFFFFF;
+            --bg: #F8F4EE;
+            --text: #2D1B0E;
+            --text-secondary: #6B5A4A;
+            --text-muted: #9B8A7A;
+            --border: #E8E0D8;
+            --shadow: 0 8px 32px rgba(74, 10, 10, 0.10);
+            --shadow-lg: 0 16px 56px rgba(74, 10, 10, 0.16);
+            --radius: 20px;
+            --radius-sm: 12px;
+            --radius-full: 9999px;
+            --font-primary: 'Inter', sans-serif;
+            --font-tirhuta: 'Noto Sans Tirhuta', 'Noto Sans Devanagari', serif;
+            --font-devanagari: 'Noto Sans Devanagari', 'Arial', sans-serif;
+            --transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --max-width: 1200px;
+        }
 
-/* ===== RESET ===== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    -webkit-tap-highlight-color: transparent;
-}
+        /* ===== RESET ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
 
-html {
-    font-size: 16px;
-    scroll-behavior: smooth;
-}
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
 
-body {
-    font-family: var(--font-primary);
-    background: var(--bg);
-    color: var(--text);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-    overflow-x: hidden;
-    -webkit-user-select: none;
-    user-select: none;
-    width: 100%;
-}
+        body {
+            font-family: var(--font-primary);
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
 
-/* ===== HEADER - FULL WIDTH ===== */
-.header {
-    width: 100%;
-    background: linear-gradient(135deg, var(--primary-dark), var(--primary));
-    padding: 10px 16px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 4px 20px rgba(74, 10, 10, 0.25);
-}
+        /* ===== TIRHUTA TEXT - Fix for No Glyph Issue ===== */
+        .tirhuta-text {
+            font-family: var(--font-tirhuta);
+            font-weight: 700;
+            display: inline-block;
+        }
 
-/* ===== NAV TABS - RESPONSIVE ===== */
-.nav-tabs {
-    width: 100%;
-    display: flex;
-    background: var(--white);
-    padding: 4px;
-    gap: 4px;
-    border-bottom: 1px solid var(--border);
-    position: sticky;
-    top: 56px;
-    z-index: 99;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    justify-content: center;
-}
+        .tirhuta-text-sm {
+            font-family: var(--font-tirhuta);
+            font-weight: 400;
+            display: inline-block;
+        }
 
-/* ===== CONTAINER - FULL WIDTH ===== */
-.container {
-    width: 100%;
-    max-width: 800px;
-    padding: 10px 12px 70px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-}
+        /* Fallback - Devanagari में दिखेगा अगर Tirhuta Font नहीं आया */
+        .tirhuta-fallback {
+            font-family: var(--font-devanagari);
+            display: inline-block;
+        }
 
-/* ===== LEARNING CARD - FULL WIDTH ===== */
-.learning-card {
-    background: var(--white);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    overflow: hidden;
-    width: 100%;
-    max-width: 100%;
-    transition: var(--transition);
-}
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 16px;
+            width: 100%;
+        }
 
-/* ===== CANVAS - RESPONSIVE ===== */
-.canvas-container {
-    position: relative;
-    width: 100%;
-    max-width: 450px;
-    aspect-ratio: 1 / 1;
-    background: var(--white);
-    border-radius: var(--radius-sm);
-    border: 3px solid var(--border);
-    touch-action: none;
-    box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.03);
-    transition: border-color var(--transition);
-    margin: 0 auto;
-}
+        .hidden {
+            display: none !important;
+        }
 
-.canvas-container canvas {
-    width: 100% !important;
-    height: 100% !important;
-    display: block;
-    border-radius: calc(var(--radius-sm) - 2px);
-    touch-action: none;
-    cursor: crosshair;
-    background: #fff;
-}
+        .text-center {
+            text-align: center;
+        }
 
-/* ================================================================
-   RESPONSIVE MEDIA QUERIES
-   ================================================================ */
+        .flex-center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-/* ===== DESKTOP (1024px and above) ===== */
-@media (min-width: 1024px) {
-    .container {
-        max-width: 900px;
-        padding: 20px 24px 80px;
-    }
-    
-    .learning-card {
-        max-width: 800px;
-    }
-    
-    .canvas-container {
-        max-width: 480px;
-    }
-    
-    .learning-header .char-display {
-        font-size: 4.5rem;
-    }
-    
-    .nav-tab {
-        padding: 10px 24px;
-        font-size: 0.9rem;
-    }
-    
-    .nav-tab i {
-        font-size: 1.2rem;
-    }
-    
-    .toolbar .btn {
-        padding: 8px 20px;
-        font-size: 0.85rem;
-    }
-}
+        .flex-between {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
 
-/* ===== LAPTOP (768px to 1023px) ===== */
-@media (min-width: 768px) and (max-width: 1023px) {
-    .container {
-        max-width: 750px;
-        padding: 16px 20px 70px;
-    }
-    
-    .learning-card {
-        max-width: 700px;
-    }
-    
-    .canvas-container {
-        max-width: 420px;
-    }
-    
-    .learning-header .char-display {
-        font-size: 4rem;
-    }
-    
-    .nav-tab {
-        padding: 8px 18px;
-        font-size: 0.8rem;
-    }
-    
-    .nav-tab span {
-        display: inline;
-    }
-}
+        .gap-8 {
+            gap: 8px;
+        }
+        .gap-12 {
+            gap: 12px;
+        }
+        .gap-16 {
+            gap: 16px;
+        }
+        .mt-8 {
+            margin-top: 8px;
+        }
+        .mt-12 {
+            margin-top: 12px;
+        }
+        .mt-16 {
+            margin-top: 16px;
+        }
+        .mt-20 {
+            margin-top: 20px;
+        }
+        .mt-24 {
+            margin-top: 24px;
+        }
+        .mb-8 {
+            margin-bottom: 8px;
+        }
+        .mb-12 {
+            margin-bottom: 12px;
+        }
+        .mb-16 {
+            margin-bottom: 16px;
+        }
 
-/* ===== TABLET (480px to 767px) ===== */
-@media (min-width: 480px) and (max-width: 767px) {
-    .container {
-        max-width: 100%;
-        padding: 14px 16px 60px;
-    }
-    
-    .learning-card {
-        max-width: 100%;
-    }
-    
-    .canvas-container {
-        max-width: 380px;
-    }
-    
-    .learning-header .char-display {
-        font-size: 3.5rem;
-    }
-    
-    .learning-header {
-        padding: 18px 14px 14px;
-        min-height: 120px;
-    }
-    
-    .nav-tab {
-        padding: 6px 14px;
-        font-size: 0.7rem;
-        min-width: 50px;
-    }
-    
-    .nav-tab span {
-        display: inline;
-        font-size: 0.65rem;
-    }
-    
-    .nav-tab i {
-        font-size: 0.9rem;
-    }
-    
-    .char-info-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 6px;
-    }
-    
-    .toolbar .btn {
-        padding: 6px 14px;
-        font-size: 0.7rem;
-        min-height: 30px;
-    }
-    
-    .stroke-step {
-        font-size: 0.55rem;
-        padding: 3px 8px;
-    }
-    
-    .exam-options {
-        grid-template-columns: 1fr 1fr;
-    }
-    
-    .exam-options button {
-        font-size: 1.3rem;
-        min-height: 44px;
-        padding: 10px 8px;
-    }
-    
-    .char-grid {
-        grid-template-columns: repeat(auto-fill, minmax(38px, 1fr));
-        gap: 4px;
-    }
-    
-    .char-grid-item {
-        font-size: 1rem;
-    }
-    
-    .user-info .field {
-        min-width: 70px;
-        max-width: 150px;
-    }
-    
-    .certificate-preview {
-        padding: 14px 12px;
-    }
-    
-    .certificate-preview .cert-heading {
-        font-size: 1.1rem;
-    }
-    
-    .certificate-preview .cert-name {
-        font-size: 1.1rem;
-    }
-}
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 24px;
+            border: none;
+            border-radius: var(--radius-full);
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: var(--font-primary);
+            text-decoration: none;
+            touch-action: manipulation;
+        }
 
-/* ===== MOBILE (320px to 479px) ===== */
-@media (max-width: 479px) {
-    .container {
-        padding: 8px 8px 50px;
-    }
-    
-    .learning-card {
-        border-radius: 14px;
-    }
-    
-    .learning-header {
-        padding: 14px 10px 12px;
-        min-height: 100px;
-    }
-    
-    .learning-header .char-display {
-        font-size: 2.8rem;
-    }
-    
-    .learning-header .char-name {
-        font-size: 0.75rem;
-    }
-    
-    .learning-header .char-counter {
-        font-size: 0.55rem;
-        padding: 2px 10px;
-    }
-    
-    .learning-body {
-        padding: 10px 8px;
-    }
-    
-    .canvas-container {
-        max-width: 300px;
-    }
-    
-    .canvas-hint {
-        font-size: 0.5rem;
-        padding: 3px 10px;
-        bottom: 8px;
-    }
-    
-    .nav-tabs {
-        top: 48px;
-        padding: 3px;
-        gap: 2px;
-    }
-    
-    .nav-tab {
-        padding: 4px 6px;
-        font-size: 0.55rem;
-        min-width: 40px;
-        border-radius: 10px;
-    }
-    
-    .nav-tab span {
-        display: none;
-    }
-    
-    .nav-tab i {
-        font-size: 0.9rem;
-    }
-    
-    .nav-tab .badge {
-        font-size: 0.4rem;
-        padding: 0 4px;
-    }
-    
-    .char-info-grid {
-        grid-template-columns: 1fr;
-        gap: 4px;
-    }
-    
-    .char-info-item {
-        padding: 6px 8px;
-    }
-    
-    .char-info-item .label {
-        font-size: 0.5rem;
-    }
-    
-    .char-info-item .value {
-        font-size: 0.7rem;
-    }
-    
-    .stroke-guide {
-        gap: 3px;
-        margin-bottom: 8px;
-        padding: 4px 6px;
-    }
-    
-    .stroke-step {
-        font-size: 0.5rem;
-        padding: 2px 6px;
-        gap: 2px;
-    }
-    
-    .stroke-step i {
-        font-size: 0.45rem;
-    }
-    
-    .toolbar {
-        gap: 4px;
-        margin-top: 8px;
-    }
-    
-    .toolbar .btn {
-        padding: 4px 10px;
-        font-size: 0.6rem;
-        min-height: 26px;
-        gap: 3px;
-    }
-    
-    .toolbar .btn i {
-        font-size: 0.6rem;
-    }
-    
-    .practice-status .status {
-        font-size: 0.6rem;
-        padding: 2px 12px;
-    }
-    
-    .tip-card {
-        padding: 8px 10px;
-        gap: 4px;
-        margin-top: 8px;
-    }
-    
-    .tip-card i {
-        font-size: 0.7rem;
-    }
-    
-    .tip-card p {
-        font-size: 0.6rem;
-        min-width: 80px;
-    }
-    
-    .tip-card .badge-device {
-        font-size: 0.5rem;
-        padding: 2px 8px;
-    }
-    
-    .exam-card {
-        padding: 12px 10px;
-    }
-    
-    .exam-title {
-        font-size: 0.8rem;
-    }
-    
-    .exam-subtitle {
-        font-size: 0.6rem;
-        margin-bottom: 8px;
-    }
-    
-    .exam-question {
-        font-size: 0.7rem;
-        padding: 8px 10px;
-        margin-bottom: 8px;
-    }
-    
-    .exam-options {
-        grid-template-columns: 1fr;
-        gap: 6px;
-    }
-    
-    .exam-options button {
-        font-size: 1.2rem;
-        min-height: 38px;
-        padding: 6px 8px;
-        max-width: 100%;
-    }
-    
-    .exam-feedback {
-        font-size: 0.7rem;
-        min-height: 18px;
-    }
-    
-    .exam-controls .btn {
-        font-size: 0.65rem;
-        padding: 6px 12px;
-        max-width: 120px;
-    }
-    
-    .exam-result {
-        font-size: 0.7rem;
-        padding: 8px 10px;
-    }
-    
-    .progress-card {
-        padding: 12px 10px;
-    }
-    
-    .progress-title {
-        font-size: 0.8rem;
-        margin-bottom: 8px;
-    }
-    
-    .progress-stats {
-        gap: 4px;
-        margin-bottom: 8px;
-    }
-    
-    .stat-box {
-        padding: 4px 6px;
-    }
-    
-    .stat-box .number {
-        font-size: 1rem;
-    }
-    
-    .stat-box .label {
-        font-size: 0.45rem;
-    }
-    
-    .char-grid {
-        grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
-        gap: 3px;
-    }
-    
-    .char-grid-item {
-        font-size: 0.8rem;
-        border-radius: 6px;
-    }
-    
-    .char-grid-item.done::after {
-        width: 11px;
-        height: 11px;
-        font-size: 0.35rem;
-        top: -3px;
-        right: -3px;
-    }
-    
-    .cert-card {
-        padding: 12px 10px;
-    }
-    
-    .cert-title {
-        font-size: 0.8rem;
-    }
-    
-    .cert-status {
-        font-size: 0.6rem;
-        margin-bottom: 8px;
-    }
-    
-    .certificate-preview {
-        padding: 12px 8px;
-        max-width: 100%;
-    }
-    
-    .certificate-preview .cert-heading {
-        font-size: 0.9rem;
-    }
-    
-    .certificate-preview .cert-sub {
-        font-size: 0.6rem;
-        letter-spacing: 2px;
-    }
-    
-    .certificate-preview .cert-name {
-        font-size: 0.9rem;
-        margin: 4px 0 2px;
-        padding-bottom: 4px;
-    }
-    
-    .certificate-preview .cert-detail {
-        font-size: 0.6rem;
-    }
-    
-    .certificate-preview .cert-stamp {
-        font-size: 1.2rem;
-        margin-top: 4px;
-        letter-spacing: 4px;
-    }
-    
-    .cert-actions .btn {
-        font-size: 0.6rem;
-        padding: 4px 10px;
-    }
-    
-    .cert-message {
-        font-size: 0.6rem;
-    }
-    
-    .user-info {
-        padding: 6px 8px;
-        gap: 4px;
-    }
-    
-    .user-info .field {
-        min-width: 50px;
-        max-width: 100px;
-        padding: 2px 6px 2px 4px;
-    }
-    
-    .user-info .field i {
-        font-size: 0.6rem;
-    }
-    
-    .user-info .field input {
-        font-size: 0.55rem;
-        padding: 2px 0;
-    }
-    
-    .user-info .btn-update {
-        font-size: 0.55rem;
-        padding: 2px 10px;
-    }
-    
-    .header {
-        padding: 8px 12px;
-    }
-    
-    .logo {
-        font-size: 0.8rem;
-        gap: 6px;
-    }
-    
-    .logo-icon {
-        width: 26px;
-        height: 26px;
-        font-size: 0.7rem;
-    }
-    
-    .theme-btn {
-        width: 28px;
-        height: 28px;
-        font-size: 0.7rem;
-    }
-    
-    .user-badge {
-        font-size: 0.55rem;
-        padding: 2px 8px;
-        gap: 4px;
-    }
-    
-    .user-badge i {
-        font-size: 0.6rem;
-    }
-    
-    .shortcuts-hint {
-        display: none !important;
-    }
-    
-    .footer {
-        font-size: 0.5rem;
-        padding: 8px;
-    }
-}
+        .btn:active {
+            transform: scale(0.96);
+        }
 
-/* ===== VERY SMALL (below 320px) ===== */
-@media (max-width: 319px) {
-    .learning-header .char-display {
-        font-size: 2.2rem;
-    }
-    
-    .canvas-container {
-        max-width: 220px;
-    }
-    
-    .char-grid {
-        grid-template-columns: repeat(auto-fill, minmax(24px, 1fr));
-        gap: 2px;
-    }
-    
-    .char-grid-item {
-        font-size: 0.6rem;
-    }
-    
-    .toolbar .btn {
-        font-size: 0.5rem;
-        padding: 3px 6px;
-        min-height: 20px;
-    }
-    
-    .nav-tab {
-        min-width: 32px;
-        padding: 3px 4px;
-    }
-    
-    .nav-tab i {
-        font-size: 0.7rem;
-    }
-}
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: #fff;
+            box-shadow: 0 4px 16px rgba(122, 26, 26, 0.25);
+        }
 
-/* ================================================================
-   ACCESSIBILITY - REDUCED MOTION
-   ================================================================ */
-@media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        transition-duration: 0.01ms !important;
-    }
-}
+        .btn-primary:hover {
+            box-shadow: 0 8px 32px rgba(122, 26, 26, 0.35);
+            transform: translateY(-2px);
+        }
 
-/* ================================================================
-   DARK THEME
-   ================================================================ */
-[data-theme="dark"] {
-    --white: #1A1A1A;
-    --bg: #121212;
-    --text: #F0EDE8;
-    --text-secondary: #B5A898;
-    --text-muted: #7A6A5A;
-    --border: #333333;
-    --shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
-    --shadow-lg: 0 16px 56px rgba(0, 0, 0, 0.6);
-}
+        .btn-secondary {
+            background: var(--white);
+            color: var(--text);
+            border: 1px solid var(--border);
+        }
 
-[data-theme="dark"] .canvas-container canvas {
-    background: #1A1A1A;
-}
+        .btn-secondary:hover {
+            border-color: var(--gold);
+            transform: translateY(-2px);
+        }
 
-[data-theme="dark"] .learning-card,
-[data-theme="dark"] .progress-card,
-[data-theme="dark"] .exam-card,
-[data-theme="dark"] .cert-card,
-[data-theme="dark"] .tip-card {
-    border-color: #333;
-}
+        .btn-gold {
+            background: linear-gradient(135deg, var(--secondary), var(--gold));
+            color: #fff;
+            box-shadow: 0 4px 16px rgba(212, 160, 23, 0.25);
+        }
 
-[data-theme="dark"] .char-info-item {
-    background: #1E1E1E;
-}
+        .btn-gold:hover {
+            box-shadow: 0 8px 32px rgba(212, 160, 23, 0.35);
+            transform: translateY(-2px);
+        }
 
-[data-theme="dark"] .exam-question {
-    background: #1E1E1E;
-}
+        .btn-danger {
+            background: linear-gradient(135deg, var(--danger), #b71c1c);
+            color: #fff;
+        }
 
-[data-theme="dark"] .certificate-preview {
-    background: linear-gradient(135deg, #1A1A1A, #1E1E1E);
-    border-color: var(--gold);
-}
+        .btn-sm {
+            padding: 6px 16px;
+            font-size: 0.75rem;
+        }
 
-[data-theme="dark"] .exam-options button {
-    background: #1A1A1A;
-    border-color: #333;
-}
+        .btn-lg {
+            padding: 14px 32px;
+            font-size: 1.05rem;
+        }
 
-[data-theme="dark"] .char-grid-item {
-    background: #1E1E1E;
-    border-color: #333;
-}
+        .btn-block {
+            width: 100%;
+            justify-content: center;
+        }
 
-[data-theme="dark"] .char-grid-item.current {
-    background: #2A2418;
-    border-color: var(--gold);
-}
+        /* ===== CARDS ===== */
+        .card {
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 24px;
+            border: 1px solid var(--border);
+            transition: var(--transition);
+        }
 
-[data-theme="dark"] .toolbar .btn-prev,
-[data-theme="dark"] .toolbar .btn-clear {
-    background: #1E1E1E;
-    color: #B5A898;
-}
+        .card:hover {
+            box-shadow: var(--shadow-lg);
+        }
 
-[data-theme="dark"] .status {
-    background: #1E1E1E;
-    color: #B5A898;
-}
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
 
-[data-theme="dark"] .user-info {
-    background: #1A1A1A;
-    border-color: #333;
-}
+        .card-title i {
+            color: var(--gold);
+        }
 
-[data-theme="dark"] .user-info .field {
-    background: #1E1E1E;
-    border-color: #333;
-}
+        /* ===== HEADER ===== */
+        .header {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            padding: 10px 16px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(74, 10, 10, 0.3);
+        }
 
-[data-theme="dark"] .user-info .field input {
-    color: #F0EDE8;
-}
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
 
-[data-theme="dark"] .nav-tabs {
-    background: #1A1A1A;
-    border-color: #333;
-}
+        .logo {
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            font-family: var(--font-primary);
+        }
 
-[data-theme="dark"] .stroke-step {
-    background: #1E1E1E;
-    border-color: #333;
-    color: #B5A898;
-}
+        .logo-icon {
+            width: 34px;
+            height: 34px;
+            background: var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            color: var(--primary-dark);
+            font-family: var(--font-tirhuta);
+        }
 
-[data-theme="dark"] .stroke-step.active {
-    background: var(--gold);
-    color: #fff;
-    border-color: var(--gold);
-}
+        .logo span {
+            color: var(--gold-light);
+        }
 
-[data-theme="dark"] .canvas-hint {
-    background: rgba(255, 255, 255, 0.08);
-    color: #aaa;
-}
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
 
-[data-theme="dark"] .shortcuts-hint {
-    background: #1A1A1A;
-    border-color: #333;
-    color: #B5A898;
-}
+        .theme-btn {
+            background: rgba(255, 255, 255, 0.15);
+            border: none;
+            color: #fff;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-[data-theme="dark"] .shortcuts-hint kbd {
-    background: #1E1E1E;
-    border-color: #333;
-}
+        .theme-btn:hover {
+            background: rgba(255, 255, 255, 0.25);
+        }
 
-[data-theme="dark"] .toast {
-    background: #1A1A1A;
-    border-color: #333;
-    color: #F0EDE8;
-}
+        .auth-btn {
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            color: #fff;
+            padding: 6px 16px;
+            border-radius: var(--radius-full);
+            cursor: pointer;
+            font-size: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-family: var(--font-primary);
+            transition: var(--transition);
+        }
+
+        .auth-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .user-menu {
+            position: relative;
+        }
+
+        .user-btn {
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            color: #fff;
+            padding: 6px 16px;
+            border-radius: var(--radius-full);
+            cursor: pointer;
+            font-size: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-family: var(--font-primary);
+            transition: var(--transition);
+        }
+
+        .user-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .user-btn .avatar {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-dark);
+            font-weight: 700;
+            font-size: 0.6rem;
+        }
+
+        .user-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: var(--white);
+            border-radius: var(--radius-sm);
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border);
+            min-width: 200px;
+            padding: 6px 0;
+            display: none;
+            margin-top: 6px;
+            z-index: 100;
+        }
+
+        .user-dropdown.show {
+            display: block;
+            animation: fadeSlide 0.3s ease;
+        }
+
+        .user-dropdown a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 16px;
+            color: var(--text);
+            text-decoration: none;
+            font-size: 0.8rem;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .user-dropdown a:hover {
+            background: var(--bg);
+        }
+
+        .user-dropdown .divider {
+            height: 1px;
+            background: var(--border);
+            margin: 4px 12px;
+        }
+
+        /* ===== NAV TABS ===== */
+        .nav-tabs {
+            background: var(--white);
+            padding: 6px 16px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            gap: 4px;
+            overflow-x: auto;
+            scrollbar-width: none;
+            -webkit-overflow-scrolling: touch;
+            position: sticky;
+            top: 60px;
+            z-index: 99;
+        }
+
+        .nav-tabs::-webkit-scrollbar {
+            display: none;
+        }
+
+        .nav-tab {
+            padding: 6px 18px;
+            border: none;
+            background: transparent;
+            border-radius: var(--radius-full);
+            font-size: 0.75rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: var(--font-primary);
+            color: var(--text-secondary);
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .nav-tab i {
+            font-size: 0.85rem;
+        }
+
+        .nav-tab.active {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: #fff;
+            box-shadow: 0 4px 16px rgba(122, 26, 26, 0.2);
+        }
+
+        .nav-tab.active i {
+            color: var(--gold-light);
+        }
+
+        .nav-tab .badge {
+            background: var(--gold);
+            color: #fff;
+            font-size: 0.5rem;
+            padding: 0 6px;
+            border-radius: var(--radius-full);
+            font-weight: 700;
+            margin-left: 4px;
+        }
+
+        .nav-tab:hover:not(.active) {
+            background: var(--bg);
+        }
+
+        /* ================================================================
+           PAGES
+           ================================================================ */
+        .page {
+            display: none;
+            padding: 20px 0 60px;
+            animation: fadeSlide 0.4s ease;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        @keyframes fadeSlide {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ================================================================
+           HERO / HOMEPAGE
+           ================================================================ */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            border-radius: var(--radius);
+            padding: 40px 30px;
+            color: #fff;
+            margin-bottom: 24px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: '𑒀';
+            position: absolute;
+            right: -20px;
+            top: -20px;
+            font-size: 15rem;
+            font-family: var(--font-tirhuta);
+            opacity: 0.05;
+            pointer-events: none;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 8px;
+        }
+
+        .hero h1 .highlight {
+            color: var(--gold-light);
+        }
+
+        .hero p {
+            font-size: 1.05rem;
+            opacity: 0.85;
+            max-width: 600px;
+            margin-bottom: 16px;
+            line-height: 1.7;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 32px;
+            margin-top: 16px;
+            flex-wrap: wrap;
+        }
+
+        .hero-stats .stat {
+            text-align: center;
+        }
+
+        .hero-stats .stat .number {
+            font-size: 2rem;
+            font-weight: 800;
+            display: block;
+            color: var(--gold-light);
+        }
+
+        .hero-stats .stat .label {
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .hero-actions .btn {
+            background: var(--gold);
+            color: var(--primary-dark);
+        }
+
+        .hero-actions .btn:hover {
+            background: var(--gold-light);
+        }
+
+        .hero-actions .btn-secondary {
+            background: rgba(255, 255, 255, 0.15);
+            color: #fff;
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .hero-actions .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        /* ===== DASHBOARD GRID ===== */
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-top: 16px;
+        }
+
+        .stat-card {
+            background: var(--white);
+            border-radius: var(--radius-sm);
+            padding: 20px;
+            border: 1px solid var(--border);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow);
+        }
+
+        .stat-card .icon {
+            font-size: 2rem;
+            color: var(--gold);
+            margin-bottom: 8px;
+        }
+
+        .stat-card .number {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1.2;
+        }
+
+        .stat-card .label {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            margin-top: 4px;
+        }
+
+        /* ===== COURSE GRID ===== */
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 16px;
+            margin-top: 16px;
+        }
+
+        .course-card {
+            background: var(--white);
+            border-radius: var(--radius-sm);
+            padding: 20px;
+            border: 1px solid var(--border);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .course-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow);
+            border-color: var(--gold);
+        }
+
+        .course-card .course-icon {
+            font-size: 2.2rem;
+            color: var(--gold);
+            margin-bottom: 8px;
+        }
+
+        .course-card .course-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .course-card .course-desc {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-top: 4px;
+        }
+
+        .course-card .course-progress {
+            margin-top: 12px;
+        }
+
+        .course-card .progress-bar {
+            width: 100%;
+            height: 6px;
+            background: var(--border);
+            border-radius: var(--radius-full);
+            overflow: hidden;
+        }
+
+        .course-card .progress-bar .fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--gold), var(--gold-light));
+            border-radius: var(--radius-full);
+            transition: width 0.8s ease;
+            width: 0%;
+        }
+
+        .course-card .progress-text {
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+            margin-top: 4px;
+            text-align: right;
+        }
+
+        /* ================================================================
+           PRACTICE PAGE
+           ================================================================ */
+        .practice-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .practice-header {
+            background: linear-gradient(135deg, var(--primary), #6B1515);
+            padding: 24px 20px 18px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .practice-header .char-display {
+            font-family: var(--font-tirhuta);
+            font-size: 4.5rem;
+            font-weight: 700;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            line-height: 1.2;
+        }
+
+        .practice-header .char-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            opacity: 0.9;
+            margin-top: 2px;
+        }
+
+        .practice-header .char-counter {
+            font-size: 0.8rem;
+            opacity: 0.6;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2px 16px;
+            border-radius: var(--radius-full);
+            display: inline-block;
+            margin-top: 4px;
+        }
+
+        .practice-body {
+            padding: 20px 24px;
+        }
+
+        .char-info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-bottom: 14px;
+        }
+
+        .char-info-item {
+            background: var(--bg);
+            padding: 8px 12px;
+            border-radius: var(--radius-sm);
+            border-left: 3px solid var(--gold);
+            text-align: center;
+        }
+
+        .char-info-item .label {
+            font-size: 0.5rem;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .char-info-item .value {
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-top: 2px;
+            color: var(--text);
+            font-family: var(--font-tirhuta);
+        }
+
+        .stroke-guide {
+            display: flex;
+            gap: 6px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 14px;
+        }
+
+        .stroke-step {
+            padding: 4px 12px;
+            background: var(--bg);
+            border-radius: var(--radius-full);
+            font-size: 0.6rem;
+            border: 1.5px solid var(--border);
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            transition: var(--transition);
+        }
+
+        .stroke-step.active {
+            background: var(--gold);
+            color: #fff;
+            border-color: var(--gold);
+            box-shadow: 0 4px 16px rgba(212, 160, 23, 0.2);
+        }
+
+        .canvas-wrapper {
+            display: flex;
+            justify-content: center;
+        }
+
+        .canvas-container {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            aspect-ratio: 1 / 1;
+            background: #fff;
+            border-radius: var(--radius-sm);
+            border: 3px solid var(--border);
+            touch-action: none;
+            margin: 0 auto;
+        }
+
+        .canvas-container canvas {
+            width: 100% !important;
+            height: 100% !important;
+            display: block;
+            border-radius: calc(var(--radius-sm) - 2px);
+            touch-action: none;
+            cursor: crosshair;
+            background: #fff;
+        }
+
+        .canvas-hint {
+            position: absolute;
+            bottom: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.06);
+            backdrop-filter: blur(4px);
+            padding: 4px 14px;
+            border-radius: var(--radius-full);
+            font-size: 0.6rem;
+            color: var(--text-muted);
+            pointer-events: none;
+            white-space: nowrap;
+            font-family: var(--font-primary);
+        }
+
+        .practice-toolbar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin-top: 14px;
+        }
+
+        .practice-toolbar .btn {
+            padding: 6px 16px;
+            font-size: 0.75rem;
+        }
+
+        .practice-status {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .practice-status .status {
+            display: inline-block;
+            padding: 4px 18px;
+            border-radius: var(--radius-full);
+            font-size: 0.75rem;
+            background: var(--bg);
+            color: var(--text-secondary);
+        }
+
+        .practice-status .status.success {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        /* ================================================================
+           PROGRESS PAGE
+           ================================================================ */
+        .char-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(42px, 1fr));
+            gap: 4px;
+            margin-top: 12px;
+        }
+
+        .char-grid-item {
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-tirhuta);
+            font-size: 1.1rem;
+            background: var(--bg);
+            border-radius: 8px;
+            border: 2px solid var(--border);
+            transition: var(--transition);
+            cursor: pointer;
+            position: relative;
+        }
+
+        .char-grid-item:hover {
+            transform: scale(1.05);
+            border-color: var(--gold);
+        }
+
+        .char-grid-item.done {
+            background: #e8f5e9;
+            border-color: #a5d6a7;
+            color: #2e7d32;
+        }
+
+        .char-grid-item.done::after {
+            content: "✓";
+            position: absolute;
+            top: -4px;
+            right: -4px;
+            font-size: 0.4rem;
+            background: #2e7d32;
+            color: #fff;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .char-grid-item.current {
+            border-color: var(--gold);
+            background: #fff8e1;
+            box-shadow: 0 0 0 2px rgba(212, 160, 23, 0.2);
+        }
+
+        /* ================================================================
+           EXAM PAGE
+           ================================================================ */
+        .exam-question {
+            font-size: 0.95rem;
+            padding: 14px 16px;
+            background: var(--bg);
+            border-radius: var(--radius-sm);
+            border-left: 4px solid var(--gold);
+            margin-bottom: 14px;
+            text-align: center;
+            word-wrap: break-word;
+        }
+
+        .exam-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            justify-items: center;
+        }
+
+        .exam-options button {
+            padding: 12px 8px;
+            border: 2px solid var(--border);
+            border-radius: var(--radius-sm);
+            background: var(--white);
+            font-family: var(--font-tirhuta);
+            font-size: 1.4rem;
+            cursor: pointer;
+            transition: var(--transition);
+            min-height: 50px;
+            touch-action: manipulation;
+            width: 100%;
+            max-width: 180px;
+            text-align: center;
+            word-wrap: break-word;
+        }
+
+        .exam-options button:hover:not(:disabled) {
+            border-color: var(--gold);
+            background: var(--bg);
+            transform: translateY(-2px);
+        }
+
+        .exam-options button.correct {
+            border-color: var(--success);
+            background: #e8f5e9;
+        }
+
+        .exam-options button.wrong {
+            border-color: var(--danger);
+            background: #ffebee;
+        }
+
+        .exam-options button:disabled {
+            cursor: default;
+            opacity: 0.6;
+        }
+
+        .exam-feedback {
+            margin-top: 10px;
+            min-height: 24px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-align: center;
+        }
+
+        .exam-result {
+            margin-top: 12px;
+            padding: 12px 16px;
+            border-radius: var(--radius-sm);
+            text-align: center;
+            font-weight: 600;
+            display: none;
+            font-size: 0.9rem;
+        }
+
+        .exam-result.show {
+            display: block;
+            animation: fadeSlide 0.4s ease;
+        }
+
+        .exam-result.pass {
+            background: #e8f5e9;
+            color: var(--success);
+            border: 2px solid var(--success);
+        }
+
+        .exam-result.fail {
+            background: #ffebee;
+            color: var(--danger);
+            border: 2px solid var(--danger);
+        }
+
+        /* ================================================================
+           CERTIFICATE PAGE
+           ================================================================ */
+        .certificate-preview {
+            border: 4px double var(--gold);
+            border-radius: var(--radius-sm);
+            padding: 28px 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #fffdf7, #fdf5e6);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .certificate-preview .cert-heading {
+            font-family: var(--font-tirhuta);
+            color: var(--primary);
+            font-size: 1.6rem;
+            font-weight: 700;
+        }
+
+        .certificate-preview .cert-sub {
+            color: var(--gold);
+            font-size: 0.9rem;
+            letter-spacing: 4px;
+        }
+
+        .certificate-preview .cert-name {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin: 12px 0 6px;
+            border-bottom: 2px dashed var(--gold);
+            padding-bottom: 8px;
+            color: var(--text);
+        }
+
+        .certificate-preview .cert-detail {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            margin: 4px 0;
+        }
+
+        .certificate-preview .cert-stamp {
+            font-size: 2rem;
+            color: var(--gold);
+            opacity: 0.3;
+            margin-top: 10px;
+            letter-spacing: 8px;
+        }
+
+        /* ================================================================
+           ADMIN PANEL
+           ================================================================ */
+        .admin-table-wrap {
+            overflow-x: auto;
+            margin-top: 12px;
+        }
+
+        .admin-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.8rem;
+            min-width: 600px;
+        }
+
+        .admin-table th {
+            background: var(--primary);
+            color: #fff;
+            padding: 10px 12px;
+            text-align: left;
+            font-weight: 600;
+            position: sticky;
+            top: 0;
+        }
+
+        .admin-table td {
+            padding: 8px 12px;
+            border-bottom: 1px solid var(--border);
+            vertical-align: middle;
+        }
+
+        .admin-table tr:hover td {
+            background: var(--bg);
+        }
+
+        /* ================================================================
+           AUTH MODAL
+           ================================================================ */
+        .auth-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 9999;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+            backdrop-filter: blur(4px);
+        }
+
+        .auth-modal.show {
+            display: flex;
+            animation: fadeSlide 0.3s ease;
+        }
+
+        .auth-modal .auth-box {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 32px 28px;
+            max-width: 420px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .auth-modal .auth-box h2 {
+            text-align: center;
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin-bottom: 4px;
+            font-family: var(--font-tirhuta);
+        }
+
+        .auth-modal .auth-box .subtitle {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            margin-bottom: 20px;
+        }
+
+        .auth-modal .form-group {
+            margin-bottom: 14px;
+        }
+
+        .auth-modal .form-group label {
+            display: block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            margin-bottom: 4px;
+        }
+
+        .auth-modal .form-group input {
+            width: 100%;
+            padding: 10px 14px;
+            border: 2px solid var(--border);
+            border-radius: var(--radius-sm);
+            font-size: 0.85rem;
+            font-family: var(--font-primary);
+            transition: var(--transition);
+            background: var(--bg);
+            color: var(--text);
+        }
+
+        .auth-modal .form-group input:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 0 4px rgba(212, 160, 23, 0.1);
+        }
+
+        .auth-modal .form-error {
+            color: var(--danger);
+            font-size: 0.8rem;
+            text-align: center;
+            min-height: 22px;
+            margin-top: 4px;
+        }
+
+        .auth-modal .form-success {
+            color: var(--success);
+            font-size: 0.8rem;
+            text-align: center;
+            min-height: 22px;
+            margin-top: 4px;
+        }
+
+        .auth-modal .auth-switch {
+            text-align: center;
+            margin-top: 14px;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        .auth-modal .auth-switch span {
+            color: var(--primary);
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .auth-modal .auth-switch span:hover {
+            color: var(--gold);
+        }
+
+        .auth-modal .close-modal {
+            float: right;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-muted);
+            background: none;
+            border: none;
+            padding: 0 4px;
+        }
+
+        /* ================================================================
+           TOAST
+           ================================================================ */
+        .toast-container {
+            position: fixed;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 99999;
+            max-width: 420px;
+            width: 90%;
+            pointer-events: none;
+        }
+
+        .toast {
+            background: var(--white);
+            border-radius: var(--radius-sm);
+            padding: 10px 16px;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            animation: slideUp 0.4s ease;
+            pointer-events: auto;
+            font-size: 0.8rem;
+        }
+
+        .toast.success {
+            border-left: 4px solid var(--success);
+        }
+        .toast.error {
+            border-left: 4px solid var(--danger);
+        }
+        .toast.warning {
+            border-left: 4px solid var(--warning);
+        }
+        .toast.info {
+            border-left: 4px solid var(--info);
+        }
+
+        .toast .icon {
+            font-size: 1.1rem;
+        }
+        .toast .message {
+            flex: 1;
+        }
+        .toast .close {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--text-muted);
+            font-size: 1rem;
+            padding: 0 4px;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px) scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        /* ================================================================
+           FOOTER
+           ================================================================ */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            border-top: 1px solid var(--border);
+            margin-top: 20px;
+        }
+
+        .footer i {
+            color: var(--gold);
+        }
+
+        /* ================================================================
+           RESPONSIVE
+           ================================================================ */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .hero p {
+                font-size: 0.9rem;
+            }
+            .hero-stats .stat .number {
+                font-size: 1.5rem;
+            }
+            .practice-header .char-display {
+                font-size: 3.5rem;
+            }
+            .practice-body {
+                padding: 16px;
+            }
+            .char-info-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .dashboard-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .course-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .exam-options {
+                grid-template-columns: 1fr 1fr;
+            }
+            .exam-options button {
+                max-width: 100%;
+            }
+            .header .container {
+                flex-direction: row;
+            }
+            .logo {
+                font-size: 0.95rem;
+            }
+            .nav-tabs {
+                top: 54px;
+                padding: 4px 12px;
+            }
+            .nav-tab {
+                padding: 4px 12px;
+                font-size: 0.65rem;
+            }
+            .nav-tab span {
+                display: none;
+            }
+            .nav-tab i {
+                font-size: 1rem;
+            }
+            .auth-modal .auth-box {
+                padding: 24px 20px;
+            }
+            .admin-table {
+                font-size: 0.7rem;
+                min-width: 500px;
+            }
+            .admin-table th,
+            .admin-table td {
+                padding: 6px 8px;
+            }
+            .certificate-preview {
+                padding: 20px 16px;
+            }
+            .certificate-preview .cert-heading {
+                font-size: 1.2rem;
+            }
+            .certificate-preview .cert-name {
+                font-size: 1.2rem;
+            }
+            .char-grid {
+                grid-template-columns: repeat(auto-fill, minmax(34px, 1fr));
+            }
+            .char-grid-item {
+                font-size: 0.85rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 24px 18px;
+            }
+            .hero h1 {
+                font-size: 1.4rem;
+            }
+            .hero-stats {
+                gap: 16px;
+            }
+            .hero-stats .stat .number {
+                font-size: 1.2rem;
+            }
+            .practice-header .char-display {
+                font-size: 2.8rem;
+            }
+            .practice-header {
+                padding: 16px 14px;
+            }
+            .practice-body {
+                padding: 12px;
+            }
+            .char-info-grid {
+                grid-template-columns: 1fr;
+            }
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+            .course-grid {
+                grid-template-columns: 1fr;
+            }
+            .exam-options {
+                grid-template-columns: 1fr;
+            }
+            .exam-options button {
+                font-size: 1.2rem;
+                min-height: 42px;
+            }
+            .canvas-container {
+                max-width: 280px;
+            }
+            .stroke-step {
+                font-size: 0.5rem;
+                padding: 2px 8px;
+            }
+            .auth-modal .auth-box {
+                padding: 20px 16px;
+            }
+            .char-grid {
+                grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
+            }
+            .char-grid-item {
+                font-size: 0.7rem;
+            }
+            .certificate-preview {
+                padding: 16px 12px;
+            }
+            .certificate-preview .cert-heading {
+                font-size: 1rem;
+            }
+            .certificate-preview .cert-name {
+                font-size: 1rem;
+            }
+            .user-btn span {
+                display: none;
+            }
+            .user-btn .avatar {
+                width: 20px;
+                height: 20px;
+                font-size: 0.5rem;
+            }
+            .user-btn {
+                padding: 4px 10px;
+            }
+            .auth-btn span {
+                display: none;
+            }
+            .auth-btn {
+                padding: 4px 10px;
+            }
+            .header-right {
+                gap: 4px;
+            }
+        }
+
+        /* ================================================================
+           DARK THEME
+           ================================================================ */
+        [data-theme="dark"] {
+            --white: #1A1A1A;
+            --bg: #121212;
+            --text: #F0EDE8;
+            --text-secondary: #B5A898;
+            --text-muted: #7A6A5A;
+            --border: #333333;
+            --shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+            --shadow-lg: 0 16px 56px rgba(0, 0, 0, 0.6);
+        }
+
+        [data-theme="dark"] .canvas-container canvas {
+            background: #1A1A1A;
+        }
+
+        [data-theme="dark"] .canvas-container {
+            border-color: #444;
+        }
+
+        [data-theme="dark"] .canvas-hint {
+            background: rgba(255, 255, 255, 0.08);
+            color: #aaa;
+        }
+
+        [data-theme="dark"] .user-dropdown {
+            background: #1A1A1A;
+            border-color: #333;
+        }
+
+        [data-theme="dark"] .user-dropdown a:hover {
+            background: #252525;
+        }
+
+        [data-theme="dark"] .auth-modal .auth-box {
+            background: #1A1A1A;
+            border-color: #333;
+        }
+
+        [data-theme="dark"] .auth-modal .form-group input {
+            background: #1E1E1E;
+            color: #F0EDE8;
+            border-color: #444;
+        }
+
+        [data-theme="dark"] .admin-table tr:hover td {
+            background: #1E1E1E;
+        }
+
+        [data-theme="dark"] .course-card,
+        [data-theme="dark"] .stat-card {
+            border-color: #333;
+        }
+
+        [data-theme="dark"] .toast {
+            background: #1A1A1A;
+            border-color: #333;
+            color: #F0EDE8;
+        }
+
+        [data-theme="dark"] .certificate-preview {
+            background: linear-gradient(135deg, #1A1A1A, #1E1E1E);
+            border-color: var(--gold);
+        }
+
+        [data-theme="dark"] .exam-options button {
+            background: #1A1A1A;
+            border-color: #333;
+        }
+
+        [data-theme="dark"] .exam-options button.correct {
+            background: #1A3A1A;
+            border-color: var(--success);
+        }
+
+        [data-theme="dark"] .exam-options button.wrong {
+            background: #3A1A1A;
+            border-color: var(--danger);
+        }
+
+        [data-theme="dark"] .char-grid-item {
+            background: #1E1E1E;
+            border-color: #333;
+        }
+
+        [data-theme="dark"] .char-grid-item.done {
+            background: #1A3A1A;
+            border-color: var(--success);
+        }
+
+        [data-theme="dark"] .char-grid-item.current {
+            background: #2A2418;
+            border-color: var(--gold);
+        }
+
+        [data-theme="dark"] .stroke-step {
+            background: #1E1E1E;
+            border-color: #333;
+            color: #B5A898;
+        }
+
+        [data-theme="dark"] .stroke-step.active {
+            background: var(--gold);
+            color: #fff;
+            border-color: var(--gold);
+        }
+
+        [data-theme="dark"] .nav-tabs {
+            background: #1A1A1A;
+            border-color: #333;
+        }
+
+        [data-theme="dark"] .practice-status .status {
+            background: #1E1E1E;
+            color: #B5A898;
+        }
+
+        [data-theme="dark"] .practice-status .status.success {
+            background: #1A3A1A;
+            color: #4CAF50;
+        }
+
+        /* ================================================================
+           SCROLLBAR
+           ================================================================ */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--gold);
+            border-radius: 10px;
+        }
+
+        /* ================================================================
+           ACCESSIBILITY
+           ================================================================ */
+        :focus-visible {
+            outline: 2px solid var(--gold);
+            outline-offset: 2px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <!-- ===== HEADER ===== -->
-    <header class="header">
-        <div class="logo">
-            <span class="logo-icon">𑒀</span>
-            <span>तिरहुता <span>लिपि</span></span>
-        </div>
-        <div class="header-right">
-            <button class="theme-btn" id="themeBtn">
-                <i class="fas fa-moon" id="themeIcon"></i>
-            </button>
-            <div class="user-badge" id="profileBtn">
-                <i class="fas fa-user-circle"></i>
-                <span id="userNameDisplay">साधक</span>
+    <!-- ================================================================
+    HEADER
+    ================================================================ -->
+    <header class="header" id="appHeader">
+        <div class="container">
+            <div class="logo" onclick="navigateTo('home')">
+                <span class="logo-icon">𑒀</span>
+                <span><span class="tirhuta-text">तिरहुता</span> <span class="tirhuta-text">लिपि</span></span>
+            </div>
+            <div class="header-right">
+                <button class="theme-btn" id="themeBtn">
+                    <i class="fas fa-moon" id="themeIcon"></i>
+                </button>
+                <div id="authButtons">
+                    <button class="auth-btn" onclick="openAuthModal()">
+                        <i class="fas fa-user"></i> <span>लॉगिन</span>
+                    </button>
+                </div>
+                <div class="user-menu" id="userMenu" style="display:none;">
+                    <button class="user-btn" id="userMenuBtn">
+                        <span class="avatar" id="userAvatar">सा</span>
+                        <span id="userNameDisplay">साधक</span>
+                        <i class="fas fa-chevron-down" style="font-size:0.5rem;opacity:0.6;"></i>
+                    </button>
+                    <div class="user-dropdown" id="userDropdown">
+                        <a onclick="navigateTo('home')"><i class="fas fa-home"></i> होम</a>
+                        <a onclick="navigateTo('practice')"><i class="fas fa-pen-fancy"></i> अभ्यास</a>
+                        <a onclick="navigateTo('progress')"><i class="fas fa-chart-simple"></i> प्रगति</a>
+                        <a onclick="navigateTo('exam')"><i class="fas fa-clipboard-question"></i> परीक्षा</a>
+                        <a onclick="navigateTo('certificate')"><i class="fas fa-award"></i> प्रमाणपत्र</a>
+                        <div class="divider"></div>
+                        <a id="menuAdmin" style="display:none;" onclick="navigateTo('admin')"><i class="fas fa-user-shield"></i> एडमिन पैनल</a>
+                        <a onclick="logoutUser()"><i class="fas fa-sign-out-alt"></i> लॉगआउट</a>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
 
-    <!-- ===== NAV TABS ===== -->
+    <!-- ================================================================
+    NAV TABS
+    ================================================================ -->
     <nav class="nav-tabs" id="navTabs">
-        <button class="nav-tab active" data-section="learn">
-            <i class="fas fa-pen-fancy"></i>
-            <span>सीखी</span>
+        <button class="nav-tab active" onclick="navigateTo('home')">
+            <i class="fas fa-home"></i> <span>होम</span>
+        </button>
+        <button class="nav-tab" onclick="navigateTo('practice')">
+            <i class="fas fa-pen-fancy"></i> <span>अभ्यास</span>
             <span class="badge" id="learnBadge">0%</span>
         </button>
-        <button class="nav-tab" data-section="progress">
-            <i class="fas fa-chart-simple"></i>
-            <span>प्रगति</span>
+        <button class="nav-tab" onclick="navigateTo('progress')">
+            <i class="fas fa-chart-simple"></i> <span>प्रगति</span>
         </button>
-        <button class="nav-tab" data-section="exam">
-            <i class="fas fa-clipboard-question"></i>
-            <span>परीक्षा</span>
+        <button class="nav-tab" onclick="navigateTo('exam')">
+            <i class="fas fa-clipboard-question"></i> <span>परीक्षा</span>
         </button>
-        <button class="nav-tab" data-section="certificate">
-            <i class="fas fa-award"></i>
-            <span>प्रमाण</span>
+        <button class="nav-tab" onclick="navigateTo('certificate')">
+            <i class="fas fa-award"></i> <span>प्रमाण</span>
         </button>
     </nav>
 
-    <!-- ===== USER INFO ===== -->
-    <div class="user-info">
-        <div class="field">
-            <i class="fas fa-user"></i>
-            <input type="text" id="userName" placeholder="नाम" value="साधक" />
+    <!-- ================================================================
+    AUTH MODAL
+    ================================================================ -->
+    <div class="auth-modal" id="authModal">
+        <div class="auth-box">
+            <button class="close-modal" onclick="closeAuthModal()">&times;</button>
+            <h2><span class="tirhuta-text">𑒞𑒱𑒩𑒯𑒳𑒞𑒰 𑒪𑒱𑒣𑒱</span></h2>
+            <p class="subtitle" id="authSubtitle">लॉगिन करें और सीखना शुरू करें</p>
+
+            <div id="authError" class="form-error"></div>
+            <div id="authSuccess" class="form-success"></div>
+
+            <form id="authForm" onsubmit="handleAuth(event)">
+                <div id="nameField" class="form-group" style="display:none;">
+                    <label>पूरा नाम</label>
+                    <input type="text" id="authName" placeholder="आपका पूरा नाम" />
+                </div>
+
+                <div class="form-group">
+                    <label>ईमेल</label>
+                    <input type="email" id="authEmail" placeholder="आपका ईमेल" required />
+                </div>
+
+                <div id="mobileField" class="form-group" style="display:none;">
+                    <label>मोबाइल नंबर</label>
+                    <input type="tel" id="authMobile" placeholder="10 अंकों का मोबाइल" />
+                </div>
+
+                <div id="districtField" class="form-group" style="display:none;">
+                    <label>जिला</label>
+                    <input type="text" id="authDistrict" placeholder="आपका जिला" />
+                </div>
+
+                <div class="form-group">
+                    <label>पासवर्ड</label>
+                    <input type="password" id="authPassword" placeholder="कम से कम 6 अंक" required minlength="6" />
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block btn-lg" id="authSubmitBtn">
+                    <i class="fas fa-sign-in-alt"></i> लॉगिन करें
+                </button>
+            </form>
+
+            <div class="auth-switch" id="authSwitch">
+                <span onclick="toggleAuthMode()">नए हैं?</span> खाता बनाएँ
+            </div>
+            <div style="text-align:center;margin-top:12px;font-size:0.7rem;color:var(--text-muted);">
+                <i class="fas fa-shield-alt"></i> आपका डेटा सुरक्षित है
+            </div>
         </div>
-        <div class="field">
-            <i class="fas fa-map-marker-alt"></i>
-            <input type="text" id="userDistrict" placeholder="जिला" value="मिथिला" />
-        </div>
-        <button class="btn-update" id="updateUserBtn">✅</button>
     </div>
 
-    <!-- ===== CONTAINER ===== -->
+    <!-- ================================================================
+    CONTAINER
+    ================================================================ -->
     <div class="container">
 
-        <!-- ===== SECTION: LEARN ===== -->
-        <section id="learnSection" class="section active">
+        <!-- ============================================================
+        PAGE: HOME
+        ============================================================ -->
+        <div class="page active" id="homePage">
 
-            <div class="learning-card">
-                <div class="learning-header">
+            <!-- Hero -->
+            <div class="hero">
+                <h1><span class="tirhuta-text">𑒞𑒱𑒩𑒯𑒳𑒞𑒰</span> <span class="highlight"><span class="tirhuta-text">𑒪𑒱𑒣𑒱</span></span></h1>
+                <p>तिरहुता (मिथिलाक्षर) लिपि सीखने का आधुनिक, इंटरैक्टिव, और पूर्णतः निःशुल्क मंच। 120+ अक्षर, लेखन अभ्यास, परीक्षा, और प्रमाणपत्र।</p>
+
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="number" id="heroTotal">122</span>
+                        <span class="label">कुल अक्षर</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number" id="heroDone">0</span>
+                        <span class="label">सीखे गए</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number" id="heroPercent">0%</span>
+                        <span class="label">प्रगति</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number" id="heroUsers">0</span>
+                        <span class="label">उपयोगकर्ता</span>
+                    </div>
+                </div>
+
+                <div class="hero-actions">
+                    <button class="btn btn-lg" onclick="navigateTo('practice')">
+                        <i class="fas fa-play"></i> अभी सीखें
+                    </button>
+                    <button class="btn btn-secondary btn-lg" onclick="navigateTo('exam')">
+                        <i class="fas fa-clipboard-check"></i> परीक्षा दें
+                    </button>
+                </div>
+            </div>
+
+            <!-- Dashboard Stats -->
+            <div class="dashboard-grid" id="dashboardStats">
+                <div class="stat-card">
+                    <div class="icon"><i class="fas fa-font"></i></div>
+                    <div class="number" id="statTotal">122</div>
+                    <div class="label">कुल अक्षर</div>
+                </div>
+                <div class="stat-card">
+                    <div class="icon"><i class="fas fa-check-circle"></i></div>
+                    <div class="number" id="statDone">0</div>
+                    <div class="label">पूर्ण</div>
+                </div>
+                <div class="stat-card">
+                    <div class="icon"><i class="fas fa-fire"></i></div>
+                    <div class="number" id="statStreak">0</div>
+                    <div class="label">लगातार दिन</div>
+                </div>
+                <div class="stat-card">
+                    <div class="icon"><i class="fas fa-clock"></i></div>
+                    <div class="number" id="statTime">0m</div>
+                    <div class="label">कुल समय</div>
+                </div>
+                <div class="stat-card">
+                    <div class="icon"><i class="fas fa-calendar-day"></i></div>
+                    <div class="number" id="statLast">—</div>
+                    <div class="label">अंतिम अभ्यास</div>
+                </div>
+                <div class="stat-card">
+                    <div class="icon"><i class="fas fa-trophy"></i></div>
+                    <div class="number" id="statProgress">0%</div>
+                    <div class="label">पूर्णता</div>
+                </div>
+            </div>
+
+            <!-- Courses -->
+            <div style="margin-top:24px;">
+                <div class="card-title"><i class="fas fa-graduation-cap"></i> आपके कोर्स</div>
+                <div class="course-grid" id="courseGrid">
+                    <div class="course-card" onclick="navigateTo('practice')">
+                        <div class="course-icon"><i class="fas fa-sun"></i></div>
+                        <div class="course-title">दैनिक अभ्यास</div>
+                        <div class="course-desc">रोजाना 5 नए अक्षर सीखें</div>
+                        <div class="course-progress">
+                            <div class="progress-bar"><div class="fill" id="dailyProgress" style="width:0%;"></div></div>
+                            <div class="progress-text"><span id="dailyText">0/5</span> आज</div>
+                        </div>
+                    </div>
+
+                    <div class="course-card" onclick="navigateTo('progress')">
+                        <div class="course-icon"><i class="fas fa-calendar-alt"></i></div>
+                        <div class="course-title">मासिक पाठ्यक्रम</div>
+                        <div class="course-desc">30 दिनों में पूरी लिपि सीखें</div>
+                        <div class="course-progress">
+                            <div class="progress-bar"><div class="fill" id="monthlyProgress" style="width:0%;"></div></div>
+                            <div class="progress-text"><span id="monthlyText">0/122</span> अक्षर</div>
+                        </div>
+                    </div>
+
+                    <div class="course-card" onclick="navigateTo('exam')">
+                        <div class="course-icon"><i class="fas fa-clipboard-check"></i></div>
+                        <div class="course-title">परीक्षा प्रशिक्षण</div>
+                        <div class="course-desc">10 प्रश्नों का टेस्ट दें</div>
+                        <div class="course-progress">
+                            <div class="progress-bar"><div class="fill" id="examProgress" style="width:0%;"></div></div>
+                            <div class="progress-text"><span id="examText">0/10</span> पूर्ण</div>
+                        </div>
+                    </div>
+
+                    <div class="course-card" onclick="navigateTo('certificate')">
+                        <div class="course-icon"><i class="fas fa-award"></i></div>
+                        <div class="course-title">प्रमाणपत्र</div>
+                        <div class="course-desc">परीक्षा पास करें और प्रमाणपत्र प्राप्त करें</div>
+                        <div class="course-progress">
+                            <div class="progress-bar"><div class="fill" id="certProgress" style="width:0%;"></div></div>
+                            <div class="progress-text"><span id="certText">0%</span> पास</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================
+        PAGE: PRACTICE
+        ============================================================ -->
+        <div class="page" id="practicePage">
+            <div class="flex-between" style="flex-wrap:wrap;gap:12px;margin-bottom:16px;">
+                <div>
+                    <h1 style="font-size:1.3rem;font-weight:800;color:var(--text);">
+                        <i class="fas fa-pen-fancy" style="color:var(--gold);"></i> अभ्यास
+                    </h1>
+                    <p style="color:var(--text-secondary);font-size:0.85rem;">उंगली या माउस से लिखें</p>
+                </div>
+                <button class="btn btn-secondary btn-sm" onclick="navigateTo('home')">
+                    <i class="fas fa-arrow-left"></i> वापस
+                </button>
+            </div>
+
+            <div class="practice-card">
+                <div class="practice-header">
                     <div class="char-display" id="currentChar">𑒀</div>
                     <div class="char-name" id="charName">𑒀 - अज्जी</div>
                     <div class="char-counter" id="charCounter">1 / 122</div>
                 </div>
 
-                <div class="learning-body">
+                <div class="practice-body">
                     <div class="char-info-grid">
                         <div class="char-info-item">
                             <div class="label">उच्चारण</div>
@@ -915,160 +1940,227 @@ body {
                     <div class="canvas-wrapper">
                         <div class="canvas-container">
                             <canvas id="practiceCanvas"></canvas>
-                            <div class="canvas-hint"><i class="fas fa-hand-pointer"></i> उंगली या माउस से लिखी</div>
+                            <div class="canvas-hint"><i class="fas fa-hand-pointer"></i> उंगली या माउस से लिखें</div>
                         </div>
                     </div>
 
-                    <div class="toolbar">
-                        <button class="btn btn-prev" id="prevChar"><i class="fas fa-chevron-left"></i> पिछला</button>
-                        <button class="btn btn-clear" id="clearCanvas"><i class="fas fa-eraser"></i> साफ़</button>
-                        <button class="btn btn-save" id="savePractice"><i class="fas fa-save"></i> सहेजी</button>
-                        <button class="btn btn-next" id="nextChar">अगला <i class="fas fa-chevron-right"></i></button>
+                    <div class="practice-toolbar">
+                        <button class="btn btn-secondary btn-sm" id="prevChar"><i class="fas fa-chevron-left"></i> पिछला</button>
+                        <button class="btn btn-secondary btn-sm" id="clearCanvas"><i class="fas fa-eraser"></i> साफ़</button>
+                        <button class="btn btn-primary btn-sm" id="savePractice"><i class="fas fa-save"></i> सहेजें</button>
+                        <button class="btn btn-gold btn-sm" id="nextChar">अगला <i class="fas fa-chevron-right"></i></button>
                     </div>
 
                     <div class="practice-status">
-                        <span class="status" id="practiceStatus">✍️ उंगली या माउस से लिखी</span>
+                        <span class="status" id="practiceStatus">✍️ उंगली या माउस से लिखें</span>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class="tip-card">
-                <i class="fas fa-lightbulb"></i>
-                <p><strong>टिप:</strong> स्ट्रोक दिशा के अनुसार लिखी।</p>
-                <span class="badge-device">
-                    <i class="fas fa-mobile-alt"></i> फिंगर
-                    <span style="opacity:0.3;margin:0 4px;">|</span>
-                    <i class="fas fa-mouse"></i> माउस
-                </span>
+        <!-- ============================================================
+        PAGE: PROGRESS
+        ============================================================ -->
+        <div class="page" id="progressPage">
+            <div class="flex-between" style="flex-wrap:wrap;gap:12px;margin-bottom:16px;">
+                <div>
+                    <h1 style="font-size:1.3rem;font-weight:800;color:var(--text);">
+                        <i class="fas fa-chart-simple" style="color:var(--gold);"></i> प्रगति
+                    </h1>
+                    <p style="color:var(--text-secondary);font-size:0.85rem;">आपकी सीखने की यात्रा</p>
+                </div>
+                <button class="btn btn-secondary btn-sm" onclick="navigateTo('home')">
+                    <i class="fas fa-arrow-left"></i> वापस
+                </button>
             </div>
 
-        </section>
+            <div class="card">
+                <div class="card-title"><i class="fas fa-chart-line"></i> प्रगति सारांश</div>
 
-        <!-- ===== SECTION: PROGRESS ===== -->
-        <section id="progressSection" class="section">
-
-            <div class="progress-card">
-                <div class="progress-title">
-                    <i class="fas fa-chart-simple"></i> हमर प्रगति
-                </div>
-
-                <div class="progress-stats">
-                    <div class="stat-box">
-                        <div class="number" id="progDone">0</div>
-                        <div class="label">पूर्ण</div>
+                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;">
+                    <div style="background:var(--bg);padding:14px;border-radius:var(--radius-sm);text-align:center;">
+                        <div style="font-size:1.6rem;font-weight:800;color:var(--primary);" id="progDone">0</div>
+                        <div style="font-size:0.7rem;color:var(--text-secondary);">पूर्ण</div>
                     </div>
-                    <div class="stat-box">
-                        <div class="number" id="progTotal">122</div>
-                        <div class="label">कुल</div>
+                    <div style="background:var(--bg);padding:14px;border-radius:var(--radius-sm);text-align:center;">
+                        <div style="font-size:1.6rem;font-weight:800;color:var(--primary);" id="progTotal">122</div>
+                        <div style="font-size:0.7rem;color:var(--text-secondary);">कुल</div>
                     </div>
-                    <div class="stat-box">
-                        <div class="number" id="progPercent">0%</div>
-                        <div class="label">प्रगति</div>
+                    <div style="background:var(--bg);padding:14px;border-radius:var(--radius-sm);text-align:center;">
+                        <div style="font-size:1.6rem;font-weight:800;color:var(--primary);" id="progPercent">0%</div>
+                        <div style="font-size:0.7rem;color:var(--text-secondary);">प्रगति</div>
+                    </div>
+                    <div style="background:var(--bg);padding:14px;border-radius:var(--radius-sm);text-align:center;">
+                        <div style="font-size:1.6rem;font-weight:800;color:var(--primary);" id="progRemaining">122</div>
+                        <div style="font-size:0.7rem;color:var(--text-secondary);">शेष</div>
                     </div>
                 </div>
 
-                <div class="progress-bar-wrap">
-                    <div class="fill" id="progressFill"></div>
+                <div style="margin-top:16px;">
+                    <div style="width:100%;height:8px;background:var(--border);border-radius:var(--radius-full);overflow:hidden;">
+                        <div class="fill" id="progressFill" style="height:100%;background:linear-gradient(90deg,var(--gold),var(--gold-light));border-radius:var(--radius-full);transition:width 0.8s ease;width:0%;"></div>
+                    </div>
                 </div>
 
-                <div class="char-grid" id="charGrid"></div>
+                <div style="margin-top:16px;">
+                    <div style="font-weight:600;font-size:0.85rem;margin-bottom:8px;">अक्षर ग्रिड</div>
+                    <div class="char-grid" id="charGrid"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================
+        PAGE: EXAM
+        ============================================================ -->
+        <div class="page" id="examPage">
+            <div class="flex-between" style="flex-wrap:wrap;gap:12px;margin-bottom:16px;">
+                <div>
+                    <h1 style="font-size:1.3rem;font-weight:800;color:var(--text);">
+                        <i class="fas fa-clipboard-question" style="color:var(--gold);"></i> परीक्षा
+                    </h1>
+                    <p style="color:var(--text-secondary);font-size:0.85rem;">70%+ स्कोर पर प्रमाणपत्र मिलेगा</p>
+                </div>
+                <button class="btn btn-secondary btn-sm" onclick="navigateTo('home')">
+                    <i class="fas fa-arrow-left"></i> वापस
+                </button>
             </div>
 
-        </section>
-
-        <!-- ===== SECTION: EXAM ===== -->
-        <section id="examSection" class="section">
-
-            <div class="exam-card">
-                <div class="exam-title">
-                    <i class="fas fa-clipboard-question"></i> परीक्षा
-                </div>
-                <div class="exam-subtitle">
-                    <i class="fas fa-info-circle"></i> 70%+ पास
-                </div>
-
+            <div class="card">
                 <div id="examContent">
                     <div class="exam-question">
-                        <strong>प्रश्न:</strong> <span id="examQuestionText">कौन अक्षर अछि?</span>
+                        <strong>प्रश्न:</strong> <span id="examQuestionText">कौन अक्षर है?</span>
                     </div>
 
                     <div class="exam-options" id="examOptions"></div>
 
                     <div class="exam-feedback" id="examFeedback"></div>
 
-                    <div class="exam-controls">
-                        <button class="btn btn-exam-next" id="examNextBtn">अगला <i class="fas fa-arrow-right"></i></button>
-                        <button class="btn btn-exam-reset" id="examResetBtn"><i class="fas fa-rotate"></i></button>
+                    <div style="display:flex;gap:8px;margin-top:14px;justify-content:center;flex-wrap:wrap;">
+                        <button class="btn btn-primary" id="examNextBtn">अगला <i class="fas fa-arrow-right"></i></button>
+                        <button class="btn btn-secondary" id="examResetBtn"><i class="fas fa-rotate"></i> पुनः</button>
                     </div>
 
                     <div class="exam-result" id="examResult"></div>
                 </div>
             </div>
+        </div>
 
-        </section>
-
-        <!-- ===== SECTION: CERTIFICATE ===== -->
-        <section id="certificateSection" class="section">
-
-            <div class="cert-card">
-                <div class="cert-title">
-                    <i class="fas fa-award"></i> प्रमाणपत्र
+        <!-- ============================================================
+        PAGE: CERTIFICATE
+        ============================================================ -->
+        <div class="page" id="certificatePage">
+            <div class="flex-between" style="flex-wrap:wrap;gap:12px;margin-bottom:16px;">
+                <div>
+                    <h1 style="font-size:1.3rem;font-weight:800;color:var(--text);">
+                        <i class="fas fa-award" style="color:var(--gold);"></i> प्रमाणपत्र
+                    </h1>
+                    <p style="color:var(--text-secondary);font-size:0.85rem;" id="certStatus">परीक्षा पास करें</p>
                 </div>
+                <button class="btn btn-secondary btn-sm" onclick="navigateTo('home')">
+                    <i class="fas fa-arrow-left"></i> वापस
+                </button>
+            </div>
 
-                <div class="cert-status" id="certStatus">
-                    <i class="fas fa-info-circle"></i> परीक्षा पास करी
-                </div>
-
+            <div class="card">
                 <div class="certificate-preview" id="certificatePreview">
-                    <div class="cert-heading">𑒞𑒱𑒩𑒯𑒳𑒞𑒰 𑒪𑒱𑒣𑒱</div>
+                    <div class="cert-heading"><span class="tirhuta-text">𑒞𑒱𑒩𑒯𑒳𑒞𑒰 𑒪𑒱𑒣𑒱</span></div>
                     <div class="cert-sub">✦ प्रमाणपत्र ✦</div>
                     <div class="cert-name" id="certName">साधक</div>
                     <div class="cert-detail" id="certDistrict">𑒧𑒱𑒟𑒱𑒪𑒰 (मिथिला)</div>
                     <div class="cert-detail" id="certScore">स्कोर: —</div>
-                    <div class="cert-detail" style="font-size:0.6rem;color:var(--text-muted);">
+                    <div class="cert-detail" style="font-size:0.7rem;color:var(--text-muted);">
                         <span id="certDate">—</span>
                     </div>
                     <div class="cert-stamp">✦ ✦ ✦</div>
                 </div>
 
-                <div class="cert-actions">
-                    <button class="btn btn-pdf" id="downloadCert"><i class="fas fa-file-pdf"></i> PDF</button>
-                    <button class="btn btn-share" id="shareCert"><i class="fas fa-share-alt"></i> शेयर</button>
-                    <button class="btn btn-print" onclick="window.print()"><i class="fas fa-print"></i></button>
+                <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:16px;">
+                    <button class="btn btn-primary" id="downloadCert"><i class="fas fa-file-pdf"></i> PDF</button>
+                    <button class="btn btn-gold" id="shareCert"><i class="fas fa-share-alt"></i> शेयर</button>
+                    <button class="btn btn-secondary" onclick="window.print()"><i class="fas fa-print"></i> प्रिंट</button>
                 </div>
 
-                <div class="cert-message" id="certMessage"></div>
+                <div id="certMessage" style="text-align:center;margin-top:12px;color:var(--text-secondary);font-size:0.8rem;"></div>
+            </div>
+        </div>
+
+        <!-- ============================================================
+        PAGE: ADMIN
+        ============================================================ -->
+        <div class="page" id="adminPage">
+            <div class="flex-between" style="flex-wrap:wrap;gap:12px;margin-bottom:16px;">
+                <div>
+                    <h1 style="font-size:1.3rem;font-weight:800;color:var(--text);">
+                        <i class="fas fa-user-shield" style="color:var(--gold);"></i> एडमिन पैनल
+                    </h1>
+                    <p style="color:var(--text-secondary);font-size:0.85rem;">सभी उपयोगकर्ताओं का डेटा</p>
+                </div>
+                <button class="btn btn-secondary btn-sm" onclick="navigateTo('home')">
+                    <i class="fas fa-arrow-left"></i> वापस
+                </button>
             </div>
 
-        </section>
+            <div class="card">
+                <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;align-items:center;">
+                    <button class="btn btn-primary btn-sm" onclick="refreshAdminData()"><i class="fas fa-sync"></i> रिफ्रेश</button>
+                    <button class="btn btn-danger btn-sm" onclick="clearAllData()"><i class="fas fa-trash"></i> सभी डेटा हटाएँ</button>
+                    <span style="margin-left:auto;font-size:0.8rem;color:var(--text-secondary);" id="adminTotalUsers">कुल उपयोगकर्ता: 0</span>
+                </div>
+
+                <div class="admin-table-wrap">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>नाम</th>
+                                <th>ईमेल</th>
+                                <th>मोबाइल</th>
+                                <th>जिला</th>
+                                <th>प्रगति</th>
+                                <th>अंतिम</th>
+                                <th>डिवाइस</th>
+                                <th>समय</th>
+                            </tr>
+                        </thead>
+                        <tbody id="adminTableBody">
+                            <tr><td colspan="9" style="text-align:center;padding:30px;color:var(--text-muted);">कोई डेटा नहीं</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
 
     </div>
 
-    <!-- ===== SHORTCUTS ===== -->
-    <div class="shortcuts-hint">
-        <span><kbd>←</kbd> <kbd>→</kbd></span>
-        <span><kbd>S</kbd> सहेजी</span>
-        <span><kbd>R</kbd> साफ़</span>
-    </div>
-
-    <!-- ===== TOAST ===== -->
+    <!-- ================================================================
+    TOAST CONTAINER
+    ================================================================ -->
     <div class="toast-container" id="toastContainer"></div>
 
-    <!-- ===== FOOTER ===== -->
+    <!-- ================================================================
+    FOOTER
+    ================================================================ -->
     <footer class="footer">
-        <i class="fas fa-om"></i> 𑒞𑒱𑒩𑒯𑒳𑒞𑒰 𑒪𑒱𑒣𑒱 · मिथिलाक्षर
+        <i class="fas fa-om"></i> <span class="tirhuta-text">𑒞𑒱𑒩𑒯𑒳𑒞𑒰 𑒪𑒱𑒣𑒱</span> · मिथिलाक्षर शिक्षण मंच
+        <span style="display:block;font-size:0.65rem;margin-top:4px;color:var(--text-muted);">
+            ❤️ से बना · सभी अधिकार सुरक्षित
+        </span>
     </footer>
 
-    <!-- ===== SCRIPTS ===== -->
+    <!-- ================================================================
+    SCRIPTS
+    ================================================================ -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js">
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js">
     </script>
 
     <script>
-        // ===== DATA =====
-      const TIRHUTA_DATA = [
-    // ==================== पवित्र चिह्न ====================
+        // ================================================================
+        // DATA - Complete Tirhuta Dataset
+        // ================================================================
+        const TIRHUTA_DATA = [
+           // ==================== पवित्र चिह्न ====================
     { char: '𑒀', name: 'अज्जी', pronounce: 'Ajji', category: 'पवित्र', strokes: 4, example: 'प्रारम्भ में अज्जी' },
     { char: '𑓇', name: 'ॐ', pronounce: 'ॐ (Om)', category: 'पवित्र', strokes: 4, example: 'ॐ नमः शिवाय' },
 
@@ -2140,13 +3232,17 @@ body {
     { char: 'ऽ', name: 'अवग्रह', pronounce: 'avagraha', category: 'विराम', strokes: 1, example: 'ऽ' },
 ];
 
-        // ===== STATE =====
-        const STATE = {
-            currentIndex: 0,
+
+        // ================================================================
+        // APP STATE
+        // ================================================================
+        const APP = {
+            users: JSON.parse(localStorage.getItem('tirhuta_users') || '[]'),
+            currentUser: JSON.parse(localStorage.getItem('tirhuta_current_user') || 'null'),
             practiced: JSON.parse(localStorage.getItem('tirhuta_practiced') || '{}'),
-            userName: localStorage.getItem('tirhuta_user_name') || 'साधक',
-            userDistrict: localStorage.getItem('tirhuta_user_district') || 'मिथिला',
+            currentIndex: parseInt(localStorage.getItem('tirhuta_current_index')) || 0,
             theme: localStorage.getItem('tirhuta_theme') || 'light',
+            isAdmin: false,
             isDrawing: false,
             lastX: 0,
             lastY: 0,
@@ -2157,13 +3253,37 @@ body {
             examScore: 0,
             examAnswered: false,
             examTotal: 0,
+            isLoginMode: true,
+            deviceInfo: {
+                userAgent: navigator.userAgent,
+                platform: navigator.platform || 'Unknown',
+                language: navigator.language || 'hi',
+                screenWidth: window.screen.width,
+                screenHeight: window.screen.height,
+                timestamp: new Date().toISOString()
+            }
         };
 
-        // ===== DOM REFS =====
+        // ================================================================
+        // DOM REFS
+        // ================================================================
         const $ = id => document.getElementById(id);
         const $$ = sel => document.querySelectorAll(sel);
 
-        // ===== TOAST =====
+        // ================================================================
+        // THEME
+        // ================================================================
+        function toggleTheme() {
+            APP.theme = APP.theme === 'light' ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', APP.theme);
+            localStorage.setItem('tirhuta_theme', APP.theme);
+            const icon = $('themeIcon');
+            icon.className = APP.theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+        }
+
+        // ================================================================
+        // TOAST
+        // ================================================================
         function showToast(msg, type = 'info') {
             const container = $('toastContainer');
             const icons = { success: '✅', error: '❌', warning: '⚠️', info: 'ℹ️' };
@@ -2176,27 +3296,328 @@ body {
             `;
             toast.querySelector('.close').onclick = () => toast.remove();
             container.appendChild(toast);
-            setTimeout(() => { if (toast.parentNode) toast.remove(); }, 3000);
+            setTimeout(() => { if (toast.parentNode) toast.remove(); }, 4000);
         }
 
-        // ===== THEME =====
-        function toggleTheme() {
-            STATE.theme = STATE.theme === 'light' ? 'dark' : 'light';
-            document.documentElement.setAttribute('data-theme', STATE.theme);
-            localStorage.setItem('tirhuta_theme', STATE.theme);
-            $('themeIcon').className = STATE.theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+        // ================================================================
+        // AUTH SYSTEM
+        // ================================================================
+        function getUsers() {
+            return JSON.parse(localStorage.getItem('tirhuta_users') || '[]');
         }
 
-        // ===== NAVIGATION =====
-        function navigateTo(section) {
-            $$('.nav-tab').forEach(t => t.classList.toggle('active', t.dataset.section === section));
-            $$('.section').forEach(s => s.classList.toggle('active', s.id === section + 'Section'));
-            if (section === 'progress') updateProgressUI();
-            if (section === 'exam') initExam();
-            if (section === 'certificate') updateCertificateUI();
+        function saveUsers(users) {
+            localStorage.setItem('tirhuta_users', JSON.stringify(users));
         }
 
-        // ===== CANVAS =====
+        function getCurrentUser() {
+            return JSON.parse(localStorage.getItem('tirhuta_current_user') || 'null');
+        }
+
+        function setCurrentUser(user) {
+            localStorage.setItem('tirhuta_current_user', JSON.stringify(user));
+            APP.currentUser = user;
+            if (user && user.email === 'admin@tirhuta.com') {
+                APP.isAdmin = true;
+            } else {
+                APP.isAdmin = false;
+            }
+            updateUI();
+        }
+
+        function logoutUser() {
+            localStorage.removeItem('tirhuta_current_user');
+            APP.currentUser = null;
+            APP.isAdmin = false;
+            $('userDropdown').classList.remove('show');
+            updateUI();
+            navigateTo('home');
+            showToast('लॉगआउट हो गया', 'info');
+        }
+
+        function isLoggedIn() {
+            return APP.currentUser !== null;
+        }
+
+        function registerUser(name, email, mobile, district, password) {
+            const users = getUsers();
+
+            if (users.find(u => u.email === email)) {
+                return { success: false, message: 'यह ईमेल पहले से रजिस्टर है' };
+            }
+
+            const newUser = {
+                id: Date.now().toString(36),
+                name: name || 'Anonymous',
+                email: email,
+                mobile: mobile || '',
+                district: district || '',
+                password: password,
+                createdAt: new Date().toISOString(),
+                lastLogin: null,
+                totalTime: 0,
+                progress: {},
+                examScores: [],
+                certificate: null,
+                deviceInfo: APP.deviceInfo,
+                sessions: [],
+                streak: 0,
+                lastPracticeDate: null
+            };
+
+            users.push(newUser);
+            saveUsers(users);
+            setCurrentUser(newUser);
+
+            return { success: true, message: 'रजिस्ट्रेशन सफल!' };
+        }
+
+        function loginUser(email, password) {
+            const users = getUsers();
+            const user = users.find(u => u.email === email && u.password === password);
+
+            if (!user) {
+                return { success: false, message: 'गलत ईमेल या पासवर्ड' };
+            }
+
+            user.lastLogin = new Date().toISOString();
+            if (!user.sessions) user.sessions = [];
+            user.sessions.push({
+                login: new Date().toISOString(),
+                device: APP.deviceInfo
+            });
+
+            saveUsers(users);
+            setCurrentUser(user);
+
+            return { success: true, message: 'लॉगिन सफल!' };
+        }
+
+        // ================================================================
+        // AUTH MODAL
+        // ================================================================
+        function openAuthModal() {
+            $('authModal').classList.add('show');
+            $('authError').textContent = '';
+            $('authSuccess').textContent = '';
+            APP.isLoginMode = true;
+            $('authTitle').innerHTML = '<span class="tirhuta-text">𑒞𑒱𑒩𑒯𑒳𑒞𑒰 𑒪𑒱𑒣𑒱</span>';
+            $('authSubtitle').textContent = 'लॉगिन करें और सीखना शुरू करें';
+            $('authSubmitBtn').innerHTML = '<i class="fas fa-sign-in-alt"></i> लॉगिन करें';
+            $('nameField').style.display = 'none';
+            $('mobileField').style.display = 'none';
+            $('districtField').style.display = 'none';
+            $('authSwitch').innerHTML = '<span onclick="toggleAuthMode()">नए हैं?</span> खाता बनाएँ';
+            $('authForm').reset();
+        }
+
+        function closeAuthModal() {
+            $('authModal').classList.remove('show');
+        }
+
+        function toggleAuthMode() {
+            APP.isLoginMode = !APP.isLoginMode;
+
+            if (APP.isLoginMode) {
+                $('authTitle').innerHTML = '<span class="tirhuta-text">𑒞𑒱𑒩𑒯𑒳𑒞𑒰 𑒪𑒱𑒣𑒱</span>';
+                $('authSubtitle').textContent = 'लॉगिन करें और सीखना शुरू करें';
+                $('authSubmitBtn').innerHTML = '<i class="fas fa-sign-in-alt"></i> लॉगिन करें';
+                $('nameField').style.display = 'none';
+                $('mobileField').style.display = 'none';
+                $('districtField').style.display = 'none';
+                $('authSwitch').innerHTML = '<span onclick="toggleAuthMode()">नए हैं?</span> खाता बनाएँ';
+            } else {
+                $('authTitle').textContent = 'खाता बनाएँ';
+                $('authSubtitle').textContent = 'रजिस्टर करें और सीखना शुरू करें';
+                $('authSubmitBtn').innerHTML = '<i class="fas fa-user-plus"></i> रजिस्टर करें';
+                $('nameField').style.display = 'block';
+                $('mobileField').style.display = 'block';
+                $('districtField').style.display = 'block';
+                $('authSwitch').innerHTML = '<span onclick="toggleAuthMode()">पुराने हैं?</span> लॉगिन करें';
+            }
+
+            $('authError').textContent = '';
+            $('authSuccess').textContent = '';
+        }
+
+        function handleAuth(e) {
+            e.preventDefault();
+
+            const name = $('authName').value.trim();
+            const email = $('authEmail').value.trim();
+            const mobile = $('authMobile').value.trim();
+            const district = $('authDistrict').value.trim();
+            const password = $('authPassword').value;
+
+            $('authError').textContent = '';
+            $('authSuccess').textContent = '';
+
+            if (!email || !password) {
+                $('authError').textContent = 'कृपया ईमेल और पासवर्ड दर्ज करें';
+                return;
+            }
+
+            if (APP.isLoginMode) {
+                const result = loginUser(email, password);
+                if (result.success) {
+                    $('authSuccess').textContent = result.message;
+                    closeAuthModal();
+                    updateUI();
+                    navigateTo('home');
+                    showToast('स्वागत है! 🎉', 'success');
+                } else {
+                    $('authError').textContent = result.message;
+                }
+            } else {
+                if (!name || !mobile || !district) {
+                    $('authError').textContent = 'कृपया सभी फ़ील्ड भरें';
+                    return;
+                }
+                if (password.length < 6) {
+                    $('authError').textContent = 'पासवर्ड कम से कम 6 अंक का होना चाहिए';
+                    return;
+                }
+                if (mobile.length < 10) {
+                    $('authError').textContent = 'मोबाइल नंबर 10 अंकों का होना चाहिए';
+                    return;
+                }
+
+                const result = registerUser(name, email, mobile, district, password);
+                if (result.success) {
+                    $('authSuccess').textContent = result.message;
+                    closeAuthModal();
+                    updateUI();
+                    navigateTo('home');
+                    showToast('रजिस्ट्रेशन सफल! 🎉', 'success');
+                } else {
+                    $('authError').textContent = result.message;
+                }
+            }
+        }
+
+        // ================================================================
+        // UI UPDATE
+        // ================================================================
+        function updateUI() {
+            const user = APP.currentUser;
+            const authBtns = $('authButtons');
+            const userMenu = $('userMenu');
+            const display = $('userNameDisplay');
+            const avatar = $('userAvatar');
+
+            if (user) {
+                authBtns.style.display = 'none';
+                userMenu.style.display = 'block';
+                display.textContent = user.name || 'साधक';
+                avatar.textContent = (user.name || 'सा')[0];
+                $('menuAdmin').style.display = APP.isAdmin ? 'block' : 'none';
+            } else {
+                authBtns.style.display = 'block';
+                userMenu.style.display = 'none';
+                $('menuAdmin').style.display = 'none';
+            }
+
+            updateDashboard();
+            updateHeroStats();
+        }
+
+        // ================================================================
+        // NAVIGATION
+        // ================================================================
+        function navigateTo(page) {
+            const pages = ['home', 'practice', 'progress', 'exam', 'certificate', 'admin'];
+
+            pages.forEach(p => {
+                const el = $(p + 'Page');
+                if (el) el.classList.remove('active');
+            });
+
+            const target = $(page + 'Page');
+            if (target) target.classList.add('active');
+
+            $$('.nav-tab').forEach(tab => {
+                tab.classList.remove('active');
+                const text = tab.textContent.trim();
+                if ((page === 'home' && text.includes('होम')) ||
+                    (page === 'practice' && text.includes('अभ्यास')) ||
+                    (page === 'progress' && text.includes('प्रगति')) ||
+                    (page === 'exam' && text.includes('परीक्षा')) ||
+                    (page === 'certificate' && text.includes('प्रमाण')) ||
+                    (page === 'admin' && text.includes('एडमिन'))) {
+                    tab.classList.add('active');
+                }
+            });
+
+            if (page === 'practice') initPractice();
+            if (page === 'progress') updateProgressUI();
+            if (page === 'exam') initExam();
+            if (page === 'certificate') updateCertificateUI();
+            if (page === 'admin' && APP.isAdmin) refreshAdminData();
+            if (page === 'home') { updateDashboard();
+                updateHeroStats(); }
+
+            $('userDropdown').classList.remove('show');
+        }
+
+        // ================================================================
+        // HERO STATS
+        // ================================================================
+        function updateHeroStats() {
+            const total = TIRHUTA_DATA.length;
+            const done = Object.keys(APP.practiced).filter(k => APP.practiced[k]).length;
+            const pct = Math.round((done / total) * 100);
+
+            $('heroTotal').textContent = total;
+            $('heroDone').textContent = done;
+            $('heroPercent').textContent = pct + '%';
+
+            const users = getUsers();
+            $('heroUsers').textContent = users.length;
+        }
+
+        // ================================================================
+        // DASHBOARD
+        // ================================================================
+        function updateDashboard() {
+            const user = APP.currentUser;
+            const total = TIRHUTA_DATA.length;
+            const done = Object.keys(APP.practiced).filter(k => APP.practiced[k]).length;
+            const pct = Math.round((done / total) * 100);
+
+            $('statTotal').textContent = total;
+            $('statDone').textContent = done;
+            $('statProgress').textContent = pct + '%';
+            $('statStreak').textContent = user?.streak || 0;
+            $('statTime').textContent = user?.totalTime ? Math.floor(user.totalTime / 60) + 'm' : '0m';
+            $('statLast').textContent = user?.lastLogin ? new Date(user.lastLogin).toLocaleDateString('hi-IN') : '—';
+
+            const dailyDone = Math.min(done, 5);
+            $('dailyProgress').style.width = (dailyDone / 5 * 100) + '%';
+            $('dailyText').textContent = `${dailyDone}/5`;
+
+            $('monthlyProgress').style.width = pct + '%';
+            $('monthlyText').textContent = `${done}/${total}`;
+
+            const examScores = user?.examScores || [];
+            const examDone = examScores.filter(s => s.pct >= 70).length;
+            $('examProgress').style.width = Math.min((examDone / 3) * 100, 100) + '%';
+            $('examText').textContent = `${examDone}/3 पास`;
+
+            const cert = user?.certificate;
+            if (cert && cert.pct >= 70) {
+                $('certProgress').style.width = '100%';
+                $('certText').textContent = '✅ प्राप्त';
+            } else {
+                $('certProgress').style.width = '0%';
+                $('certText').textContent = '0%';
+            }
+
+            $('learnBadge').textContent = pct + '%';
+        }
+
+        // ================================================================
+        // CANVAS
+        // ================================================================
         function initCanvas() {
             const canvas = $('practiceCanvas');
             const container = canvas.parentElement;
@@ -2206,9 +3627,9 @@ body {
             canvas.style.width = size + 'px';
             canvas.style.height = size + 'px';
 
-            STATE.canvas = canvas;
-            STATE.ctx = canvas.getContext('2d');
-            const ctx = STATE.ctx;
+            APP.canvas = canvas;
+            APP.ctx = canvas.getContext('2d');
+            const ctx = APP.ctx;
 
             ctx.lineWidth = 8;
             ctx.lineCap = 'round';
@@ -2225,7 +3646,7 @@ body {
             canvas.addEventListener('touchend', stopDraw, { passive: false });
 
             clearCanvas();
-            loadChar(STATE.currentIndex);
+            loadChar(APP.currentIndex || 0);
         }
 
         function handleTouch(e) {
@@ -2243,34 +3664,34 @@ body {
         }
 
         function startDraw(e) {
-            const c = STATE.canvas;
+            const c = APP.canvas;
             if (!c) return;
-            STATE.isDrawing = true;
+            APP.isDrawing = true;
             const r = c.getBoundingClientRect();
-            STATE.lastX = (e.clientX - r.left) * (c.width / r.width);
-            STATE.lastY = (e.clientY - r.top) * (c.height / r.height);
+            APP.lastX = (e.clientX - r.left) * (c.width / r.width);
+            APP.lastY = (e.clientY - r.top) * (c.height / r.height);
         }
 
         function draw(e) {
-            const c = STATE.canvas,
-                ctx = STATE.ctx;
-            if (!STATE.isDrawing || !c || !ctx) return;
+            const c = APP.canvas,
+                ctx = APP.ctx;
+            if (!APP.isDrawing || !c || !ctx) return;
             const r = c.getBoundingClientRect();
             const x = (e.clientX - r.left) * (c.width / r.width);
             const y = (e.clientY - r.top) * (c.height / r.height);
             ctx.beginPath();
-            ctx.moveTo(STATE.lastX, STATE.lastY);
+            ctx.moveTo(APP.lastX, APP.lastY);
             ctx.lineTo(x, y);
             ctx.stroke();
-            STATE.lastX = x;
-            STATE.lastY = y;
+            APP.lastX = x;
+            APP.lastY = y;
         }
 
-        function stopDraw() { STATE.isDrawing = false; }
+        function stopDraw() { APP.isDrawing = false; }
 
         function clearCanvas() {
-            const c = STATE.canvas,
-                ctx = STATE.ctx;
+            const c = APP.canvas,
+                ctx = APP.ctx;
             if (!c || !ctx) return;
             ctx.fillStyle = '#fff';
             ctx.fillRect(0, 0, c.width, c.height);
@@ -2289,8 +3710,7 @@ body {
                 ctx.stroke();
             }
 
-            // ===== IMPORTANT: Reference Character (𑒀) in CENTRE =====
-            const data = TIRHUTA_DATA[STATE.currentIndex];
+            const data = TIRHUTA_DATA[APP.currentIndex];
             if (data) {
                 ctx.fillStyle = '#e0d8d0';
                 const fs = Math.min(c.width * 0.45, 160);
@@ -2304,10 +3724,26 @@ body {
             ctx.lineWidth = 8;
         }
 
-        // ===== PRACTICE =====
+        // ================================================================
+        // PRACTICE
+        // ================================================================
+        function initPractice() {
+            if (!APP.canvas) {
+                initCanvas();
+            }
+            loadChar(APP.currentIndex || 0);
+            setTimeout(() => {
+                const container = document.querySelector('.canvas-container');
+                if (container) container.focus();
+            }, 100);
+        }
+
         function loadChar(index) {
             const data = TIRHUTA_DATA[index];
             if (!data) return;
+
+            APP.currentIndex = index;
+            localStorage.setItem('tirhuta_current_index', index);
 
             $('currentChar').textContent = data.char;
             $('charName').textContent = data.char + ' - ' + data.name;
@@ -2319,62 +3755,85 @@ body {
 
             const steps = $$('.stroke-step');
             steps.forEach((el, i) => {
-                el.classList.toggle('active', i < data.strokes);
+                if (i < data.strokes) {
+                    el.classList.add('active');
+                } else {
+                    el.classList.remove('active');
+                }
             });
 
             const status = $('practiceStatus');
-            if (STATE.practiced[index]) {
+            if (APP.practiced[index]) {
                 status.className = 'status success';
-                status.textContent = '✅ अभ्यास होए गेल अछि!';
+                status.textContent = '✅ अभ्यास हो चुका है!';
             } else {
                 status.className = 'status';
-                status.textContent = '✍️ उंगली या माउस से लिखी';
+                status.textContent = '✍️ उंगली या माउस से लिखें';
             }
 
             clearCanvas();
-            updateProgressUI();
-            updateBadge();
+            updateDashboard();
+            updateHeroStats();
         }
 
         function savePractice() {
-            const data = TIRHUTA_DATA[STATE.currentIndex];
+            const data = TIRHUTA_DATA[APP.currentIndex];
             if (!data) return;
 
-            STATE.practiced[STATE.currentIndex] = {
+            APP.practiced[APP.currentIndex] = {
                 char: data.char,
                 name: data.name,
                 timestamp: new Date().toISOString()
             };
 
-            localStorage.setItem('tirhuta_practiced', JSON.stringify(STATE.practiced));
+            localStorage.setItem('tirhuta_practiced', JSON.stringify(APP.practiced));
+
+            if (APP.currentUser) {
+                const users = getUsers();
+                const user = users.find(u => u.email === APP.currentUser.email);
+                if (user) {
+                    if (!user.progress) user.progress = {};
+                    user.progress[APP.currentIndex] = true;
+                    const today = new Date().toDateString();
+                    if (user.lastPracticeDate !== today) {
+                        user.streak = (user.streak || 0) + 1;
+                        user.lastPracticeDate = today;
+                    }
+                    saveUsers(users);
+                    APP.currentUser = user;
+                }
+            }
 
             const status = $('practiceStatus');
             status.className = 'status success';
-            status.textContent = '✅ सहेजल गेल!';
+            status.textContent = '✅ सहेजा गया!';
 
-            showToast('अभ्यास सहेजल गेल! 🎉', 'success');
-            updateProgressUI();
-            updateBadge();
+            showToast('अभ्यास सहेजा गया! 🎉', 'success');
+            updateDashboard();
+            updateHeroStats();
 
             setTimeout(() => {
-                if (STATE.currentIndex < TIRHUTA_DATA.length - 1) {
-                    STATE.currentIndex++;
-                    loadChar(STATE.currentIndex);
+                if (APP.currentIndex < TIRHUTA_DATA.length - 1) {
+                    APP.currentIndex++;
+                    loadChar(APP.currentIndex);
                 } else {
                     showToast('🎉 सभी अक्षर पूर्ण!', 'success');
                 }
             }, 500);
         }
 
-        // ===== PROGRESS =====
+        // ================================================================
+        // PROGRESS UI
+        // ================================================================
         function updateProgressUI() {
             const total = TIRHUTA_DATA.length;
-            const done = Object.keys(STATE.practiced).filter(k => STATE.practiced[k]).length;
+            const done = Object.keys(APP.practiced).filter(k => APP.practiced[k]).length;
             const pct = Math.round((done / total) * 100);
 
             $('progDone').textContent = done;
             $('progTotal').textContent = total;
             $('progPercent').textContent = pct + '%';
+            $('progRemaining').textContent = total - done;
             $('progressFill').style.width = pct + '%';
 
             const grid = $('charGrid');
@@ -2382,29 +3841,31 @@ body {
             TIRHUTA_DATA.forEach((data, i) => {
                 const div = document.createElement('div');
                 div.className = 'char-grid-item';
-                if (STATE.practiced[i]) div.classList.add('done');
-                if (i === STATE.currentIndex) div.classList.add('current');
-                div.textContent = data.char;
+                if (APP.practiced[i]) div.classList.add('done');
+                if (i === APP.currentIndex) div.classList.add('current');
+                if (APP.practiced[i]) {
+                    div.innerHTML =
+                        `${data.char} <span style="position:absolute;top:-4px;right:-4px;font-size:0.4rem;background:#2e7d32;color:#fff;width:14px;height:14px;border-radius:50%;display:flex;align-items:center;justify-content:center;">✓</span>`;
+                } else {
+                    div.textContent = data.char;
+                }
                 div.title = data.name;
                 div.onclick = () => {
-                    STATE.currentIndex = i;
-                    loadChar(i);
-                    navigateTo('learn');
+                    APP.currentIndex = i;
+                    localStorage.setItem('tirhuta_current_index', i);
+                    navigateTo('practice');
+                    setTimeout(() => loadChar(i), 100);
                 };
                 grid.appendChild(div);
             });
         }
 
-        function updateBadge() {
-            const total = TIRHUTA_DATA.length;
-            const done = Object.keys(STATE.practiced).filter(k => STATE.practiced[k]).length;
-            $('learnBadge').textContent = Math.round((done / total) * 100) + '%';
-        }
-
-        // ===== EXAM =====
+        // ================================================================
+        // EXAM
+        // ================================================================
         function initExam() {
             const shuffled = [...TIRHUTA_DATA].sort(() => Math.random() - 0.5);
-            STATE.examQuestions = shuffled.slice(0, 10).map(item => {
+            APP.examQuestions = shuffled.slice(0, 10).map(item => {
                 const wrongs = TIRHUTA_DATA.filter(c => c.char !== item.char)
                     .sort(() => Math.random() - 0.5)
                     .slice(0, 3);
@@ -2416,10 +3877,10 @@ body {
                     name: item.name
                 };
             });
-            STATE.examIndex = 0;
-            STATE.examScore = 0;
-            STATE.examAnswered = false;
-            STATE.examTotal = STATE.examQuestions.length;
+            APP.examIndex = 0;
+            APP.examScore = 0;
+            APP.examAnswered = false;
+            APP.examTotal = APP.examQuestions.length;
             $('examResult').className = 'exam-result';
             $('examResult').textContent = '';
             $('examNextBtn').disabled = false;
@@ -2427,15 +3888,15 @@ body {
         }
 
         function renderExamQuestion() {
-            if (STATE.examIndex >= STATE.examQuestions.length) {
+            if (APP.examIndex >= APP.examQuestions.length) {
                 showExamResult();
                 return;
             }
-            const q = STATE.examQuestions[STATE.examIndex];
-            $('examQuestionText').textContent = `"${q.char}" कौन अक्षर अछि? (${q.name})`;
+            const q = APP.examQuestions[APP.examIndex];
+            $('examQuestionText').textContent = `"${q.char}" कौन अक्षर है? (${q.name})`;
             const options = $('examOptions');
             options.innerHTML = '';
-            STATE.examAnswered = false;
+            APP.examAnswered = false;
             $('examFeedback').textContent = '';
 
             q.options.forEach(opt => {
@@ -2445,13 +3906,13 @@ body {
                 btn.onclick = () => handleExamAnswer(btn, opt, q.correct);
                 options.appendChild(btn);
             });
-            $('examNextBtn').textContent = STATE.examIndex === STATE.examQuestions.length - 1 ? 'समाप्त' : 'अगला';
+            $('examNextBtn').textContent = APP.examIndex === APP.examQuestions.length - 1 ? 'समाप्त' : 'अगला';
             $('examResult').className = 'exam-result';
         }
 
         function handleExamAnswer(btn, selected, correct) {
-            if (STATE.examAnswered) return;
-            STATE.examAnswered = true;
+            if (APP.examAnswered) return;
+            APP.examAnswered = true;
             const all = $('examOptions').querySelectorAll('button');
             all.forEach(b => {
                 b.disabled = true;
@@ -2460,7 +3921,7 @@ body {
                 if (b === btn && selected === correct) b.classList.add('correct');
             });
             if (selected === correct) {
-                STATE.examScore++;
+                APP.examScore++;
                 $('examFeedback').innerHTML = '✅ सही!';
                 $('examFeedback').style.color = '#2e7d32';
             } else {
@@ -2470,63 +3931,75 @@ body {
         }
 
         $('examNextBtn').onclick = () => {
-            if (!STATE.examAnswered && STATE.examIndex < STATE.examQuestions.length) {
-                showToast('पहिले उत्तर दी', 'warning');
+            if (!APP.examAnswered && APP.examIndex < APP.examQuestions.length) {
+                showToast('पहले उत्तर दें', 'warning');
                 return;
             }
-            STATE.examIndex++;
-            STATE.examIndex >= STATE.examQuestions.length ? showExamResult() : renderExamQuestion();
+            APP.examIndex++;
+            APP.examIndex >= APP.examQuestions.length ? showExamResult() : renderExamQuestion();
         };
 
         $('examResetBtn').onclick = initExam;
 
         function showExamResult() {
-            const pct = Math.round((STATE.examScore / STATE.examTotal) * 100);
+            const pct = Math.round((APP.examScore / APP.examTotal) * 100);
             const passed = pct >= 70;
             const result = $('examResult');
             result.className = 'exam-result show ' + (passed ? 'pass' : 'fail');
             result.innerHTML = `
                 <strong>${passed ? '🎉 बधाई!' : '😞 पुनः प्रयास'}</strong><br>
-                स्कोर: ${STATE.examScore}/${STATE.examTotal} (${pct}%)
+                स्कोर: ${APP.examScore}/${APP.examTotal} (${pct}%)
             `;
             $('examOptions').innerHTML = '';
             $('examFeedback').textContent = '';
             $('examNextBtn').disabled = true;
 
-            if (passed) {
-                const cert = {
-                    name: STATE.userName,
-                    district: STATE.userDistrict,
-                    score: STATE.examScore,
-                    total: STATE.examTotal,
-                    pct: pct,
-                    date: new Date().toISOString()
-                };
-                localStorage.setItem('tirhuta_certificate', JSON.stringify(cert));
-                updateCertificateUI();
-                showToast('🎉 परीक्षा पास! प्रमाणपत्र देखी।', 'success');
+            if (passed && APP.currentUser) {
+                const users = getUsers();
+                const user = users.find(u => u.email === APP.currentUser.email);
+                if (user) {
+                    if (!user.examScores) user.examScores = [];
+                    const cert = {
+                        name: user.name,
+                        district: user.district,
+                        score: APP.examScore,
+                        total: APP.examTotal,
+                        pct: pct,
+                        date: new Date().toISOString()
+                    };
+                    user.examScores.push(cert);
+                    user.certificate = cert;
+                    saveUsers(users);
+                    localStorage.setItem('tirhuta_certificate', JSON.stringify(cert));
+                    updateCertificateUI();
+                    showToast('🎉 परीक्षा पास! प्रमाणपत्र देखें।', 'success');
+                }
             }
         }
 
-        // ===== CERTIFICATE =====
+        // ================================================================
+        // CERTIFICATE
+        // ================================================================
         function updateCertificateUI() {
-            const cert = JSON.parse(localStorage.getItem('tirhuta_certificate'));
+            const user = APP.currentUser;
+            const cert = user?.certificate || JSON.parse(localStorage.getItem('tirhuta_certificate') || 'null');
+
             if (cert && cert.pct >= 70) {
-                $('certName').textContent = cert.name || 'साधक';
-                $('certDistrict').textContent = cert.district ? '𑒧𑒱𑒟𑒱𑒪𑒰 (' + cert.district + ')' : '';
+                $('certName').textContent = user?.name || cert.name || 'साधक';
+                $('certDistrict').textContent = user?.district ? '𑒧𑒱𑒟𑒱𑒪𑒰 (' + user.district + ')' : '';
                 $('certScore').textContent = 'स्कोर: ' + cert.score + '/' + cert.total + ' (' + cert.pct + '%)';
                 $('certDate').textContent = new Date(cert.date).toLocaleDateString('hi-IN');
                 $('certStatus').innerHTML = '✅ प्रमाणपत्र तैयार!';
                 $('certStatus').style.color = '#2e7d32';
                 $('downloadCert').disabled = false;
                 $('shareCert').disabled = false;
-                $('certMessage').textContent = '✨ प्रमाणपत्र जारी भेल।';
+                $('certMessage').textContent = '✨ प्रमाणपत्र जारी हो गया।';
             } else {
-                $('certName').textContent = STATE.userName || 'साधक';
-                $('certDistrict').textContent = STATE.userDistrict ? '𑒧𑒱𑒟𑒱𑒪𑒰 (' + STATE.userDistrict + ')' : '';
+                $('certName').textContent = user?.name || 'साधक';
+                $('certDistrict').textContent = user?.district ? '𑒧𑒱𑒟𑒱𑒪𑒰 (' + user.district + ')' : '';
                 $('certScore').textContent = 'स्कोर: —';
                 $('certDate').textContent = '—';
-                $('certStatus').innerHTML = 'ℹ️ परीक्षा पास करी (70%+)';
+                $('certStatus').innerHTML = 'ℹ️ परीक्षा पास करें (70%+)';
                 $('certStatus').style.color = '#888';
                 $('downloadCert').disabled = true;
                 $('shareCert').disabled = true;
@@ -2534,7 +4007,6 @@ body {
             }
         }
 
-        // ===== PDF =====
         $('downloadCert').onclick = function() {
             const el = document.querySelector('.certificate-preview');
             html2canvas(el, { scale: 2, backgroundColor: '#fffdf7', useCORS: true, logging: false })
@@ -2546,14 +4018,13 @@ body {
                         ph = 210;
                     const r = Math.min(pw / c.width, ph / c.height);
                     pdf.addImage(img, 'PNG', (pw - c.width * r) / 2, (ph - c.height * r) / 2, c.width * r, c.height *
-                    r);
+                        r);
                     pdf.save('Tirhuta_Certificate.pdf');
-                    showToast('PDF डाउनलोड होए रहल अछि...', 'success');
+                    showToast('PDF डाउनलोड हो रहा है...', 'success');
                 })
-                .catch(() => showToast('PDF बनावे में त्रुटि', 'error'));
+                .catch(() => showToast('PDF बनाने में त्रुटि', 'error'));
         };
 
-        // ===== SHARE =====
         $('shareCert').onclick = function() {
             const el = document.querySelector('.certificate-preview');
             html2canvas(el, { scale: 2, backgroundColor: '#fffdf7', useCORS: true, logging: false })
@@ -2572,99 +4043,173 @@ body {
                         }
                     });
                 })
-                .catch(() => showToast('शेयर करए में त्रुटि', 'error'));
+                .catch(() => showToast('शेयर करने में त्रुटि', 'error'));
         };
 
-        // ===== USER INFO =====
-        function updateUserInfo() {
-            STATE.userName = $('userName').value.trim() || 'साधक';
-            STATE.userDistrict = $('userDistrict').value.trim() || 'मिथिला';
-            localStorage.setItem('tirhuta_user_name', STATE.userName);
-            localStorage.setItem('tirhuta_user_district', STATE.userDistrict);
-            $('userNameDisplay').textContent = STATE.userName;
-            updateCertificateUI();
-            showToast('✅ अपडेट भेल!', 'success');
+        // ================================================================
+        // ADMIN PANEL
+        // ================================================================
+        function refreshAdminData() {
+            if (!APP.isAdmin) {
+                showToast('एडमिन एक्सेस नहीं है', 'error');
+                return;
+            }
+
+            const users = getUsers();
+            const tbody = $('adminTableBody');
+            $('adminTotalUsers').textContent = `कुल उपयोगकर्ता: ${users.length}`;
+
+            if (users.length === 0) {
+                tbody.innerHTML =
+                    `<tr><td colspan="9" style="text-align:center;padding:30px;color:var(--text-muted);">कोई डेटा नहीं</td></tr>`;
+                return;
+            }
+
+            let html = '';
+            users.forEach((u, i) => {
+                const done = Object.keys(u.progress || {}).filter(k => u.progress[k]).length || 0;
+                const pct = Math.round((done / 122) * 100);
+                const lastLogin = u.lastLogin ? new Date(u.lastLogin).toLocaleDateString('hi-IN') : '—';
+                const device = u.deviceInfo?.platform || '—';
+                const totalTime = u.totalTime ? Math.floor(u.totalTime / 60) + 'm' : '—';
+
+                html += `
+                    <tr>
+                        <td>${i + 1}</td>
+                        <td><strong>${u.name || '—'}</strong></td>
+                        <td>${u.email || '—'}</td>
+                        <td>${u.mobile || '—'}</td>
+                        <td>${u.district || '—'}</td>
+                        <td>${pct}% (${done}/122)</td>
+                        <td>${lastLogin}</td>
+                        <td>${device}</td>
+                        <td>${totalTime}</td>
+                    </tr>
+                `;
+            });
+
+            tbody.innerHTML = html;
+            showToast('डेटा रिफ्रेश हो गया', 'success');
         }
 
-        // ===== EVENT BINDINGS =====
-        $('themeBtn').onclick = toggleTheme;
-        $('updateUserBtn').onclick = updateUserInfo;
+        function clearAllData() {
+            if (confirm('क्या आप सभी डेटा हटाना चाहते हैं? यह कार्रवाई वापस नहीं की जा सकती!')) {
+                localStorage.clear();
+                location.reload();
+            }
+        }
 
-        $('profileBtn').onclick = () => {
-            const n = prompt('नाम:', STATE.userName);
-            if (n && n.trim()) { $('userName').value = n.trim();
-                updateUserInfo(); }
-            const d = prompt('जिला:', STATE.userDistrict);
-            if (d && d.trim()) { $('userDistrict').value = d.trim();
-                updateUserInfo(); }
+        // ================================================================
+        // USER MENU
+        // ================================================================
+        $('userMenuBtn').onclick = function(e) {
+            e.stopPropagation();
+            $('userDropdown').classList.toggle('show');
         };
 
-        $$('.nav-tab').forEach(tab => {
-            tab.onclick = () => navigateTo(tab.dataset.section);
-        });
+        document.onclick = function() {
+            $('userDropdown').classList.remove('show');
+        };
 
+        // ================================================================
+        // THEME INIT
+        // ================================================================
+        $('themeBtn').onclick = toggleTheme;
+        document.documentElement.setAttribute('data-theme', APP.theme);
+        if (APP.theme === 'dark') $('themeIcon').className = 'fas fa-sun';
+
+        // ================================================================
+        // PRACTICE BUTTONS
+        // ================================================================
         $('clearCanvas').onclick = clearCanvas;
         $('savePractice').onclick = savePractice;
         $('prevChar').onclick = () => {
-            if (STATE.currentIndex > 0) { STATE.currentIndex--;
-                loadChar(STATE.currentIndex); }
+            if (APP.currentIndex > 0) { APP.currentIndex--;
+                loadChar(APP.currentIndex); }
         };
         $('nextChar').onclick = () => {
-            if (STATE.currentIndex < TIRHUTA_DATA.length - 1) { STATE.currentIndex++;
-                loadChar(STATE.currentIndex); }
+            if (APP.currentIndex < TIRHUTA_DATA.length - 1) { APP.currentIndex++;
+                loadChar(APP.currentIndex); }
         };
 
-        // ===== KEYBOARD SHORTCUTS =====
+        // ================================================================
+        // KEYBOARD SHORTCUTS
+        // ================================================================
         document.addEventListener('keydown', (e) => {
             const tag = e.target.tagName;
             if (tag === 'INPUT' || tag === 'TEXTAREA') return;
-            if (e.key === 'ArrowLeft' && STATE.currentIndex > 0) { STATE.currentIndex--;
-                loadChar(STATE.currentIndex);
+
+            if (e.key === 'ArrowLeft' && APP.currentIndex > 0) { APP.currentIndex--;
+                loadChar(APP.currentIndex);
                 e.preventDefault(); }
-            if (e.key === 'ArrowRight' && STATE.currentIndex < TIRHUTA_DATA.length - 1) { STATE.currentIndex++;
-                loadChar(STATE.currentIndex);
+            if (e.key === 'ArrowRight' && APP.currentIndex < TIRHUTA_DATA.length - 1) { APP.currentIndex++;
+                loadChar(APP.currentIndex);
                 e.preventDefault(); }
             if (e.key === 's' || e.key === 'S') { savePractice();
                 e.preventDefault(); }
             if (e.key === 'r' || e.key === 'R') { clearCanvas();
                 e.preventDefault(); }
+            if (e.key === 'Escape') {
+                $('userDropdown').classList.remove('show');
+                closeAuthModal();
+            }
         });
 
-        // ===== INIT =====
-        document.documentElement.setAttribute('data-theme', STATE.theme);
-        if (STATE.theme === 'dark') $('themeIcon').className = 'fas fa-sun';
-        $('userName').value = STATE.userName;
-        $('userDistrict').value = STATE.userDistrict;
-        $('userNameDisplay').textContent = STATE.userName;
-
-        setTimeout(() => {
-            initCanvas();
-            loadChar(0);
-            updateProgressUI();
-            updateBadge();
-            initExam();
-            updateCertificateUI();
-        }, 100);
-
+        // ================================================================
+        // RESIZE
+        // ================================================================
         let resizeTimer;
         window.addEventListener('resize', () => {
             clearTimeout(resizeTimer);
             resizeTimer = setTimeout(() => {
-                if (STATE.canvas) {
-                    const c = STATE.canvas.parentElement;
+                if (APP.canvas) {
+                    const c = APP.canvas.parentElement;
                     const s = Math.min(c.clientWidth || 380, 380);
-                    STATE.canvas.width = s;
-                    STATE.canvas.height = s;
-                    STATE.canvas.style.width = s + 'px';
-                    STATE.canvas.style.height = s + 'px';
-                    loadChar(STATE.currentIndex);
+                    APP.canvas.width = s;
+                    APP.canvas.height = s;
+                    APP.canvas.style.width = s + 'px';
+                    APP.canvas.style.height = s + 'px';
+                    loadChar(APP.currentIndex || 0);
                 }
             }, 300);
         });
 
-        console.log('🙏 तिरहुता शिक्षण मंच तैयार!');
-        console.log('📖 कुल अक्षर:', TIRHUTA_DATA.length);
-        console.log('⌨️  ← → नेविगेट, S सहेजी, R साफ़');
+        // ================================================================
+        // INIT
+        // ================================================================
+        function init() {
+            const user = getCurrentUser();
+            if (user) {
+                APP.currentUser = user;
+                if (user.email === 'admin@tirhuta.com') {
+                    APP.isAdmin = true;
+                }
+                const practiced = localStorage.getItem('tirhuta_practiced');
+                if (practiced) {
+                    APP.practiced = JSON.parse(practiced);
+                }
+                const idx = localStorage.getItem('tirhuta_current_index');
+                if (idx) {
+                    APP.currentIndex = parseInt(idx);
+                }
+            }
+
+            updateUI();
+            navigateTo('home');
+
+            if (!APP.isAdmin) {
+                $('menuAdmin').style.display = 'none';
+            }
+
+            console.log('🙏 तिरहुता लिपि शिक्षण मंच तैयार!');
+            console.log('📖 कुल अक्षर:', TIRHUTA_DATA.length);
+            console.log('👥 कुल उपयोगकर्ता:', getUsers().length);
+            console.log('👤 वर्तमान:', APP.currentUser?.email || 'कोई नहीं');
+            console.log('⌨️  ← → नेविगेट, S सहेजें, R साफ़ करें');
+            console.log('🔑 एडमिन: admin@tirhuta.com / admin123');
+        }
+
+        init();
     </script>
 
 </body>
